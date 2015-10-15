@@ -99,8 +99,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UsingNavigationPageProvider\UsingNavigationPageProvider.csproj">
-      <Name>UsingNavigationPageProvider</Name>
+    <ProjectReference Include="..\UsingNavigationPageProvider\UsingNavPageProvider.csproj">
+      <Name>UsingNavPageProvider</Name>
+      <Project>{5B848B79-6072-4D9D-9932-7F020DA48503}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -130,16 +131,16 @@
       <HintPath>..\..\packages\Unity.4.0.1\lib\portable-net45+wp80+win8+wpa81+MonoAndroid10+MonoTouch10\Microsoft.Practices.Unity.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Prism, Version=6.0.1.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Prism.Forms.5.9.0-pre1\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.dll</HintPath>
+    <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Core.6.1.0\lib\Xamarin.iOS10\Prism.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Prism.Forms, Version=5.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Prism.Forms.5.9.0-pre1\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.Forms.dll</HintPath>
+    <Reference Include="Prism.Forms, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Forms.6.0.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.Forms.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Prism.Unity.Forms, Version=5.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Prism.Forms.5.9.0-pre1\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.Unity.Forms.dll</HintPath>
+    <Reference Include="Prism.Unity.Forms, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Unity.6.1.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.Unity.Forms.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
