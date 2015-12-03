@@ -8,7 +8,7 @@ namespace UsingDependencyService.ViewModels
     {
         private readonly ITextToSpeech _textToSpeech;
 
-        private string _textToSay = "Hello from Xamarin.Forms and Prism";
+        private string _textToSay = "Hello from Xamarin Forms and Prism.";
         public string TextToSay
         {
             get { return _textToSay; }
