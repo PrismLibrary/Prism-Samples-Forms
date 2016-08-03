@@ -2,32 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Prism.Unity;
+using UsingPageDialogService.Views;
 using Xamarin.Forms;
 
 namespace UsingPageDialogService
 {
-    public class App : Application
+    public class App : PrismApplication
     {
-        public App()
+        protected override void OnInitialized() 
         {
-            Bootstrapper bs = new Bootstrapper();
-            bs.Run(this);
+            NavigationService.NavigateAsync("MainPage");
         }
 
-        protected override void OnStart()
+        protected override void RegisterTypes()
         {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            Container.RegisterTypeForNavigation<MainPage>();
         }
     }
 }
