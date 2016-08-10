@@ -27,13 +27,13 @@ namespace UsingPageDialogService.ViewModels
 
         private async void DisplayAlert()
         {
-            var result = await _pageDialogService.DisplayAlert("Alert", "This is an alert from MainPageViewModel.", "Accept", "Cancel");
+            var result = await _pageDialogService.DisplayAlertAsync("Alert", "This is an alert from MainPageViewModel.", "Accept", "Cancel");
             Debug.WriteLine(result);
         }
 
         private async void DsiplayActionSheet()
         {
-            var result = await _pageDialogService.DisplayActionSheet("ActionSheet", "Cancel", "Destroy", "Option 1", "Option 2");
+            var result = await _pageDialogService.DisplayActionSheetAsync("ActionSheet", "Cancel", "Destroy", "Option 1", "Option 2");
             Debug.WriteLine(result);
         }
 
@@ -44,7 +44,7 @@ namespace UsingPageDialogService.ViewModels
             IActionSheetButton cancelAction = ActionSheetButton.CreateCancelButton("Cancel", new DelegateCommand(() => { Debug.WriteLine("Cancel"); }));
             IActionSheetButton destroyAction = ActionSheetButton.CreateDestroyButton("Destroy", new DelegateCommand(() => { Debug.WriteLine("Destroy"); }));
 
-            await _pageDialogService.DisplayActionSheet("ActionSheet with ActionSheetButtons", option1Action, option2Action, cancelAction, destroyAction);
+            await _pageDialogService.DisplayActionSheetAsync("ActionSheet with ActionSheetButtons", option1Action, option2Action, cancelAction, destroyAction);
         }
     }
 }
