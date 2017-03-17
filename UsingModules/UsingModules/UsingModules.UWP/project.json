@@ -6,7 +6,7 @@
     "Prism.Forms": "6.2.0",
     "Prism.Unity.Forms": "6.2.0",
     "Unity": "4.0.1",
-    "Xamarin.Forms": "2.3.2.127"
+    "Xamarin.Forms": "2.3.3.193"
   },
   "frameworks": {
     "uap10.0": {}
