@@ -4,8 +4,18 @@
              xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              mvvm:ViewModelLocator.AutowireViewModel="True"
              x:Class="UsingDependencyService.Views.MainPage">
-  <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-    <Entry Text="{Binding TextToSay}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <StackLayout VerticalOptions="CenterAndExpand">
+    <StackLayout.HorizontalOptions>
+        <OnPlatform x:TypeArguments="LayoutOptions" iOS="Center" Android="Center" WinPhone="FillAndExpand" />
+    </StackLayout.HorizontalOptions>
+    <StackLayout.Margin>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,0,0,0" Android="0,0,0,0" WinPhone="20,0,20,0" />
+    </StackLayout.Margin>
+    <Entry Text="{Binding TextToSay}" VerticalOptions="Center">
+        <Entry.HorizontalOptions>
+            <OnPlatform x:TypeArguments="LayoutOptions" iOS="Center" Android="Center" WinPhone="FillAndExpand" />
+        </Entry.HorizontalOptions>
+    </Entry>
     <Button Command="{Binding SpeakCommand}" Text="Speak"/>
   </StackLayout>
   

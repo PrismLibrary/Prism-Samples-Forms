@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoCookbook", "ContosoCookbook\ContosoCookbook\ContosoCookbook.csproj", "{74248B22-F60B-4636-BC4F-59CAAFC83520}"
 EndProject
@@ -228,6 +228,8 @@ Global
 		{57BA24B3-EBC6-4FF8-ADE1-9EC505C244BE}.AppStore|x86.Build.0 = Release|x86
 		{57BA24B3-EBC6-4FF8-ADE1-9EC505C244BE}.AppStore|x86.Deploy.0 = Release|x86
 		{57BA24B3-EBC6-4FF8-ADE1-9EC505C244BE}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{57BA24B3-EBC6-4FF8-ADE1-9EC505C244BE}.Debug|Any CPU.Build.0 = Debug|x86
+		{57BA24B3-EBC6-4FF8-ADE1-9EC505C244BE}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{57BA24B3-EBC6-4FF8-ADE1-9EC505C244BE}.Debug|ARM.ActiveCfg = Debug|ARM
 		{57BA24B3-EBC6-4FF8-ADE1-9EC505C244BE}.Debug|ARM.Build.0 = Debug|ARM
 		{57BA24B3-EBC6-4FF8-ADE1-9EC505C244BE}.Debug|ARM.Deploy.0 = Debug|ARM
