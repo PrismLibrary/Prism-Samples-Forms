@@ -16466,20 +16466,20 @@
     "UAP,Version=v10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jaellis\\.nuget\\packages\\": {}
+    "C:\\Users\\jerem\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\TestDevl\\Prism-Samples-Forms\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService.UWP\\UsingDependencyService.UWP.csproj",
+      "projectUniqueName": "C:\\GitHome\\Prism-Samples-Forms\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService.UWP\\UsingDependencyService.UWP.csproj",
       "projectName": "UsingDependencyService.UWP",
-      "projectPath": "C:\\TestDevl\\Prism-Samples-Forms\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService.UWP\\UsingDependencyService.UWP.csproj",
-      "projectJsonPath": "C:\\TestDevl\\Prism-Samples-Forms\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService.UWP\\project.json",
+      "projectPath": "C:\\GitHome\\Prism-Samples-Forms\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService.UWP\\UsingDependencyService.UWP.csproj",
+      "projectJsonPath": "C:\\GitHome\\Prism-Samples-Forms\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService.UWP\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
-            "C:\\TestDevl\\Prism-Samples-Forms\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService.csproj": {
-              "projectPath": "C:\\TestDevl\\Prism-Samples-Forms\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService.csproj"
+            "C:\\GitHome\\Prism-Samples-Forms\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService.csproj": {
+              "projectPath": "C:\\GitHome\\Prism-Samples-Forms\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService\\UsingDependencyService.csproj"
             }
           }
         }
@@ -16492,7 +16492,7 @@
       "Prism.Forms": "6.2.0",
       "Prism.Unity.Forms": "6.2.0",
       "Unity": "4.0.1",
-      "Xamarin.Forms": "[2.3.3.193, )"
+      "Xamarin.Forms": "2.3.3.193"
     },
     "frameworks": {
       "uap10.0": {}

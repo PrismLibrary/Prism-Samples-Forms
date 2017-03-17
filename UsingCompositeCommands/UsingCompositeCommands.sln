@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeCommands", "UsingCompositeCommands\UsingCompositeCommands\CompositeCommands.csproj", "{1A10BFD2-241E-479C-BFFD-1B0950C7E960}"
 EndProject
@@ -228,6 +228,8 @@ Global
 		{4F4ACEA6-41BE-434A-B721-44FD360B59FA}.AppStore|x86.Build.0 = Release|x86
 		{4F4ACEA6-41BE-434A-B721-44FD360B59FA}.AppStore|x86.Deploy.0 = Release|x86
 		{4F4ACEA6-41BE-434A-B721-44FD360B59FA}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4F4ACEA6-41BE-434A-B721-44FD360B59FA}.Debug|Any CPU.Build.0 = Debug|x86
+		{4F4ACEA6-41BE-434A-B721-44FD360B59FA}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{4F4ACEA6-41BE-434A-B721-44FD360B59FA}.Debug|ARM.ActiveCfg = Debug|ARM
 		{4F4ACEA6-41BE-434A-B721-44FD360B59FA}.Debug|ARM.Build.0 = Debug|ARM
 		{4F4ACEA6-41BE-434A-B721-44FD360B59FA}.Debug|ARM.Deploy.0 = Debug|ARM
