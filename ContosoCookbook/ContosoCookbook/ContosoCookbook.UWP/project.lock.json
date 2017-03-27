@@ -295,7 +295,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Prism.Core/6.3.0-pre2": {
+      "Prism.Core/6.3.0": {
         "type": "package",
         "compile": {
           "lib/wpa81/Prism.dll": {}
@@ -304,10 +304,10 @@
           "lib/wpa81/Prism.dll": {}
         }
       },
-      "Prism.Forms/6.3.0-pre2": {
+      "Prism.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "6.3.0-pre2",
+          "Prism.Core": "6.3.0",
           "Xamarin.Forms": "2.3.3.193"
         },
         "compile": {
@@ -317,10 +317,10 @@
           "lib/UAP10.0/Prism.Forms.dll": {}
         }
       },
-      "Prism.Unity.Forms/6.3.0-pre2": {
+      "Prism.Unity.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Forms": "6.3.0-pre2",
+          "Prism.Forms": "6.3.0",
           "Unity": "4.0.1",
           "Xamarin.Forms": "2.3.3.193"
         },
@@ -2210,7 +2210,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Prism.Core/6.3.0-pre2": {
+      "Prism.Core/6.3.0": {
         "type": "package",
         "compile": {
           "lib/wpa81/Prism.dll": {}
@@ -2219,10 +2219,10 @@
           "lib/wpa81/Prism.dll": {}
         }
       },
-      "Prism.Forms/6.3.0-pre2": {
+      "Prism.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "6.3.0-pre2",
+          "Prism.Core": "6.3.0",
           "Xamarin.Forms": "2.3.3.193"
         },
         "compile": {
@@ -2232,10 +2232,10 @@
           "lib/UAP10.0/Prism.Forms.dll": {}
         }
       },
-      "Prism.Unity.Forms/6.3.0-pre2": {
+      "Prism.Unity.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Forms": "6.3.0-pre2",
+          "Prism.Forms": "6.3.0",
           "Unity": "4.0.1",
           "Xamarin.Forms": "2.3.3.193"
         },
@@ -4040,7 +4040,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Prism.Core/6.3.0-pre2": {
+      "Prism.Core/6.3.0": {
         "type": "package",
         "compile": {
           "lib/wpa81/Prism.dll": {}
@@ -4049,10 +4049,10 @@
           "lib/wpa81/Prism.dll": {}
         }
       },
-      "Prism.Forms/6.3.0-pre2": {
+      "Prism.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "6.3.0-pre2",
+          "Prism.Core": "6.3.0",
           "Xamarin.Forms": "2.3.3.193"
         },
         "compile": {
@@ -4062,10 +4062,10 @@
           "lib/UAP10.0/Prism.Forms.dll": {}
         }
       },
-      "Prism.Unity.Forms/6.3.0-pre2": {
+      "Prism.Unity.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Forms": "6.3.0-pre2",
+          "Prism.Forms": "6.3.0",
           "Unity": "4.0.1",
           "Xamarin.Forms": "2.3.3.193"
         },
@@ -5837,7 +5837,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Prism.Core/6.3.0-pre2": {
+      "Prism.Core/6.3.0": {
         "type": "package",
         "compile": {
           "lib/wpa81/Prism.dll": {}
@@ -5846,10 +5846,10 @@
           "lib/wpa81/Prism.dll": {}
         }
       },
-      "Prism.Forms/6.3.0-pre2": {
+      "Prism.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "6.3.0-pre2",
+          "Prism.Core": "6.3.0",
           "Xamarin.Forms": "2.3.3.193"
         },
         "compile": {
@@ -5859,10 +5859,10 @@
           "lib/UAP10.0/Prism.Forms.dll": {}
         }
       },
-      "Prism.Unity.Forms/6.3.0-pre2": {
+      "Prism.Unity.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Forms": "6.3.0-pre2",
+          "Prism.Forms": "6.3.0",
           "Unity": "4.0.1",
           "Xamarin.Forms": "2.3.3.193"
         },
@@ -7670,7 +7670,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Prism.Core/6.3.0-pre2": {
+      "Prism.Core/6.3.0": {
         "type": "package",
         "compile": {
           "lib/wpa81/Prism.dll": {}
@@ -7679,10 +7679,10 @@
           "lib/wpa81/Prism.dll": {}
         }
       },
-      "Prism.Forms/6.3.0-pre2": {
+      "Prism.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "6.3.0-pre2",
+          "Prism.Core": "6.3.0",
           "Xamarin.Forms": "2.3.3.193"
         },
         "compile": {
@@ -7692,10 +7692,10 @@
           "lib/UAP10.0/Prism.Forms.dll": {}
         }
       },
-      "Prism.Unity.Forms/6.3.0-pre2": {
+      "Prism.Unity.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Forms": "6.3.0-pre2",
+          "Prism.Forms": "6.3.0",
           "Unity": "4.0.1",
           "Xamarin.Forms": "2.3.3.193"
         },
@@ -9467,7 +9467,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Prism.Core/6.3.0-pre2": {
+      "Prism.Core/6.3.0": {
         "type": "package",
         "compile": {
           "lib/wpa81/Prism.dll": {}
@@ -9476,10 +9476,10 @@
           "lib/wpa81/Prism.dll": {}
         }
       },
-      "Prism.Forms/6.3.0-pre2": {
+      "Prism.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "6.3.0-pre2",
+          "Prism.Core": "6.3.0",
           "Xamarin.Forms": "2.3.3.193"
         },
         "compile": {
@@ -9489,10 +9489,10 @@
           "lib/UAP10.0/Prism.Forms.dll": {}
         }
       },
-      "Prism.Unity.Forms/6.3.0-pre2": {
+      "Prism.Unity.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Forms": "6.3.0-pre2",
+          "Prism.Forms": "6.3.0",
           "Unity": "4.0.1",
           "Xamarin.Forms": "2.3.3.193"
         },
@@ -11300,7 +11300,7 @@
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Prism.Core/6.3.0-pre2": {
+      "Prism.Core/6.3.0": {
         "type": "package",
         "compile": {
           "lib/wpa81/Prism.dll": {}
@@ -11309,10 +11309,10 @@
           "lib/wpa81/Prism.dll": {}
         }
       },
-      "Prism.Forms/6.3.0-pre2": {
+      "Prism.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "6.3.0-pre2",
+          "Prism.Core": "6.3.0",
           "Xamarin.Forms": "2.3.3.193"
         },
         "compile": {
@@ -11322,10 +11322,10 @@
           "lib/UAP10.0/Prism.Forms.dll": {}
         }
       },
-      "Prism.Unity.Forms/6.3.0-pre2": {
+      "Prism.Unity.Forms/6.3.0": {
         "type": "package",
         "dependencies": {
-          "Prism.Forms": "6.3.0-pre2",
+          "Prism.Forms": "6.3.0",
           "Unity": "4.0.1",
           "Xamarin.Forms": "2.3.3.193"
         },
@@ -13484,10 +13484,10 @@
         "tools/install.ps1"
       ]
     },
-    "Prism.Core/6.3.0-pre2": {
-      "sha512": "iOAJ9Nnf/aqc/k3FgLFQGb5qkrMo38OMuTXzyIdadjP2hgCLNm4aEkkBzT7Tmoe0FAESomGZuccxjlH0N99V/g==",
+    "Prism.Core/6.3.0": {
+      "sha512": "8KKRF/1Hx76dXFrYb3XUbkGFWTZjjI99DTGcPt5/aGghb3iYBscxiT4WDVlGmUpfqw7QS/jDI2BGs5ZsAy8XVA==",
       "type": "package",
-      "path": "prism.core/6.3.0-pre2",
+      "path": "prism.core/6.3.0",
       "files": [
         "lib/MonoAndroid10/Prism.dll",
         "lib/MonoAndroid10/Prism.xml",
@@ -13505,14 +13505,14 @@
         "lib/wp81/Prism.xml",
         "lib/wpa81/Prism.dll",
         "lib/wpa81/Prism.xml",
-        "prism.core.6.3.0-pre2.nupkg.sha512",
+        "prism.core.6.3.0.nupkg.sha512",
         "prism.core.nuspec"
       ]
     },
-    "Prism.Forms/6.3.0-pre2": {
-      "sha512": "q0Bgi3/iKjzOIyetsvIJ8jz31tvinr2QkSyqHBUqF31oKVk2hmE/YlhgHysoKeak0QOJZE/hPFgdCSyk7NtpXw==",
+    "Prism.Forms/6.3.0": {
+      "sha512": "jti3t5G8/Gl3EDSvBVvJEyaeuLuV918vsqyfCkDEibD3A4DE8X96M2kqVq7aCwTuuZan7Zln1lpJ20i+JsoCcQ==",
       "type": "package",
-      "path": "prism.forms/6.3.0-pre2",
+      "path": "prism.forms/6.3.0",
       "files": [
         "lib/MonoAndroid1.0/Prism.Forms.dll",
         "lib/MonoAndroid1.0/Prism.Forms.xml",
@@ -13530,14 +13530,14 @@
         "lib/Xamarin.iOS1.0/Prism.Forms.xml",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Prism.Forms.dll",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Prism.Forms.xml",
-        "prism.forms.6.3.0-pre2.nupkg.sha512",
+        "prism.forms.6.3.0.nupkg.sha512",
         "prism.forms.nuspec"
       ]
     },
-    "Prism.Unity.Forms/6.3.0-pre2": {
-      "sha512": "RpDb2G8ZoqozwUbnT3fmEbe0kOBjV5iJhSyZHYJZmUQCDibkGib5iuSahJQCvHuzD6+T1J9EIt1waItz8UOAkQ==",
+    "Prism.Unity.Forms/6.3.0": {
+      "sha512": "8NxMcKxye0GqVSnqBGpntcvI5Xt/dlu+yB5Bju1CgjAQy5l76aTucV9rXnMtuu+81t4xB+SARKzmED8v+X7W5Q==",
       "type": "package",
-      "path": "prism.unity.forms/6.3.0-pre2",
+      "path": "prism.unity.forms/6.3.0",
       "files": [
         "lib/MonoAndroid1.0/Prism.Unity.Forms.dll",
         "lib/MonoAndroid1.0/Prism.Unity.Forms.dll.config",
@@ -13563,7 +13563,7 @@
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Prism.Unity.Forms.dll",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Prism.Unity.Forms.dll.config",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Prism.Unity.Forms.xml",
-        "prism.unity.forms.6.3.0-pre2.nupkg.sha512",
+        "prism.unity.forms.6.3.0.nupkg.sha512",
         "prism.unity.forms.nuspec"
       ]
     },
@@ -16545,7 +16545,7 @@
       "CommonServiceLocator >= 1.3.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.1.0",
       "Newtonsoft.Json >= 9.0.1",
-      "Prism.Unity.Forms >= 6.3.0-pre2",
+      "Prism.Unity.Forms >= 6.3.0",
       "Unity >= 4.0.1",
       "Xamarin.Forms >= 2.3.3.193"
     ],
@@ -16575,7 +16575,7 @@
       "CommonServiceLocator": "1.3.0",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
       "Newtonsoft.Json": "9.0.1",
-      "Prism.Unity.Forms": "6.3.0-pre2",
+      "Prism.Unity.Forms": "[6.3.0, )",
       "Unity": "4.0.1",
       "Xamarin.Forms": "2.3.3.193"
     },
