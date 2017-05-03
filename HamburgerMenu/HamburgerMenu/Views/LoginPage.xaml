@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}"
+    x:Class="HamburgerMenu.Views.LoginPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Entry">
+                    <Setter Property="Margin" Value="40,10" />
+                </Style>
+            </ResourceDictionary>
+        </Grid.Resources>
+
+        <StackLayout Grid.Row="1" VerticalOptions="FillAndExpand">
+            <Entry Text="{Binding UserName}" Placeholder="Enter the username" VerticalOptions="EndAndExpand" />
+            <Entry Text="{Binding Password}" IsPassword="true" Placeholder="Did you read the code???" VerticalOptions="StartAndExpand" />
+            <Button Text="Submit" Command="{Binding LoginCommand}" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
