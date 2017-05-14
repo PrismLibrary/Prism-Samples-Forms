@@ -6,6 +6,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.userspecs
+*.droidres
 
 # Build results
 [Dd]ebug/
