@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{AF5CEEF4-EEE1-4C6A-8FED-4FE1435049A3}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UsingEventAggregator Status">
+    <Files>
+      <File FileName="UsingEventAggregator Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.UsingEventAggregator.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.22F2E4E3-5954-43B3-B75B-4A55F0FB0379" />
+  <MonoDevelop.Ide.ItemProperties.UsingEventAggregator.Droid PreferredExecutionTarget="Android.Pixel_API_25" />
+  <MultiItemStartupConfigurations />
+</Properties>
