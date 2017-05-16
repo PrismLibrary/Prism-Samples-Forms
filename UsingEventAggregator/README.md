@@ -4,7 +4,9 @@
 #### Named Events
 Custom event with primitive payload
 
-`public class IsFunChangedEvent : PubSubEvent<bool> { }`
+```csharp
+public class IsFunChangedEvent : PubSubEvent<bool> { }
+```
 
 ##### Subcribe
 
