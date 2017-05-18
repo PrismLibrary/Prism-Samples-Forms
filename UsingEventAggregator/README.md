@@ -62,39 +62,22 @@ void IsFunChanged(bool arg)
     // Do something with the payload
 }
 ```
-## Platform Subscriptions
+### Platform Subscriptions
 To subscribe to an event published in Xamarin.Forms app at the platform level, resolve the `IEventAggregator` from the Xamarin.Forms.App() instance before loading it.
 
-## Usage
 ### iOS
-In `FinishedLaunching()` method of `AppDelegate.cs`
+After initializing the Xamarin.Forms app in `FinishedLaunching()` method of `AppDelegate.cs`,
 ```csharp
-. . .
 var application = new App (new iOSInitializer ());
-
 var ea = application.Container.Resolve<IEventAggregator> ().GetEvent<NativeEvent>().Subscribe(OnNameChangedEvent);
-
 LoadApplication (application);
-. . .
-private void OnNameChangedEvent(NativeEventArgs args)
-{
-    var alertView = new UIAlertView {
-        Title = "Native Alert",
-        Message = $"Hi {args.Message}, from iOS"
-    };
-    alertView.AddButton ("OK");
-    alertView.Show ();
-}
-```
-
-Event handler,
-```csharp
-void NameChanged(string name) { }
 ```
 
 ### Android
 ```csharp
-_eventAggregator.GetEvent<GenericEvent<string>> ().Subscribe (NameChanged);
+var application = new App (new AndroidInitializer ());
+var ea = application.Container.Resolve<IEventAggregator> ().GetEvent<NativeEvent> ().Subscribe (OnNameChangedEvent);
+LoadApplication (application);
 ```
 
 Event handler,
