@@ -74,29 +74,17 @@ LoadApplication (application);
 ```
 
 ### Android
+After initializing the Xamarin.Forms app in `OnCreate()` method of `MainActivity.cs`,
 ```csharp
 var application = new App (new AndroidInitializer ());
 var ea = application.Container.Resolve<IEventAggregator> ().GetEvent<NativeEvent> ().Subscribe (OnNameChangedEvent);
 LoadApplication (application);
 ```
 
-Event handler,
-```csharp
-void NameChanged(string name) { }
-```
-
 ### UWP
+After initializing the Xamarin.Forms app in `OnLaunched()` method of native App.xaml.cs, subsribe in the contructor of `MainPage.xaml.cs`,
 ```csharp
-_eventAggregator.GetEvent<GenericEvent<string>> ().Subscribe (NameChanged);
+var application = new UsingEventAggregator.App(new UwpInitialer());
+var ea = application.Container.Resolve<IEventAggregator>().GetEvent<NativeEvent>().Subscribe(OnNativeEvent);
+LoadApplication(application);
 ```
-
-Event handler,
-```csharp
-void NameChanged(string name) { }
-```
-
-## Publishing Events
-```csharp
-
-```
-
