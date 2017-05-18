@@ -63,7 +63,7 @@ void IsFunChanged(bool arg)
 }
 ```
 ### Platform Subscriptions
-To subscribe to an event published in Xamarin.Forms app at the platform level, resolve the `IEventAggregator` from the Xamarin.Forms.App() instance before loading it.
+To subscribe to an event published in Xamarin.Forms app at the platform level, resolve the `IEventAggregator` from the `Xamarin.Forms.App()` instance before loading it.
 
 ### iOS
 After initializing the Xamarin.Forms app in `FinishedLaunching()` method of `AppDelegate.cs`,
