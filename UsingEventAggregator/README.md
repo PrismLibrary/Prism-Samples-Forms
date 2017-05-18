@@ -23,7 +23,7 @@ void IsFunChanged(bool arg)
 ```
 
 ## Creating Events with Custom Payload
-To create a custom payload for your event, simply extend `System.EventArgs`
+To create a custom payload for your event, simply extend `System.EventArgs` and set as payload for custom event
 ```csharp
 public class NativeEventArgs : EventArgs
 {
@@ -82,7 +82,7 @@ LoadApplication (application);
 ```
 
 ### UWP
-After initializing the Xamarin.Forms app in `OnLaunched()` method of native App.xaml.cs, subsribe in the contructor of `MainPage.xaml.cs`,
+After initializing the Xamarin.Forms app in `OnLaunched()` method of native `App.xaml.cs`, subsribe in the contructor of `MainPage.xaml.cs`,
 ```csharp
 var application = new UsingEventAggregator.App(new UwpInitialer());
 var ea = application.Container.Resolve<IEventAggregator>().GetEvent<NativeEvent>().Subscribe(OnNativeEvent);
