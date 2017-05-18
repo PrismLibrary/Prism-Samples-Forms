@@ -8,46 +8,22 @@ To create an event, simply extend `Prism.Events.PubSubEvent<T>` with a T payload
 public class IsFunChangedEvent : PubSubEvent<bool> { }
 ```
 ### Usage
-#### Subcribe
-
-```csharp
-_eventAggregator.GetEvent<IsFunChangedEvent> ().Subscribe (IsFunChanged);
-
-void IsFunChanged(bool arg) { }
-```
-
 #### Publish
 ```csharp
 _eventAggregator.GetEvent<IsFunChangedEvent> ().Publish (true);
 ```
+#### Subcribe
+```csharp
+_eventAggregator.GetEvent<IsFunChangedEvent> ().Subscribe (IsFunChanged);
+
+void IsFunChanged(bool arg) 
+{
+    // Do something with the payload
+}
+```
 
 ## Creating Events with Custom Payload
-Custom event with generic payload
-
-```csharp
-public class GenericEvent<T> : PubSubEvent<T> { }
-```
-### Usage
-##### Subcribe
-
-```csharp
-_eventAggregator.GetEvent<GenericEvent<string>> ().Subscribe (NameChanged);
-```
-
-Event handler,
-```csharp
-void NameChanged(string name) { }
-```
-
-##### Publish
-```csharp
-_eventAggregator.GetEvent<GenericEvent<string>> ().Publish ("John Doe");
-```
-
-## Subscribing To Events
-Custom event with custom payload
-
-Custom payload,
+To create a custom payload for your event, simply extend `System.EventArgs`
 ```csharp
 public class NativeEventArgs : EventArgs
 {
@@ -57,13 +33,58 @@ public class NativeEventArgs : EventArgs
         Message = message;
     }
 }
-```
-```csharp
+
 public class NativeEvent : PubSubEvent<NativeEventArgs> { }
 ```
-### iOS
+### Usage
+#### Publish
 ```csharp
-_eventAggregator.GetEvent<GenericEvent<string>> ().Subscribe (NameChanged);
+_eventAggregator.GetEvent<NativeEvent> ().Publish (new NativeEventArgs("Xamarin.Forms"));
+```
+
+#### Subcribe
+```csharp
+_eventAggregator.GetEvent<NativeEvent>().Subscribe(OnNameChangedEvent);
+
+void OnNameChangedEvent(NativeEventArgs args) 
+{
+    Message = args.Message;
+}
+```
+
+## Subscribing To Events
+As mentioned avobe, subscribing to events is quite simple inside Xamarin.Forms app.
+```csharp
+_eventAggregator.GetEvent<IsFunChangedEvent> ().Subscribe (IsFunChanged);
+
+void IsFunChanged(bool arg) 
+{
+    // Do something with the payload
+}
+```
+## Platform Subscriptions
+To subscribe to an event published in Xamarin.Forms app at the platform level, resolve the `IEventAggregator` from the Xamarin.Forms.App() instance before loading it.
+
+## Usage
+### iOS
+In `FinishedLaunching()` method of `AppDelegate.cs`
+```csharp
+. . .
+var application = new App (new iOSInitializer ());
+
+var ea = application.Container.Resolve<IEventAggregator> ().GetEvent<NativeEvent>().Subscribe(OnNameChangedEvent);
+
+LoadApplication (application);
+. . .
+private void OnNameChangedEvent(NativeEventArgs args)
+{
+    var alertView = new UIAlertView {
+        Title = "Native Alert",
+        Message = $"Hi {args.Message}, from iOS"
+    };
+    alertView.AddButton ("OK");
+    alertView.Show ();
+}
 ```
 
 Event handler,
@@ -93,6 +114,6 @@ void NameChanged(string name) { }
 
 ## Publishing Events
 ```csharp
-_eventAggregator.GetEvent<NativeEvent> ().Publish (new NativeEventArgs("Xamarin.Forms"));
+
 ```
 
