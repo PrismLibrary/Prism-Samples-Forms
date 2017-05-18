@@ -1,14 +1,15 @@
 # Using EventAggregator
+In this sample, we will see how to create custom events, how to pass custom payload in events, how to subscribe to events both inside Xamarin.Forms app and on the native platform, and how to publish events all using Prism's EventAggregator.
 
-### Usage
-#### Named Events
+## Creating Events
 Custom event with primitive payload
 
 ```csharp
 public class IsFunChangedEvent : PubSubEvent<bool> { }
 ```
+### Usage
 
-##### Subcribe
+#### Subcribe
 
 ```csharp
 _eventAggregator.GetEvent<IsFunChangedEvent> ().Subscribe (IsFunChanged);
@@ -19,18 +20,18 @@ Event handler,
 void IsFunChanged(bool arg) { }
 ```
 
-##### Publish
+#### Publish
 ```csharp
 _eventAggregator.GetEvent<IsFunChangedEvent> ().Publish (true);
 ```
 
-#### Generic Events
+## Creating Events with Custom Payload
 Custom event with generic payload
 
 ```csharp
 public class GenericEvent<T> : PubSubEvent<T> { }
 ```
-
+### Usage
 ##### Subcribe
 
 ```csharp
@@ -47,7 +48,7 @@ void NameChanged(string name) { }
 _eventAggregator.GetEvent<GenericEvent<string>> ().Publish ("John Doe");
 ```
 
-#### Native Events
+## Subscribing To Events
 Custom event with custom payload
 
 Custom payload,
@@ -64,10 +65,7 @@ public class NativeEventArgs : EventArgs
 ```csharp
 public class NativeEvent : PubSubEvent<NativeEventArgs> { }
 ```
-
-##### Subcribe
-
-###### iOS
+### iOS
 ```csharp
 _eventAggregator.GetEvent<GenericEvent<string>> ().Subscribe (NameChanged);
 ```
@@ -77,7 +75,7 @@ Event handler,
 void NameChanged(string name) { }
 ```
 
-###### Android
+### Android
 ```csharp
 _eventAggregator.GetEvent<GenericEvent<string>> ().Subscribe (NameChanged);
 ```
@@ -87,7 +85,7 @@ Event handler,
 void NameChanged(string name) { }
 ```
 
-###### UWP
+### UWP
 ```csharp
 _eventAggregator.GetEvent<GenericEvent<string>> ().Subscribe (NameChanged);
 ```
@@ -97,7 +95,7 @@ Event handler,
 void NameChanged(string name) { }
 ```
 
-##### Publish
+## Publishing Events
 ```csharp
 _eventAggregator.GetEvent<NativeEvent> ().Publish (new NativeEventArgs("Xamarin.Forms"));
 ```
