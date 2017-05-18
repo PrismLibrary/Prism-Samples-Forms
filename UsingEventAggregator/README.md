@@ -2,21 +2,17 @@
 In this sample, we will see how to create custom events, how to pass custom payload in events, how to subscribe to events both inside Xamarin.Forms app and on the native platform, and how to publish events all using Prism's EventAggregator.
 
 ## Creating Events
-Custom event with primitive payload
+To create an event, simply extend `Prism.Events.PubSubEvent<T>` with a T payload.
 
 ```csharp
 public class IsFunChangedEvent : PubSubEvent<bool> { }
 ```
 ### Usage
-
 #### Subcribe
 
 ```csharp
 _eventAggregator.GetEvent<IsFunChangedEvent> ().Subscribe (IsFunChanged);
-```
 
-Event handler,
-```csharp
 void IsFunChanged(bool arg) { }
 ```
 
