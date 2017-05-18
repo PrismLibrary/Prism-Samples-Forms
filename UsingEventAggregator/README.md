@@ -23,7 +23,7 @@ void IsFunChanged(bool arg)
 ```
 
 ## Creating Events with Custom Payload
-To create a custom payload for your event, simply extend `System.EventArgs` and set as payload for custom event
+To create a custom payload for your event, simply extend `System.EventArgs` and set as payload for custom event,
 ```csharp
 public class NativeEventArgs : EventArgs
 {
