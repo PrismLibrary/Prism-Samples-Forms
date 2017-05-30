@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Prism.Unity;
+﻿using Prism.Unity;
 using UsingPageDialogService.Views;
-using Xamarin.Forms;
 
 namespace UsingPageDialogService
 {
-    public class App : PrismApplication
+    public partial class App : PrismApplication
     {
-        protected override void OnInitialized() 
+        public App(IPlatformInitializer initializer = null) : base(initializer) { }
+
+        protected override void OnInitialized()
         {
+            InitializeComponent();
             NavigationService.NavigateAsync("MainPage");
         }
 
