@@ -9,7 +9,10 @@ namespace HamburgerMenu
 {
     public partial class App : PrismApplication
     {
-        public App(IPlatformInitializer initializer = null) : base(initializer) { }
+        public App()
+        {
+            InitializeComponent();
+        }
 
         public static new App Current
         {
@@ -23,7 +26,6 @@ namespace HamburgerMenu
 
         protected override void OnInitialized()
         {
-            InitializeComponent();
             NavigationService.NavigateAsync( "Navigation/Login" );
         }
 

@@ -8,14 +8,7 @@ namespace HamburgerMenu.UWP
         public MainPage()
         {
             this.InitializeComponent();
-            LoadApplication(new HamburgerMenu.App(new UwpInitializer()));
-        }
-    }
-    public class UwpInitializer : IPlatformInitializer
-    {
-        public void RegisterTypes(IContainer container)
-        {
-            
+            LoadApplication(new HamburgerMenu.App());
         }
     }
 }
