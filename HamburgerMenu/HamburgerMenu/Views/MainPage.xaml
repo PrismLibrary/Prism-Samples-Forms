@@ -2,7 +2,9 @@
 <MasterDetailPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="HamburgerMenu.Views.MainPage">
+    x:Class="HamburgerMenu.Views.MainPage"
+    MasterBehavior="Popover">
+    <!-- Unless MasterBehavior is defined, MasterBehavior defaults to different values depending on platform. Here we explicitly define it to prevent this.  -->
     <MasterDetailPage.Master>
         <!-- Hamburger Menu Secret Sauce... Add an Icon!!!! Make sure it's in your resources for your Platform Project -->
         <NavigationPage Title="Required Foo" Icon="hamburger.png">
