@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-            prism:ViewModelLocator.AutowireViewModel="True"
-			      xmlns:local="clr-namespace:ContosoCookbook.Views;assembly=ContosoCookbook"
-            xmlns:c="clr-namespace:ContosoCookbook.Converters;assembly=ContosoCookbook"
+            xmlns:local="using:ContosoCookbook.Views"
+            xmlns:converters="using:ContosoCookbook.Converters"
             x:Class="ContosoCookbook.Views.MainPage"
             ItemsSource="{Binding RecipeGroups}"
             Title="Contoso Cookbook">
 
   <TabbedPage.Resources>
     <ResourceDictionary>
-      <c:LocalImagePathConverter x:Key="LocalImagePathConverter" />
+      <converters:LocalImagePathConverter x:Key="LocalImagePathConverter" />
     </ResourceDictionary>
   </TabbedPage.Resources>
   
@@ -20,7 +18,11 @@
       <ContentPage Title="{Binding Title}">
         <ListView ItemsSource="{Binding Recipes}" ItemTapped="OnItemTapped">
           <ListView.RowHeight>
-            <OnPlatform x:TypeArguments="x:Int32" iOS="128" Android="136" WinPhone="144" />
+            <OnPlatform x:TypeArguments="x:Int32">
+              <On Platform="iOS" Value="128"/>
+              <On Platform="Android" Value="136"/>
+              <On Platform="UWP" Value="144"/>
+            </OnPlatform>
           </ListView.RowHeight>
           <ListView.ItemTemplate>
             <DataTemplate>
@@ -29,7 +31,11 @@
                   <Grid.ColumnDefinitions>
                     <ColumnDefinition>
                       <ColumnDefinition.Width>
-                        <OnPlatform x:TypeArguments="GridLength" iOS="120" Android="144" WinPhone="144" />
+                        <OnPlatform x:TypeArguments="GridLength">
+                          <On Platform="iOS" Value="120"/>
+                          <On Platform="Android" Value="144"/>
+                          <On Platform="UWP" Value="144"/>
+                        </OnPlatform>
                       </ColumnDefinition.Width>
                     </ColumnDefinition>
                     <ColumnDefinition Width="*" />
@@ -37,7 +43,11 @@
                   <Image Source="{Binding ImagePath, Converter={StaticResource LocalImagePathConverter}}" />
                   <Grid Grid.Column="1">
                     <Grid.Padding>
-                      <OnPlatform x:TypeArguments="Thickness" iOS="4,8,0,8" Android="8,2,0,4" WinPhone="12,-2,0,-4" />
+                      <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="4,8,0,8"/>
+                        <On Platform="Android" Value="8,2,0,4"/>
+                        <On Platform="UWP" Value="12,-2,0,-4"/>
+                      </OnPlatform>
                     </Grid.Padding>
                     <Label Text="{Binding Subtitle}" FontSize="Large" LineBreakMode="WordWrap" />
                   </Grid>
