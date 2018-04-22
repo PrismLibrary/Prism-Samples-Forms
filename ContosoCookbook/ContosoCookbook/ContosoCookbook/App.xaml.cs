@@ -1,4 +1,6 @@
-﻿using Microsoft.Practices.Unity;
+﻿using Unity;
+using Prism;
+using Prism.Ioc;
 using Prism.Unity;
 using Xamarin.Forms;
 using ContosoCookbook.Views;
@@ -16,13 +18,13 @@ namespace ContosoCookbook
             NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
-        protected override void RegisterTypes()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            Container.RegisterType<IRecipeService, RecipeService>(new ContainerControlledLifetimeManager());
+            containerRegistry.RegisterSingleton<IRecipeService, RecipeService>();
 
-            Container.RegisterTypeForNavigation<NavigationPage>();
-            Container.RegisterTypeForNavigation<MainPage>();
-            Container.RegisterTypeForNavigation<RecipePage>();
+            containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<RecipePage>();
         }
     }
 }
