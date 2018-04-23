@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:local="using:ContosoCookbook.Views"
+            xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
             xmlns:converters="using:ContosoCookbook.Converters"
-            x:Class="ContosoCookbook.Views.MainPage"
+            xmlns:ioc="clr-namespace:Prism.Ioc;assembly=Prism.Forms"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+            ios:Page.UseSafeArea="true"
             ItemsSource="{Binding RecipeGroups}"
-            Title="Contoso Cookbook">
+            Title="Contoso Cookbook"
+            x:Name="mainPage"
+            x:Class="ContosoCookbook.Views.MainPage">
 
   <TabbedPage.Resources>
     <ResourceDictionary>
-      <converters:LocalImagePathConverter x:Key="LocalImagePathConverter" />
+      <ioc:ContainerProvider x:TypeArguments="converters:LocalImagePathConverter" x:Key="LocalImagePathConverter" />
     </ResourceDictionary>
   </TabbedPage.Resources>
   
   <TabbedPage.ItemTemplate>
     <DataTemplate>
       <ContentPage Title="{Binding Title}">
-        <ListView ItemsSource="{Binding Recipes}" ItemTapped="OnItemTapped">
+        <ListView ItemsSource="{Binding Recipes}">
+          <ListView.Behaviors>
+            <behaviors:EventToCommandBehavior EventName="ItemTapped"
+                                              EventArgsParameterPath="Item"
+                                              Command="{Binding BindingContext.RecipeSelectedCommand,Source={x:Reference mainPage}}" />
+          </ListView.Behaviors>
           <ListView.RowHeight>
             <OnPlatform x:TypeArguments="x:Int32">
               <On Platform="iOS" Value="128"/>

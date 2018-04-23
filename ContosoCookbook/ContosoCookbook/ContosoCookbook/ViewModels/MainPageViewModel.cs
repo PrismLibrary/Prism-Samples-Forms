@@ -37,7 +37,7 @@ namespace ContosoCookbook.ViewModels
             await _navigationService.NavigateAsync("RecipePage", p);
         }
 
-        public override async void OnNavigatingTo(NavigationParameters parameters)
+        public override async void OnNavigatingTo(INavigationParameters parameters)
         {
             if (RecipeGroups == null)
                 RecipeGroups = new ObservableCollection<RecipeGroup>(await _recipeService.GetRecipeGroups());
