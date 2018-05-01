@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             prism:ViewModelLocator.AutowireViewModel="True"
-			       xmlns:local="clr-namespace:ContosoCookbook.Views;assembly=ContosoCookbook"
-             xmlns:c="clr-namespace:ContosoCookbook.Converters;assembly=ContosoCookbook"
+             xmlns:ioc="clr-namespace:Prism.Ioc;assembly=Prism.Forms"
+             xmlns:converters="clr-namespace:ContosoCookbook.Converters;assembly=ContosoCookbook"
              x:Class="ContosoCookbook.Views.RecipePage"
              Title="{Binding Recipe.Title}">
 
   <ContentPage.Resources>
     <ResourceDictionary>
-      <c:ListConverter x:Key="ListConverter" />
-      <c:LocalImagePathConverter x:Key="LocalImagePathConverter" />
+      <converters:ListConverter x:Key="ListConverter" />
+      <ioc:ContainerProvider x:TypeArguments="converters:LocalImagePathConverter" x:Key="LocalImagePathConverter" />
       <Color x:Key="CaptionColor">#FFFF8300</Color>
     </ResourceDictionary>
   </ContentPage.Resources>
@@ -24,7 +22,11 @@
 
     <Label Text="{Binding Recipe.Title}" FontSize="Large" LineBreakMode="WordWrap">
       <Label.IsVisible>
-        <OnPlatform x:TypeArguments="x:Boolean" iOS="False" Android="False" WinPhone="True" />
+        <OnPlatform x:TypeArguments="x:Boolean">
+          <On Platform="iOS" Value="False"/>
+          <On Platform="Android" Value="False"/>
+          <On Platform="UWP" Value="True"/>
+        </OnPlatform>
       </Label.IsVisible>
     </Label>
 
@@ -47,7 +49,7 @@
         </StackLayout>
       </StackLayout>
     </ScrollView>
-  </Grid>    
+  </Grid>
 
 </ContentPage>
 

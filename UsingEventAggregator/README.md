@@ -53,7 +53,7 @@ void OnNameChangedEvent(NativeEventArgs args)
 ```
 
 ## Subscribing To Events
-As mentioned avobe, subscribing to events is quite simple inside Xamarin.Forms app.
+As mentioned above, subscribing to events is quite simple inside Xamarin.Forms app.
 ```csharp
 _eventAggregator.GetEvent<IsFunChangedEvent> ().Subscribe (IsFunChanged);
 

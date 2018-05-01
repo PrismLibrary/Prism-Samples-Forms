@@ -8,34 +8,36 @@ namespace ContosoCookbook.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        readonly INavigationService _navigationService;
-        IRecipeService _recipeService;
-
-        DelegateCommand<Recipe> _recipeSelectedCommand;
-        public DelegateCommand<Recipe> RecipeSelectedCommand => _recipeSelectedCommand != null ? _recipeSelectedCommand : (_recipeSelectedCommand = new DelegateCommand<Recipe>(RecipeSelected));
-
-        private ObservableCollection<RecipeGroup> _recipeGroups;
-        public ObservableCollection<RecipeGroup> RecipeGroups
-        {
-            get { return _recipeGroups; }
-            set { SetProperty(ref _recipeGroups, value); }
-        }
+        private INavigationService _navigationService { get; }
+        private IRecipeService _recipeService { get; }
 
         public MainPageViewModel(INavigationService navigationService, IRecipeService recipeService)
         {
             _navigationService = navigationService;
             _recipeService = recipeService;
+            RecipeSelectedCommand = new DelegateCommand<Recipe>(RecipeSelected);
+        }
+
+        public DelegateCommand<Recipe> RecipeSelectedCommand { get; }
+
+        private ObservableCollection<RecipeGroup> _recipeGroups;
+        public ObservableCollection<RecipeGroup> RecipeGroups
+        {
+            get => _recipeGroups;
+            set => SetProperty(ref _recipeGroups, value);
         }
 
         private async void RecipeSelected(Recipe recipe)
         {
-            var p = new NavigationParameters();
-            p.Add("recipe", recipe);
+            var p = new NavigationParameters
+            {
+                { "recipe", recipe }
+            };
 
             await _navigationService.NavigateAsync("RecipePage", p);
         }
 
-        public async override void OnNavigatedTo(NavigationParameters parameters)
+        public override async void OnNavigatingTo(INavigationParameters parameters)
         {
             if (RecipeGroups == null)
                 RecipeGroups = new ObservableCollection<RecipeGroup>(await _recipeService.GetRecipeGroups());

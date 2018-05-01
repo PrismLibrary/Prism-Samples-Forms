@@ -15,7 +15,7 @@ namespace UsingDependencyService.iOS.Services
 
             var speechUtterance = new AVSpeechUtterance(text)
             {
-                Rate = AVSpeechUtterance.MaximumSpeechRate / 4,
+                Rate = AVSpeechUtterance.MaximumSpeechRate / 2.5f,
                 Voice = AVSpeechSynthesisVoice.FromLanguage("en-US"),
                 Volume = 0.5f,
                 PitchMultiplier = 1.0f

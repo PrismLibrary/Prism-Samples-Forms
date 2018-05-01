@@ -9,8 +9,8 @@ namespace ContosoCookbook.ViewModels
         private Recipe _recipe;
         public Recipe Recipe
         {
-            get { return _recipe; }
-            set { SetProperty(ref _recipe, value); }
+            get => _recipe;
+            set => SetProperty(ref _recipe, value);
         }
 
         public RecipePageViewModel()
@@ -18,10 +18,10 @@ namespace ContosoCookbook.ViewModels
 
         }
 
-        public override void OnNavigatingTo(NavigationParameters parameters)
+        public override void OnNavigatingTo(INavigationParameters parameters)
         {
             if (parameters.ContainsKey("recipe"))
-                Recipe = (Recipe)parameters["recipe"];
+                Recipe = parameters.GetValue<Recipe>("recipe");
         }
     }
 }
