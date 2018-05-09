@@ -3,6 +3,7 @@ using Prism.Navigation;
 using System.Windows.Input;
 using Prism.Events;
 using UsingEventAggregator.Models;
+using UsingEventAggregator.Views;
 
 namespace UsingEventAggregator.ViewModels
 {

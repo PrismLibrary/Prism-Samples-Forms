@@ -231,3 +231,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/.vs
+/UsingEventAggregator/.vs/UsingEventAggregator/v15/Server/sqlite3

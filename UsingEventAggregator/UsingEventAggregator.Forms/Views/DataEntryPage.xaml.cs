@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Xamarin.Forms;
 
-using Xamarin.Forms;
-
-namespace UsingEventAggregator
+namespace UsingEventAggregator.Views
 {
     public partial class DataEntryPage : ContentPage
     {

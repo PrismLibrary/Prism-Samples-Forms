@@ -1,11 +1,10 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Navigation;
 using UsingEventAggregator.Models;
 
-namespace UsingEventAggregator
+namespace UsingEventAggregator.ViewModels
 {
     public class DataEntryPageViewModel : BaseViewModel
     {

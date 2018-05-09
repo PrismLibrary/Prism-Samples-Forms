@@ -2,7 +2,7 @@
 using Prism.Mvvm;
 using Prism.Navigation;
 
-namespace UsingEventAggregator
+namespace UsingEventAggregator.ViewModels
 {
     public class BaseViewModel : BindableBase, INavigationAware, IDisposable
     {
@@ -13,11 +13,11 @@ namespace UsingEventAggregator
         	set { SetProperty (ref _title, value); }
         }
 
-        public virtual void OnNavigatedFrom (NavigationParameters parameters) { }
+        public virtual void OnNavigatedFrom (INavigationParameters parameters) { }
 
-        public virtual void OnNavigatedTo (NavigationParameters parameters) { }
+        public virtual void OnNavigatedTo (INavigationParameters parameters) { }
 
-        public virtual void OnNavigatingTo (NavigationParameters parameters) { }
+        public virtual void OnNavigatingTo (INavigationParameters parameters) { }
 
         public virtual void Dispose() { }
     }

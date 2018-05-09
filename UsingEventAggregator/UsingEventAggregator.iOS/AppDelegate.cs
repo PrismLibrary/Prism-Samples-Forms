@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
-using Microsoft.Practices.Unity;
+﻿using Foundation;
+using Prism;
 using Prism.Events;
-using Prism.Unity;
+using Prism.Ioc;
 using UIKit;
+using Unity;
 using UsingEventAggregator.Models;
 
 namespace UsingEventAggregator.iOS
@@ -50,9 +47,8 @@ namespace UsingEventAggregator.iOS
 
     public class iOSInitializer : IPlatformInitializer
     {
-        public void RegisterTypes (IUnityContainer container)
+        public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
         }
     }
 }

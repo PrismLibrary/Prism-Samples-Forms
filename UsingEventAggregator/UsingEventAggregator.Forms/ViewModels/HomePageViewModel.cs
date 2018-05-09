@@ -2,9 +2,10 @@
 using Prism.Commands;
 using Prism.Events;
 using Prism.Navigation;
+using UsingEventAggregator.Views;
 using UsingEventAggregator.Models;
 
-namespace UsingEventAggregator
+namespace UsingEventAggregator.ViewModels
 {
     public class HomePageViewModel : BaseViewModel
     {

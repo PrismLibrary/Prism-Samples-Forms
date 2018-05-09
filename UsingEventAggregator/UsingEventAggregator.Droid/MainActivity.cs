@@ -1,20 +1,15 @@
-﻿using System;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-using Prism.Unity;
-using Microsoft.Practices.Unity;
+using Android.Widget;
+using Prism;
+using Prism.Ioc;
 using Prism.Events;
 using UsingEventAggregator.Models;
 
 namespace UsingEventAggregator.Droid
 {
-    [Activity (Label = "UsingEventAggregator.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity (Label = "Using Event Aggregator", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate (Bundle bundle)
@@ -38,9 +33,8 @@ namespace UsingEventAggregator.Droid
 
     public class AndroidInitializer : IPlatformInitializer
     {
-        public void RegisterTypes (IUnityContainer container)
+        public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
         }
     }
 }
