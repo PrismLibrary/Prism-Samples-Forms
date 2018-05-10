@@ -5,7 +5,8 @@ using System.Linq;
 using Foundation;
 using UIKit;
 using Prism.Unity;
-using Microsoft.Practices.Unity;
+using Prism;
+using Prism.Ioc;
 
 namespace ContosoCookbook.iOS
 {
@@ -33,9 +34,8 @@ namespace ContosoCookbook.iOS
 
     public class iOSInitializer : IPlatformInitializer
     {
-        public void RegisterTypes(IUnityContainer container)
+        public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
         }
     }
 

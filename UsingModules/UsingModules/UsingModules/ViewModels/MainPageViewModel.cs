@@ -53,13 +53,20 @@ namespace UsingModules.ViewModels
 
         public void OnNavigatedFrom(NavigationParameters parameters)
         {
-
+            // Called when the implementer has been navigated away from.
         }
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
+            // Called when the implementer has been navigated to.
             if (parameters.ContainsKey("title"))
                 Title = (string)parameters["title"] + " and Prism";
+        }
+
+        public void OnNavigatingTo(NavigationParameters parameters)
+        {
+            //Called before the implementor has been navigated to - but not called when using 
+            // device hardware or software back buttons.
         }
     }
 }

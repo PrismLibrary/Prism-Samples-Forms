@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>UsingEventAggregator</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.intelliabb.usingeventaggregator</string>
+	<string>com.yourcompany.usingeventaggregator</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

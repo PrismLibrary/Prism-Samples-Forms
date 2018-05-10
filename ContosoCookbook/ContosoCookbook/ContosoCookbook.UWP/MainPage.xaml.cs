@@ -12,8 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Prism;
+using Prism.Ioc;
 using Prism.Unity;
-using Microsoft.Practices.Unity;
 
 namespace ContosoCookbook.UWP
 {
@@ -29,7 +30,7 @@ namespace ContosoCookbook.UWP
 
     public class UwpInitializer : IPlatformInitializer
     {
-        public void RegisterTypes(IUnityContainer container)
+        public void RegisterTypes(IContainerRegistry containerRegistry)
         {
 
         }

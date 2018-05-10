@@ -27,17 +27,7 @@ namespace UsingEventAggregator.ViewModels
                 _eventAggregator.GetEvent<IsFunChangedEvent> ().Publish (value);
             }
         }
-
-        private string _name;
-        public string Name 
-        {
-        	get { return _name; }
-        	set { 
-                SetProperty (ref _name, value);
-                _eventAggregator.GetEvent<GenericEvent<string>> ().Publish (value); 
-            }
-        }
-
+        
         private ICommand _submitCommand;
         public ICommand SubmitCommand => _submitCommand ?? (_submitCommand = new DelegateCommand (OnSubmitTapped));
 
