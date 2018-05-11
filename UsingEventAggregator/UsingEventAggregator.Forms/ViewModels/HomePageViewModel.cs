@@ -60,7 +60,7 @@ namespace UsingEventAggregator.ViewModels
         #endregion
 
         #region Overrides
-
+        
         public override void Dispose ()
         {
             _eventAggregator.GetEvent<IsFunChangedEvent> ().Unsubscribe (IsFunChanged);

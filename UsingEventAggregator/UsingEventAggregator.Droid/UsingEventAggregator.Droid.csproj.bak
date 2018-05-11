@@ -11,7 +11,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>UsingEventAggregator.Droid</RootNamespace>
     <AssemblyName>UsingEventAggregator.Droid</AssemblyName>
-    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>

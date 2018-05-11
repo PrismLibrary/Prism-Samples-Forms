@@ -1,9 +1,36 @@
+# EventAggregator 
+Prism offers `EventAggregator` to send and recieve events throughout your application. It provides several benefits e.g.,
+- An abstraction `IEventAggregator` to keep your code testable
+- It is Memory safe as it holds weak reference to subscriptions
+- It simplifies subcription and publishing (no need to pass sender objects, event names, etc.)
+
+It is a better alternative to Xamarin's built-in `MessagingCenter` which is a static service that makes code hard to test.
 # Using EventAggregator
 In this sample, we will see how to create custom events, how to pass custom payload in events, how to subscribe to events both inside Xamarin.Forms app and on the native platform, and how to publish events all using Prism's EventAggregator.
 
 ## Creating Events
-To create an event, simply extend `Prism.Events.PubSubEvent<T>` with a T payload.
+To create an event, simply extend `Prism.Events.PubSubEvent`,
 
+```csharp
+public class FormSubmittedEvent : PubSubEvent { }
+```
+### Usage
+#### Publish
+```csharp
+_eventAggregator.GetEvent<FormSubmittedEvent>().Publish ();
+```
+#### Subcribe
+```csharp
+_eventAggregator.GetEvent<FormSubmittedEvent> ().Subscribe (OnFormSubmitted);
+
+void OnFormSubmitted() 
+{
+    // Do something
+}
+```
+
+## Creating Events with Payload
+To create an event and send a payload/data, extend `Prism.Events.PubSubEvent<T>` with `T` payload.
 ```csharp
 public class IsFunChangedEvent : PubSubEvent<bool> { }
 ```
@@ -53,6 +80,7 @@ void OnNameChangedEvent(NativeEventArgs args)
 ```
 
 ## Subscribing To Events
+### Shared Subscriptios
 As mentioned above, subscribing to events is quite simple inside Xamarin.Forms app.
 ```csharp
 _eventAggregator.GetEvent<IsFunChangedEvent> ().Subscribe (IsFunChanged);
@@ -63,7 +91,7 @@ void IsFunChanged(bool arg)
 }
 ```
 ### Platform Subscriptions
-To subscribe to an event published in Xamarin.Forms app at the platform level, resolve the `IEventAggregator` from the `Xamarin.Forms.App()` instance before loading it.
+For events that need subscription at the platform level, resolve the `IEventAggregator` from the `Xamarin.Forms.App()` instance before loading application.
 
 ### iOS
 After initializing the Xamarin.Forms app in `FinishedLaunching()` method of `AppDelegate.cs`,

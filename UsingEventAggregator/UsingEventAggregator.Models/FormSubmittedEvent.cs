@@ -2,5 +2,5 @@
 
 namespace UsingEventAggregator.Models
 {
-    class ProfileLoadedEvent : PubSubEvent { }
+    public class FormSubmittedEvent : PubSubEvent { }
 }

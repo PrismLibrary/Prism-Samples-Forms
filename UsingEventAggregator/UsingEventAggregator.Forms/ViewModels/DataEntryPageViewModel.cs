@@ -33,6 +33,7 @@ namespace UsingEventAggregator.ViewModels
 
         private void OnSubmitTapped()
         {
+            _eventAggregator.GetEvent<FormSubmittedEvent>()?.Publish();
             _navigationService.GoBackAsync ();
         }
     }

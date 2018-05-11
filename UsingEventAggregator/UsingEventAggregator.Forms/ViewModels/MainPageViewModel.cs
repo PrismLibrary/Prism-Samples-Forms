@@ -4,6 +4,8 @@ using System.Windows.Input;
 using Prism.Events;
 using UsingEventAggregator.Models;
 using UsingEventAggregator.Views;
+using System;
+using System.Diagnostics;
 
 namespace UsingEventAggregator.ViewModels
 {
@@ -16,9 +18,14 @@ namespace UsingEventAggregator.ViewModels
         {
             _navigationService = navigationService;
             _eventAggregator = eventAggregator;
-
+            _eventAggregator.GetEvent<FormSubmittedEvent>()?.Subscribe(OnFormSubmitted);
 
             Title = "Prism.Forms EventAggregator";
+        }
+
+        private void OnFormSubmitted()
+        {
+            Debug.WriteLine("Form submitted. Do something...");
         }
 
         #region Commands
