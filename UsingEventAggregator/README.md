@@ -1,7 +1,7 @@
 # EventAggregator 
 Prism offers `EventAggregator` to send and recieve events throughout your application. It provides several benefits e.g.,
 - An abstraction `IEventAggregator` to keep your code testable
-- It is Memory safe as it holds weak reference to subscriptions
+- It is memory safe as it holds weak reference to subscriptions
 - It simplifies subcription and publishing (no need to pass sender objects, event names, etc.)
 
 It is a better alternative to Xamarin's built-in `MessagingCenter` which is a static service that makes code hard to test.
@@ -51,6 +51,8 @@ void IsFunChanged(bool arg)
 
 ## Creating Events with Custom Payload
 To create a custom payload for your event, simply extend `System.EventArgs` and set as payload for custom event,
+
+Define your custom payload,
 ```csharp
 public class NativeEventArgs : EventArgs
 {
@@ -60,7 +62,9 @@ public class NativeEventArgs : EventArgs
         Message = message;
     }
 }
-
+```
+Create your event with custom payload,
+```csharp
 public class NativeEvent : PubSubEvent<NativeEventArgs> { }
 ```
 ### Usage
