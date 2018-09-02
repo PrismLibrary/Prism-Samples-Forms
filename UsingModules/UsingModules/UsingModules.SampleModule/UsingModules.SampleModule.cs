@@ -1,6 +1,5 @@
-﻿using Microsoft.Practices.Unity;
+﻿using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Unity;
 using UsingModules.SampleModule.Views;
 using Xamarin.Forms.Xaml;
 
@@ -9,15 +8,13 @@ namespace UsingModules.SampleModule
 {
     public class SampleModule : IModule
     {
-        private readonly IUnityContainer _unityContainer;
-        public SampleModule(IUnityContainer unityContainer)
+        public void OnInitialized(IContainerProvider containerProvider)
         {
-            _unityContainer = unityContainer;
         }
 
-        public void Initialize()
+        public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            _unityContainer.RegisterTypeForNavigation<SamplePage>();
+            containerRegistry.RegisterForNavigation<SamplePage>();
         }
     }
 }

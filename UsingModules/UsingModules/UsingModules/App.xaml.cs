@@ -1,4 +1,6 @@
 ﻿using System;
+using Prism;
+using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Unity;
 using UsingModules.Views;
@@ -19,22 +21,15 @@ namespace UsingModules
             NavigationService.NavigateAsync($"{navigationPage}?title=Hello%20from%20Xamarin.Forms");
         }
 
-        protected override void RegisterTypes()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            Container.RegisterTypeForNavigation<MainNavigationPage>();
-            Container.RegisterTypeForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<MainNavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage>();
         }
 
-        protected override void ConfigureModuleCatalog()
+        protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            Type sampleModuleType = typeof(SampleModule.SampleModule);
-            ModuleCatalog.AddModule(
-              new ModuleInfo()
-              {
-                  ModuleName = sampleModuleType.Name,
-                  ModuleType = sampleModuleType,
-                  InitializationMode = InitializationMode.OnDemand
-              });
+            moduleCatalog.AddModule<SampleModule.SampleModule>(InitializationMode.OnDemand);
         }
     }
 }

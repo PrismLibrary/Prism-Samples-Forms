@@ -12,12 +12,12 @@ namespace UsingModules.SampleModule.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public void OnNavigatedFrom(NavigationParameters parameters)
+        public void OnNavigatedFrom(INavigationParameters parameters)
         {
             // Called when the implementer has been navigated away from.
         }
 
-        public void OnNavigatedTo(NavigationParameters parameters)
+        public void OnNavigatedTo(INavigationParameters parameters)
         {
             // Called when the implementer has been navigated to.
             Title = "Sample Page from a Prism module";
@@ -27,7 +27,7 @@ namespace UsingModules.SampleModule.ViewModels
                 Title += " - parameter: " + (string)parameters[parameterName];
         }
 
-        public void OnNavigatingTo(NavigationParameters parameters)
+        public void OnNavigatingTo(INavigationParameters parameters)
         {
             //Called before the implementor has been navigated to - but not called when using 
             // device hardware or software back buttons.
