@@ -1,24 +1,26 @@
-﻿using Prism.Unity;
+﻿using Prism;
+using Prism.Ioc;
+using Prism.Unity;
 using UsingEventAggregator.Views;
 
 namespace UsingEventAggregator
 {
     public partial class App : PrismApplication
     {
-        public App (IPlatformInitializer initializer = null) : base (initializer) { }
+        public App(IPlatformInitializer initializer = null) : base (initializer) { }
 
-        protected override void OnInitialized ()
+        protected override void OnInitialized()
         {
-            InitializeComponent ();
+            InitializeComponent();
 
-            NavigationService.NavigateAsync (nameof(MainPage));
+            NavigationService.NavigateAsync(nameof(MainPage));
         }
 
-        protected override void RegisterTypes ()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            Container.RegisterTypeForNavigation<MainPage> ();
-            Container.RegisterTypeForNavigation<HomePage> ();
-            Container.RegisterTypeForNavigation<DataEntryPage> ();
+            containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<HomePage>();
+            containerRegistry.RegisterForNavigation<DataEntryPage>();
         }
     }
 }
