@@ -12,8 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Prism.Unity;
-using Microsoft.Practices.Unity;
 
 namespace UsingCompositeCommands.UWP
 {
@@ -23,16 +21,7 @@ namespace UsingCompositeCommands.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new UsingCompositeCommands.App(new UwpInitializer()));
+            LoadApplication(new UsingCompositeCommands.App());
         }
     }
-
-    public class UwpInitializer : IPlatformInitializer
-    {
-        public void RegisterTypes(IUnityContainer container)
-        {
-
-        }
-    }
-
 }

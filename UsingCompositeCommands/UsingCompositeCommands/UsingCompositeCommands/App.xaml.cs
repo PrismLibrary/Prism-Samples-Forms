@@ -1,13 +1,15 @@
-﻿using Microsoft.Practices.Unity;
-using Prism.Unity;
+﻿using Prism;
+using Prism.Ioc;
 using UsingCompositeCommands.ViewModels;
 using UsingCompositeCommands.Views;
 
 namespace UsingCompositeCommands
 {
-    public partial class App : PrismApplication
+    public partial class App
     {
-        public App(IPlatformInitializer initializer = null) : base(initializer) { }
+        public App() : this(null) { }
+
+        public App(IPlatformInitializer initializer) : base(initializer) { }
 
         protected override void OnInitialized()
         {
@@ -16,15 +18,15 @@ namespace UsingCompositeCommands
             NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
-        protected override void RegisterTypes()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            Container.RegisterTypeForNavigation<MainPage>();
-            Container.RegisterTypeForNavigation<Xamarin.Forms.NavigationPage>();
-            Container.RegisterTypeForNavigation<TabA, TabViewModel>();
-            Container.RegisterTypeForNavigation<TabB, TabViewModel>();
-            Container.RegisterTypeForNavigation<TabC, TabViewModel>();
+            containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<Xamarin.Forms.NavigationPage>();
+            containerRegistry.RegisterForNavigation<TabA, TabViewModel>();
+            containerRegistry.RegisterForNavigation<TabB, TabViewModel>();
+            containerRegistry.RegisterForNavigation<TabC, TabViewModel>();
 
-            Container.RegisterType<IApplicationCommands, ApplicationCommands>(new ContainerControlledLifetimeManager());
+            containerRegistry.RegisterSingleton<IApplicationCommands, ApplicationCommands>();
         }
     }
 }
