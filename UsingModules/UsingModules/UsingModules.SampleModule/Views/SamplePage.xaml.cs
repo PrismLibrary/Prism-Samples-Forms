@@ -1,8 +1,6 @@
-﻿using Xamarin.Forms;
-
-namespace UsingModules.SampleModule.Views
+﻿namespace UsingModules.SampleModule.Views
 {
-    public partial class SamplePage : ContentPage
+    public partial class SamplePage
     {
         public SamplePage()
         {

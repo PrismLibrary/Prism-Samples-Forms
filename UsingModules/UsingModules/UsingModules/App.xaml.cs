@@ -1,17 +1,25 @@
-﻿using System;
-using Prism;
+﻿using Prism;
 using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Unity;
+using UsingModules.ViewModels;
 using UsingModules.Views;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace UsingModules
 {
-    public partial class App : PrismApplication
+    public partial class App
     {
-        public App(IPlatformInitializer initializer = null) : base(initializer) { }
+        public App()
+            : this(null)
+        {
+        }
+
+        public App(IPlatformInitializer initializer) 
+            : base(initializer)
+        {
+        }
 
         protected override void OnInitialized()
         {
@@ -23,8 +31,8 @@ namespace UsingModules
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<MainNavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<NavigationPage>("MainNavigationPage");
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

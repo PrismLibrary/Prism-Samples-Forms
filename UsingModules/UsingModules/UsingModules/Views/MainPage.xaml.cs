@@ -1,8 +1,6 @@
-﻿using Xamarin.Forms;
-
-namespace UsingModules.Views
+﻿namespace UsingModules.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage
     {
         public MainPage()
         {

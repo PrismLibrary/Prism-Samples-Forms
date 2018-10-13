@@ -1,6 +1,7 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
 using UsingModules.SampleModule.Views;
+using UsingModules.SampleModule.ViewModels;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -14,7 +15,7 @@ namespace UsingModules.SampleModule
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<SamplePage>();
+            containerRegistry.RegisterForNavigation<SamplePage, SamplePageViewModel>();
         }
     }
 }
