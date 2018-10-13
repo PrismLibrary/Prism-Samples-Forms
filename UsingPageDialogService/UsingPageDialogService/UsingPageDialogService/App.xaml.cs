@@ -1,11 +1,14 @@
-﻿using Prism.Unity;
+﻿using Prism;
+using Prism.Ioc;
 using UsingPageDialogService.Views;
 
 namespace UsingPageDialogService
 {
-    public partial class App : PrismApplication
+    public partial class App
     {
-        public App(IPlatformInitializer initializer = null) : base(initializer) { }
+        public App() : this(null) { }
+
+        public App(IPlatformInitializer initializer) : base(initializer) { }
 
         protected override void OnInitialized()
         {
@@ -13,9 +16,9 @@ namespace UsingPageDialogService
             NavigationService.NavigateAsync("MainPage");
         }
 
-        protected override void RegisterTypes()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            Container.RegisterTypeForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<MainPage>();
         }
     }
 }

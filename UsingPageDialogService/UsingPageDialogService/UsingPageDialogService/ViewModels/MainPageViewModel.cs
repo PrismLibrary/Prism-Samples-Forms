@@ -7,12 +7,7 @@ namespace UsingPageDialogService.ViewModels
 {
     public class MainPageViewModel : BindableBase
     {
-        IPageDialogService _pageDialogService;
-
-        public DelegateCommand DisplayAlertCommand { get; set; }
-        public DelegateCommand DisplayActionSheetCommand { get; set; }
-
-        public DelegateCommand DisplayActionSheetUsingActionSheetButtonsCommand { get; set; }
+        private IPageDialogService _pageDialogService { get; }
 
         public MainPageViewModel(IPageDialogService pageDialogService)
         {
@@ -20,31 +15,41 @@ namespace UsingPageDialogService.ViewModels
 
             DisplayAlertCommand = new DelegateCommand(DisplayAlert);
 
-            DisplayActionSheetCommand = new DelegateCommand(DsiplayActionSheet);
+            DisplayActionSheetCommand = new DelegateCommand(DisplayActionSheet);
 
             DisplayActionSheetUsingActionSheetButtonsCommand = new DelegateCommand(DisplayActionSheetUsingActionSheetButtons);
         }
 
+        public DelegateCommand DisplayAlertCommand { get; }
+        public DelegateCommand DisplayActionSheetCommand { get; }
+        public DelegateCommand DisplayActionSheetUsingActionSheetButtonsCommand { get; }
+
         private async void DisplayAlert()
         {
             var result = await _pageDialogService.DisplayAlertAsync("Alert", "This is an alert from MainPageViewModel.", "Accept", "Cancel");
-            Debug.WriteLine(result);
+            Trace.WriteLine(result);
         }
 
-        private async void DsiplayActionSheet()
+        private async void DisplayActionSheet()
         {
             var result = await _pageDialogService.DisplayActionSheetAsync("ActionSheet", "Cancel", "Destroy", "Option 1", "Option 2");
-            Debug.WriteLine(result);
+            Trace.WriteLine(result);
         }
 
         private async void DisplayActionSheetUsingActionSheetButtons()
         {
-            IActionSheetButton option1Action = ActionSheetButton.CreateButton("Option 1", new DelegateCommand(() => { Debug.WriteLine("Option 1"); }));
-            IActionSheetButton option2Action = ActionSheetButton.CreateButton("Option 2", new DelegateCommand(() => { Debug.WriteLine("Option 2"); }));
-            IActionSheetButton cancelAction = ActionSheetButton.CreateCancelButton("Cancel", new DelegateCommand(() => { Debug.WriteLine("Cancel"); }));
-            IActionSheetButton destroyAction = ActionSheetButton.CreateDestroyButton("Destroy", new DelegateCommand(() => { Debug.WriteLine("Destroy"); }));
+            var buttons = new IActionSheetButton[]
+            {
+                ActionSheetButton.CreateButton("Option 1", WriteLine, "Option 1"),
+                ActionSheetButton.CreateButton("Option 2", WriteLine, "Option 2"),
+                ActionSheetButton.CreateCancelButton("Cancel", WriteLine, "Cancel"),
+                ActionSheetButton.CreateDestroyButton("Destroy", WriteLine, "Destroy")
+            };
 
-            await _pageDialogService.DisplayActionSheetAsync("ActionSheet with ActionSheetButtons", option1Action, option2Action, cancelAction, destroyAction);
+            await _pageDialogService.DisplayActionSheetAsync("ActionSheet with ActionSheetButtons", buttons);
         }
+
+        private void WriteLine(string message) =>
+            Trace.WriteLine(message);
     }
 }

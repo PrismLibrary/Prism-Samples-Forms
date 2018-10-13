@@ -12,8 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Prism.Unity;
-using Microsoft.Practices.Unity;
 
 namespace UsingPageDialogService.UWP
 {
@@ -23,16 +21,7 @@ namespace UsingPageDialogService.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new UsingPageDialogService.App(new UwpInitializer()));
+            LoadApplication(new UsingPageDialogService.App());
         }
     }
-
-    public class UwpInitializer : IPlatformInitializer
-    {
-        public void RegisterTypes(IUnityContainer container)
-        {
-
-        }
-    }
-
 }
