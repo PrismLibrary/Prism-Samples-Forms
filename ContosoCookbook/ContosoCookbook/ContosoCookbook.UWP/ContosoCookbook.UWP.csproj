@@ -131,13 +131,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.0.8</Version>
+      <Version>6.1.9</Version>
     </PackageReference>
     <PackageReference Include="Prism.Unity.Forms">
-      <Version>7.1.0.123-pre</Version>
+      <Version>7.1.0.431</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>2.5.1.444934</Version>
+      <Version>3.2.0.871581</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
