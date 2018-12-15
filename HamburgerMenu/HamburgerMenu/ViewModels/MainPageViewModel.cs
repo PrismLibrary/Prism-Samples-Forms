@@ -34,7 +34,7 @@ namespace HamburgerMenu.ViewModels
             await _navigationService.NavigateAsync(path);
         }
 
-        public override void OnNavigatedTo(NavigationParameters parameters)
+        public override void OnNavigatedTo(INavigationParameters parameters)
         {
             UserName = Settings.Current.UserName;
         }

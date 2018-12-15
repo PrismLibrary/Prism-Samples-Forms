@@ -26,7 +26,7 @@ namespace HamburgerMenu.ViewModels
 
         public DelegateCommand LogoutCommand { get; }
 
-        public override void OnNavigatedTo(NavigationParameters parameters)
+        public override void OnNavigatedTo(INavigationParameters parameters)
         {
             Message = parameters.GetValue<string>("message");
         }

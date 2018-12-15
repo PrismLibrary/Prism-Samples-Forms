@@ -32,11 +32,11 @@ namespace HamburgerMenu.Helpers
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        bool SetProperty<T>(T value, T defaultValue = default(T), [CallerMemberName] string propertyName = null)
+        bool SetProperty(string value, string defaultValue = default(string), [CallerMemberName] string propertyName = null)
         {
             if(string.IsNullOrWhiteSpace(propertyName)) return false;
 
-            if(Equals(AppSettings.GetValueOrDefault<T>(propertyName, defaultValue), value)) return false;
+            if(Equals(AppSettings.GetValueOrDefault(propertyName, defaultValue), value)) return false;
 
             AppSettings.AddOrUpdateValue(propertyName, value);
             RaisePropertyChanged(propertyName);
@@ -46,7 +46,7 @@ namespace HamburgerMenu.Helpers
 
         #endregion INotifyPropertyChanged
 
-        T GetProperty<T>(T defaultValue = default(T), [CallerMemberName]string propertyName = null)
+        string GetProperty(string defaultValue = default(string), [CallerMemberName]string propertyName = null)
         {
             if(string.IsNullOrWhiteSpace(propertyName))
                 return defaultValue;
@@ -56,7 +56,7 @@ namespace HamburgerMenu.Helpers
 
         public string UserName
         {
-            get { return GetProperty<string>(); }
+            get { return GetProperty(); }
             set { SetProperty(value); }
         }
     }

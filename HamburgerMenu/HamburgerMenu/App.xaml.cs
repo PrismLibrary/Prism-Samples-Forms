@@ -4,10 +4,13 @@ using Prism.DryIoc;
 using HamburgerMenu.Services;
 using HamburgerMenu.Views;
 using Prism.Logging;
+using Prism.Ioc;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace HamburgerMenu
 {
-    public partial class App : PrismApplication
+    public partial class App
     {
         public App()
         {
@@ -19,26 +22,21 @@ namespace HamburgerMenu
             get { return Application.Current as App; }
         }
 
-        public new ILoggerFacade Logger
-        {
-            get { return base.Logger; }
-        }
-
         protected override void OnInitialized()
         {
             NavigationService.NavigateAsync( "Navigation/Login" );
         }
 
-        protected override void RegisterTypes()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            Container.RegisterTypeForNavigation<NavigationPage>( "Navigation" );
-            Container.RegisterTypeForNavigation<MainPage>( "Index" );
-            Container.RegisterTypeForNavigation<LoginPage>( "Login" );
-            Container.RegisterTypeForNavigation<ViewA>();
-            Container.RegisterTypeForNavigation<ViewB>();
-            Container.RegisterTypeForNavigation<ViewC>();
+            containerRegistry.RegisterForNavigation<NavigationPage>("Navigation");
+            containerRegistry.RegisterForNavigation<MainPage>("Index");
+            containerRegistry.RegisterForNavigation<LoginPage>("Login");
+            containerRegistry.RegisterForNavigation<ViewA>();
+            containerRegistry.RegisterForNavigation<ViewB>();
+            containerRegistry.RegisterForNavigation<ViewC>();
 
-            Container.Register<IAuthenticationService, AuthenticationService>( Reuse.Singleton );
+            containerRegistry.RegisterSingleton<IAuthenticationService, AuthenticationService>();
         }
 
         protected override void OnStart()
