@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="PrismBlue">#46A4EC</color>
+    <color name="PrismGray">#7E7D81</color>
+    <color name="launcher_background">#7E7D81</color>
+    <color name="colorPrimary">@color/PrismBlue</color>
+    <color name="colorPrimaryDark">@color/PrismBlue</color>
+    <color name="colorAccent">@color/PrismBlue</color>
+</resources>

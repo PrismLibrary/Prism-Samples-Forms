@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:local="clr-namespace:XDSPrismForms"
+             x:Class="XDSPrismForms.Views.ModulesPage"
+             x:Name="this"
+             Title="{Binding Title}"
+             Padding="8,0">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:StateToColorConverter x:Key="StateToColor" />
+            <local:LoadTextConverter x:Key="LoadText" />
+            <local:CaseConverter x:Key="Case" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <CollectionView ItemsSource="{Binding Modules}">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical" Span="2"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BindingContext.LoadCommand, Source={x:Reference this}}" 
+                                                CommandParameter="{Binding .}"/>
+                    </Grid.GestureRecognizers>
+                    <Frame HasShadow="False"
+                           CornerRadius="8"
+                           Margin="8, 16"
+                           BackgroundColor="{Binding State, Converter={StaticResource StateToColor}}">
+                        <StackLayout
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center">
+                            <Label Text="{Binding ModuleName, Converter={StaticResource Case}}"
+                                    FontSize="Default"
+                                    VerticalOptions="Center"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="White"/>
+                            <Label Text="{Binding State, Converter={StaticResource LoadText}}"
+                                    FontSize="Micro"
+                                    VerticalOptions="Center"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="White" />
+                        </StackLayout>
+                    </Frame>
+                    <ActivityIndicator IsVisible="{Binding IsBusy}"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center" />
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

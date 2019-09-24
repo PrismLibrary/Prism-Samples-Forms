@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationModule.Views.NavMainPage"
+             xmlns:prism="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms"
+             Title="{Binding Title}">
+    <TableView Intent="Settings">
+        <TableSection Title="Select an option">
+            <TextCell Text="Go to A"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Simple"/>
+            <TextCell Text="Go to A with Params"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Params"/>
+            <TextCell Text="Go to A with both Params"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="ParamsBoth"/>
+            <TextCell Text="Go to B with AutoInitialize"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="AutoInit"/>
+            <TextCell Text="Go to A/B/C"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Deep"/>
+            <TextCell Text="Go to A/B/C with Params"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="DeepParams"/>
+            <TextCell Text="Go to A/B/C and Tab B"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Deeper"/>
+            <TextCell Text="Go to A/B/C and Tab B with Params"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="DeeperParams"/>
+            <TextCell Text="Go to A/B/C and Remove Menu"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Remove"/>
+            <TextCell Text="Go to A from XAML"
+                    Command="{prism:NavigateTo ViewA}"/>
+        </TableSection>
+    </TableView>
+</ContentPage>

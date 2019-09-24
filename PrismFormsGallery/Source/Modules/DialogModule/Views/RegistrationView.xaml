@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="DialogModule.Views.RegistrationView"
+             Title="{Binding Title}">
+    <TableView Intent="Form">
+        <TableSection>
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" Padding="12">
+                    <Label Text="Status"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"/>
+                    <Label Text="{Binding Status}"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+            </ViewCell>
+        </TableSection>
+        <TableSection Title="Personal Info">
+            <EntryCell Label="Name"
+                       Text="Hussain Abbasi"/>
+            <EntryCell Label="Email"
+                       Text="hnabbasi@outlook.com"/>
+        </TableSection>
+        <TableSection Title="Portfolio">
+            <EntryCell Label="Website"
+                       Text="www.HussainAbbasi.com"/>
+            <EntryCell Label="Blog"
+                       Text="www.intelliAbb.com"/>
+        </TableSection>
+        <TableSection>
+            <ViewCell>
+                <Button Text="Submit"
+                        TextColor="Red"
+                        Command="{Binding SubmitCommand}"/>
+            </ViewCell>
+        </TableSection>
+    </TableView>    
+</ContentPage>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="EventsModule.Views.EventPublisherPage"
+             Title="{Binding Title}">
+    <StackLayout VerticalOptions="Center" Padding="12">
+        <Entry Text="{Binding Message}"
+               Placeholder="Enter a message"
+               FontSize="Large"
+               HorizontalTextAlignment="Center"/>
+        <Button Text="Publish"
+                Command="{Binding PublishCommand}"/>
+    </StackLayout>
+</ContentPage>
