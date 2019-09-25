@@ -15,10 +15,10 @@ namespace EventsModule.ViewModels
 
         void OnMessageReceived(string message)
         {
-            Message = message;
+            Message = $"Message recieved: {message}";
         }
 
-        private string _message = "No message";
+        private string _message = "Waiting for a message";
         public string Message
         {
             get { return _message; }
