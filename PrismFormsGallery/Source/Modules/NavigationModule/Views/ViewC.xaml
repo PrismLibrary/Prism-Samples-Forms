@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:NavigationModule.Views;assembly=NavigationModule"
+             x:Class="NavigationModule.Views.ViewC"
+             Title="{Binding Title}">
+    <TabbedPage.Children>
+        <ContentPage Title="Tab A">
+            <Label Text="Tab A"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Large"
+                   VerticalOptions="Center"/>
+        </ContentPage>
+        <views:TabB/>
+        <views:TabC/>
+    </TabbedPage.Children>
+</TabbedPage>
