@@ -1,8 +1,6 @@
-﻿using Xamarin.Forms;
-
-namespace UsingEventAggregator
+﻿namespace UsingEventAggregator.Views
 {
-    public partial class HomePage : ContentPage
+    public partial class HomePage
     {
         public HomePage ()
         {

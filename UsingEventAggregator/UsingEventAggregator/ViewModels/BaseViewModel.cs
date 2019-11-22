@@ -4,14 +4,15 @@ using Prism.Navigation;
 
 namespace UsingEventAggregator
 {
-    public class BaseViewModel : BindableBase, INavigationAware, IDisposable
+    public class BaseViewModel : BindableBase, INavigationAware, IInitialize, IDestructible
     {
         #region Properties
 
         private string _title;
-        public string Title {
-        	get { return _title; }
-        	set { SetProperty (ref _title, value); }
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
         }
 
         #endregion
@@ -22,13 +23,13 @@ namespace UsingEventAggregator
 
         public virtual void OnNavigatedTo(INavigationParameters parameters) { }
 
-        public virtual void OnNavigatingTo(INavigationParameters parameters) { }
+        public virtual void Initialize(INavigationParameters parameters) { }
 
         #endregion
 
-        #region IDisposable
+        #region IDestructible
 
-        public virtual void Dispose() { }
+        public virtual void Destroy() { }
         
         #endregion
 

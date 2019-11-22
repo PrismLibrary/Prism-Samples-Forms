@@ -21,17 +21,17 @@
         <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
     <key>MinimumOSVersion</key>
-    <string>8.0</string>
+    <string>10.0</string>
     <key>CFBundleDisplayName</key>
     <string>UsingEventAggregator</string>
     <key>CFBundleIdentifier</key>
-    <string>com.companyname.UsingEventAggregator</string>
+    <string>com.prismlibrary.usingeventaggregator</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
     <key>CFBundleName</key>
-    <string>UsingEventAggregator</string>
+    <string>Event Aggregator</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
 </dict>
