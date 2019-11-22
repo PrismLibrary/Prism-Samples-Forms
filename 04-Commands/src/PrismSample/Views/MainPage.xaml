@@ -4,13 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="Main Page"
+             Title="Learning DelegateCommand"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <Label Text="{Binding Text}" />
+    <Switch IsToggled="{Binding IsActive}"/>
+    <Button Text="Click Me" Command="{Binding ButtonClickCommand}" CommandParameter="Hello" />
+  </StackLayout>
 
 </ContentPage>
