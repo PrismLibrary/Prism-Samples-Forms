@@ -1,6 +1,8 @@
-﻿using Foundation;
-using Prism;
-using Prism.Ioc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+using Foundation;
 using UIKit;
 
 namespace UsingModules.iOS
@@ -21,18 +23,9 @@ namespace UsingModules.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App(new iOSInitializer()));
+            LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }
     }
-
-    public class iOSInitializer : IPlatformInitializer
-    {
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-
-        }
-    }
-
 }

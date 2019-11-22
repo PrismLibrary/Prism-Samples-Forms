@@ -1,6 +1,8 @@
 ﻿using Prism;
 using Prism.Ioc;
 using Prism.Unity;
+using UsingEventAggregator.Navigation;
+using UsingEventAggregator.ViewModels;
 using UsingEventAggregator.Views;
 
 namespace UsingEventAggregator
@@ -13,14 +15,14 @@ namespace UsingEventAggregator
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync(nameof(MainPage));
+            NavigationService.NavigateAsync(Navigate.Start);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<MainPage>();
-            containerRegistry.RegisterForNavigation<HomePage>();
-            containerRegistry.RegisterForNavigation<DataEntryPage>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
+            containerRegistry.RegisterForNavigation<DataEntryPage, DataEntryPageViewModel>();
         }
     }
 }

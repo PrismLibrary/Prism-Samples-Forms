@@ -3,6 +3,7 @@ using Prism.Navigation;
 using System.Windows.Input;
 using Prism.Events;
 using UsingEventAggregator.Models;
+using UsingEventAggregator.Navigation;
 
 namespace UsingEventAggregator.ViewModels
 {
@@ -16,22 +17,21 @@ namespace UsingEventAggregator.ViewModels
             _navigationService = navigationService;
             _eventAggregator = eventAggregator;
 
-
             Title = "Prism.Forms EventAggregator";
+            LocalCommand = new DelegateCommand(OnLocalCommandTapped);
+            NativeCommand = new DelegateCommand(OnNativeCommandTapped);
         }
 
         #region Commands
 
-        private ICommand _localCommand;
-        public ICommand LocalCommand => _localCommand ?? (_localCommand = new DelegateCommand (OnLocalCommandTapped));
+        public ICommand LocalCommand { get; }
 
         private void OnLocalCommandTapped ()
         {
-            _navigationService.NavigateAsync (nameof (HomePage));
+            _navigationService.NavigateAsync(Navigate.Home);
         }
 
-        private ICommand _nativeCommand;
-        public ICommand NativeCommand => _nativeCommand ?? (_nativeCommand = new DelegateCommand (OnNativeCommandTapped));
+        public ICommand NativeCommand { get; }
 
         private void OnNativeCommandTapped ()
         {

@@ -5,6 +5,7 @@ using Prism.Events;
 using Prism.Navigation;
 using UsingEventAggregator.Models;
 using Prism.Services;
+using UsingEventAggregator.Navigation;
 
 namespace UsingEventAggregator
 {
@@ -21,6 +22,8 @@ namespace UsingEventAggregator
             Title = "Your Feedback (Read only)";
 
             _eventAggregator.GetEvent<IsFunChangedEvent> ().Subscribe (IsFunChanged);
+            EntryCommand = new DelegateCommand(OnEntryCommandTapped);
+            GoBackCommand = new DelegateCommand(OnGoBackCommandTapped);
         }
         
         public void IsFunChanged (bool isFun)
@@ -31,26 +34,24 @@ namespace UsingEventAggregator
         #region Properties
 
         private bool _isFun;
-        public bool IsFun 
+        public bool IsFun
         {
-            get { return _isFun; }
-            set { SetProperty (ref _isFun, value); }
+            get => _isFun;
+            set => SetProperty(ref _isFun, value);
         }
 
         #endregion
 
         #region Commands
 
-        private ICommand _entryCommand;
-        public ICommand EntryCommand => _entryCommand ?? (_entryCommand = new DelegateCommand (OnEntryCommandTapped));
+        public ICommand EntryCommand { get; }
 
         private void OnEntryCommandTapped ()
         {
-            _navigationService.NavigateAsync (nameof (DataEntryPage));
+            _navigationService.NavigateAsync(Navigate.DataEntry);
         }
 
-        private ICommand _goBackCommand;
-        public ICommand GoBackCommand => _goBackCommand ?? (_goBackCommand = new DelegateCommand (OnGoBackCommandTapped));
+        public ICommand GoBackCommand { get; }
 
         private void OnGoBackCommandTapped ()
         {
@@ -60,7 +61,7 @@ namespace UsingEventAggregator
 
         #region Overrides
 
-        public override void Dispose ()
+        public override void Destroy ()
         {
             _eventAggregator.GetEvent<IsFunChangedEvent> ().Unsubscribe (IsFunChanged);
         }

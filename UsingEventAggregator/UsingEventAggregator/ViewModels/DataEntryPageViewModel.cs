@@ -18,19 +18,17 @@ namespace UsingEventAggregator
             _eventAggregator = eventAggregator;
 
             Title = "So what do you think?";
+            SubmitCommand = new DelegateCommand(OnSubmitTapped);
         }
 
         private bool _isFun;
-        public bool IsFun {
-        get { return _isFun; }
-        set { 
-                SetProperty (ref _isFun, value);
-                _eventAggregator.GetEvent<IsFunChangedEvent> ().Publish (value);
-            }
+        public bool IsFun
+        {
+            get => _isFun;
+            set => SetProperty(ref _isFun, value, () => _eventAggregator.GetEvent<IsFunChangedEvent>().Publish(value));
         }
-        
-        private ICommand _submitCommand;
-        public ICommand SubmitCommand => _submitCommand ?? (_submitCommand = new DelegateCommand (OnSubmitTapped));
+
+        public ICommand SubmitCommand { get; }
 
         private void OnSubmitTapped()
         {
