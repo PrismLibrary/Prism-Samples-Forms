@@ -1,0 +1,4 @@
+MainPackage=Z:\repos\Prism\Prism-Samples-Forms\UsingPlatformSpecificServices\UsingPlatformSpecificServices\UsingPlatformSpecificServices.UWP\bin\x86\Debug\UsingPlatformSpecificServices.UWP_1.0.0.0_x86_Debug.appx
+SymbolPackage=Z:\repos\Prism\Prism-Samples-Forms\UsingPlatformSpecificServices\UsingPlatformSpecificServices\UsingPlatformSpecificServices.UWP\obj\x86\Debug\Symbols\UsingPlatformSpecificServices.UWP_1.0.0.0_x86_Debug.appxsym
+ResourcePack=Z:\repos\Prism\Prism-Samples-Forms\UsingPlatformSpecificServices\UsingPlatformSpecificServices\UsingPlatformSpecificServices.UWP\bin\x86\Debug\UsingPlatformSpecificServices.UWP_1.0.0.0_scale-100.appx
+ResourcePack=Z:\repos\Prism\Prism-Samples-Forms\UsingPlatformSpecificServices\UsingPlatformSpecificServices\UsingPlatformSpecificServices.UWP\bin\x86\Debug\UsingPlatformSpecificServices.UWP_1.0.0.0_scale-400.appx
