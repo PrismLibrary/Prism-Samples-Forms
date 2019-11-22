@@ -1,8 +1,8 @@
 ﻿using System;
 using Prism.Ioc;
+using PrismSample.ViewModels;
 using PrismSample.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace PrismSample
 {
@@ -12,20 +12,25 @@ namespace PrismSample
         {
         }
 
-        protected override void OnInitialized()
+        protected override async void OnInitialized()
         {
             InitializeComponent();
 
-            var mainPage = new TabbedPage();
-            mainPage.Children.Add(new NavigationPage(new MainPage()) { Title = "View A" });
-            mainPage.Children.Add(new NavigationPage(new MainPage()) { Title = "View B" });
-            mainPage.Children.Add(new NavigationPage(new MainPage()) { Title = "View C" });
-            MainPage = mainPage;
+            var result = await NavigationService.NavigateAsync("MainPage");
+
+            if(!result.Success)
+            {
+                System.Diagnostics.Debugger.Break();
+            }
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<ViewA, ViewAViewModel>();
+            containerRegistry.RegisterForNavigation<ViewB, ViewBViewModel>();
+            containerRegistry.RegisterForNavigation<ViewC, ViewCViewModel>();
         }
     }
 }

@@ -32,7 +32,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="PrismSample.UWP.App">
       <uap:VisualElements
-        DisplayName="Prism Sample"
+        DisplayName="Hello Prism"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="PrismSample.UWP"

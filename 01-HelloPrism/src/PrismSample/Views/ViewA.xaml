@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="{Binding Title}"
+             x:Class="PrismSample.Views.ViewA">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="40" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="20" />
+    </Grid.RowDefinitions>
+    <StackLayout Padding="{OnPlatform Default='20', iOS='20,40,20,20'}"
+                 BindableLayout.ItemsSource="{Binding Messages}">
+      <BindableLayout.ItemTemplate>
+        <DataTemplate>
+          <Label Text="{Binding .}" />
+        </DataTemplate>
+      </BindableLayout.ItemTemplate>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal"
+                 Grid.Row="2">
+      <Button Text="Navigate"
+              Command="{Binding NavigateCommand}"
+              CommandParameter="ViewB"
+              HorizontalOptions="FillAndExpand">
+        <Button.Triggers>
+          <DataTrigger TargetType="Button"
+                       Binding="{Binding IsToggled,Source={x:Reference useModal}}"
+                       Value="True">
+            <Setter Property="CommandParameter" Value="ViewB?useModalNavigation=true" />
+          </DataTrigger>
+        </Button.Triggers>
+      </Button>
+      <StackLayout WidthRequest="110">
+        <Switch x:Name="useModal"/>
+        <Label Text="Use Modal?"
+               FontSize="Small" />
+      </StackLayout>
+    </StackLayout>
+    <Button Text="Main Page"
+            Command="{Binding GoHomeCommand}"
+            Style="{StaticResource DarkButton}"
+            Grid.Row="3"/>
+  </Grid>
+</ContentPage>

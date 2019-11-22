@@ -7,10 +7,15 @@
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <StackLayout VerticalOptions="Center"
+               Spacing="30">
+    <Button Text="Go To ViewA"
+            Command="{Binding NavigateCommand}"
+            CommandParameter="/NavigationPage/ViewA" />
+    <Button Text="Deep Link To ViewC"
+            Command="{Binding NavigateCommand}"
+            CommandParameter="/NavigationPage/ViewA/ViewB/ViewC"
+            Style="{StaticResource DarkButton}"/>
+  </StackLayout>
 
 </ContentPage>
