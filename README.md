@@ -6,29 +6,29 @@ Samples that demonstrate how to use various Prism features with Xamarin.Forms.
 
 Learn feature by feature how to use Prism in your apps!
 
-| Sample | Description |
-|:------:|-------------|
-| [Prism Navigation][1] | How to use Prism's Uri based navigation to reset the navigation stack, or add pages Modally or Non-Modally |
-| [Registering Services][2] | coming soon |
-| [Platform Specific Services][3] | How to use Prism to auto inject platform specific dependencies that are registered with the IPlatformInitializer. |
-| [Delegate Commands][4_0] | How to use DelegateCommands and ObservesCanExecute |
-| [Composite Commands][4_1] | How to use CompositeCommands to invoke commands in multiple unrelated ViewModels from a single interaction. |
-| [Event Aggregator][5] | How to use the IEventAggregator to raise and listen to events. This shows how to use a simple event with a primitive type payload, generic event with payload &lt;T&gt;, and event with custom EventArgs. It also demonstrated how to subscribe to events published in Xamarin.Forms inside native code. |
-| [Page Dialog Service][6] | How to use the IPageDialogService to display alerts and action sheets from within your ViewModels. |
-| [Dialog Service][7] | coming soon |
-| [Tabbed Navigation][8] | coming soon |
-| [Master Detail][9] | coming soon |
-| [Modules][10] | How to use Prism modularization to separate the application logic using IModule, IModuleManager, ModuleCatalog. |
-| [Module Dependency][11] | coming soon |
-| [ViewModelLocator][12] | coming soon |
-| [ViewModel Initialization][13] | coming soon |
-| [EventToCommandBehavior][14] | coming soon |
-| [PageBehaviorFactory][15] | coming soon |
-| [PageLifecycleAware][16] | coming soon |
-| [XamlNavigation][17] | coming soon |
-| [DeviceService][18] | coming soon |
-| [NavigationMode][19] | coming soon |
-| [Confirm Navigation][20] | coming soon |
+| # | Sample | Description |
+|:-:|:------:|-------------|
+| 1 | [Prism Navigation][1] | How to use Prism's Uri based navigation to reset the navigation stack, or add pages Modally or Non-Modally |
+| 2 | [Registering Services][2] | coming soon |
+| 3 | [Platform Specific Services][3] | How to use Prism to auto inject platform specific dependencies that are registered with the IPlatformInitializer. |
+| 4 | [Delegate Commands][commands] | How to use DelegateCommands and ObservesCanExecute |
+| 4.1 | [Composite Commands][composite] | How to use CompositeCommands to invoke commands in multiple unrelated ViewModels from a single interaction. |
+| 5 | [Event Aggregator][5] | How to use the IEventAggregator to raise and listen to events. This shows how to use a simple event with a primitive type payload, generic event with payload &lt;T&gt;, and event with custom EventArgs. It also demonstrated how to subscribe to events published in Xamarin.Forms inside native code. |
+| 6 | [Page Dialog Service][6] | How to use the IPageDialogService to display alerts and action sheets from within your ViewModels. |
+| 7 | [Dialog Service][7] | coming soon |
+| 8 | [Tabbed Navigation][8] | coming soon |
+| 9 | [Master Detail][9] | coming soon |
+| 10 | [Modules][10] | How to use Prism modularization to separate the application logic using IModule, IModuleManager, ModuleCatalog. |
+| 11 | [Module Dependency][11] | coming soon |
+| 12 | [ViewModelLocator][12] | coming soon |
+| 13 | [ViewModel Initialization][13] | coming soon |
+| 14 | [EventToCommandBehavior][14] | coming soon |
+| 15 | [PageBehaviorFactory][15] | coming soon |
+| 16 | [PageLifecycleAware][16] | coming soon |
+| 17 | [XamlNavigation][17] | coming soon |
+| 18 | [DeviceService][18] | coming soon |
+| 19 | [NavigationMode][19] | coming soon |
+| 20 | [Confirm Navigation][20] | coming soon |
 
 ## Sample Apps
 
@@ -40,8 +40,8 @@ Learn feature by feature how to use Prism in your apps!
 [1]: 01-Navigation/
 [2]: 02-ServiceRegistration/
 [3]: 03-PlatformSpecificServices/
-[4_0]: 04:Commands/
-[4_1]: 04-CompositeCommands/
+[commands]: 04:Commands/
+[composite]: 04-CompositeCommands/
 [5]: 05-EventAggregator/
 [6]: 06-PageDialogService/
 [7]: 07-DialogService/
