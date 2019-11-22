@@ -20,6 +20,7 @@ Learn feature by feature how to use Prism in your apps!
 | [Master Detail][9] | n/a |
 | [Modules][10] | How to use Prism modularization to separate the application logic using IModule, IModuleManager, ModuleCatalog. |
 | [Module Dependency][11] | n/a |
+| [ViewModelLocator][12] | n/a |
 
 ## Sample Apps
 
@@ -40,6 +41,7 @@ Learn feature by feature how to use Prism in your apps!
 [9]: 09-MasterDetail/
 [10]: 10-Modules/
 [11]: 11-ModuleDependency/
+[12]: 12-ViewModelLocator/
 
 [98]: 98-PrismFormsGallery
 [99]: 99-ContosoCookbook
