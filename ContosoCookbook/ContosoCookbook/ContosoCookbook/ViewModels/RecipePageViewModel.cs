@@ -18,7 +18,7 @@ namespace ContosoCookbook.ViewModels
 
         }
 
-        public override void OnNavigatingTo(INavigationParameters parameters)
+        public override void Initialize(INavigationParameters parameters)
         {
             if (parameters.ContainsKey("recipe"))
                 Recipe = parameters.GetValue<Recipe>("recipe");

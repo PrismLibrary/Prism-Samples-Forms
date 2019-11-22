@@ -3,7 +3,7 @@ using System.Globalization;
 using Prism.Modularity;
 using Xamarin.Forms;
 
-namespace XDSPrismForms
+namespace PrismFormsGallery
 {
     public class StateToColorConverter : IValueConverter
     {

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+            xmlns:prism="http://prismlibrary.com"
             xmlns:converters="using:ContosoCookbook.Converters"
-            xmlns:ioc="clr-namespace:Prism.Ioc;assembly=Prism.Forms"
             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
             ios:Page.UseSafeArea="true"
             ItemsSource="{Binding RecipeGroups}"
@@ -13,51 +12,31 @@
 
   <TabbedPage.Resources>
     <ResourceDictionary>
-      <ioc:ContainerProvider x:TypeArguments="converters:LocalImagePathConverter" x:Key="LocalImagePathConverter" />
+      <prism:ContainerProvider x:TypeArguments="converters:LocalImagePathConverter" x:Key="LocalImagePathConverter" />
     </ResourceDictionary>
   </TabbedPage.Resources>
   
   <TabbedPage.ItemTemplate>
     <DataTemplate>
       <ContentPage Title="{Binding Title}">
-        <ListView ItemsSource="{Binding Recipes}">
-          <ListView.Behaviors>
-            <behaviors:EventToCommandBehavior EventName="ItemTapped"
+        <ListView ItemsSource="{Binding Recipes}"
+                  RowHeight="{OnPlatform UWP=144, Android=136, iOS=128}">
+                    <ListView.Behaviors>
+                        <prism:EventToCommandBehavior EventName="ItemTapped"
                                               EventArgsParameterPath="Item"
                                               Command="{Binding BindingContext.RecipeSelectedCommand,Source={x:Reference mainPage}}" />
-          </ListView.Behaviors>
-          <ListView.RowHeight>
-            <OnPlatform x:TypeArguments="x:Int32">
-              <On Platform="iOS" Value="128"/>
-              <On Platform="Android" Value="136"/>
-              <On Platform="UWP" Value="144"/>
-            </OnPlatform>
-          </ListView.RowHeight>
-          <ListView.ItemTemplate>
+                    </ListView.Behaviors>
+                    <ListView.ItemTemplate>
             <DataTemplate>
               <ViewCell>
                 <Grid Padding="8">
                   <Grid.ColumnDefinitions>
-                    <ColumnDefinition>
-                      <ColumnDefinition.Width>
-                        <OnPlatform x:TypeArguments="GridLength">
-                          <On Platform="iOS" Value="120"/>
-                          <On Platform="Android" Value="144"/>
-                          <On Platform="UWP" Value="144"/>
-                        </OnPlatform>
-                      </ColumnDefinition.Width>
-                    </ColumnDefinition>
+                    <ColumnDefinition Width="{OnPlatform UWP=144, Android=144, iOS=120}" />
                     <ColumnDefinition Width="*" />
                   </Grid.ColumnDefinitions>
                   <Image Source="{Binding ImagePath, Converter={StaticResource LocalImagePathConverter}}" />
-                  <Grid Grid.Column="1">
-                    <Grid.Padding>
-                      <OnPlatform x:TypeArguments="Thickness">
-                        <On Platform="iOS" Value="4,8,0,8"/>
-                        <On Platform="Android" Value="8,2,0,4"/>
-                        <On Platform="UWP" Value="12,-2,0,-4"/>
-                      </OnPlatform>
-                    </Grid.Padding>
+                  <Grid Grid.Column="1"
+                        Padding="{OnPlatform UWP='12,-2,0,-4', Android='8,2,0,4', iOS='4,8,0,8'}">
                     <Label Text="{Binding Subtitle}" FontSize="Large" LineBreakMode="WordWrap" />
                   </Grid>
                 </Grid>

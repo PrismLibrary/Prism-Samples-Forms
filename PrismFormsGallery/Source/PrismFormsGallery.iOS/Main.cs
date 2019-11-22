@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace XDSPrismForms.iOS
+namespace PrismFormsGallery.iOS
 {
     public class Application
     {

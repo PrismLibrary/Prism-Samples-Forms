@@ -8,9 +8,9 @@ using Android.Widget;
 using Android.OS;
 using PrismFormsGallery.Droid;
 
-namespace XDSPrismForms.Droid
+namespace PrismFormsGallery.Droid
 {
-    [Activity(Label = "Prism", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Prism Gallery", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

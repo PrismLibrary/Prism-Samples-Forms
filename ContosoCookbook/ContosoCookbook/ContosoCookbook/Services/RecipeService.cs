@@ -1,7 +1,9 @@
 ﻿using ContosoCookbook.Business;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
@@ -11,12 +13,17 @@ namespace ContosoCookbook.Services
     {
         public async Task<IList<RecipeGroup>> GetRecipeGroups()
         {
-            // Read RecipeData.json from this PCL's DataModel folder
-            var name = typeof(RecipeService).AssemblyQualifiedName.Split(',')[1].Trim();
-            var assembly = Assembly.Load(new AssemblyName(name));
-            var stream = assembly.GetManifestResourceStream(name + ".Data.RecipeData.json");
+            // Read RecipeData.json from this Assembly's DataModel folder
+            var assembly = GetType().Assembly;
+            var resourceName = assembly.GetManifestResourceNames().FirstOrDefault(x => x.EndsWith("Data.RecipeData.json", System.StringComparison.OrdinalIgnoreCase));
+            if(string.IsNullOrEmpty(resourceName))
+            {
+                Debugger.Break();
+                return new List<RecipeGroup>();
+            }
 
             // Parse the JSON and generate a collection of RecipeGroup objects
+            using (var stream = assembly.GetManifestResourceStream(resourceName))
             using (var reader = new StreamReader(stream))
             {
                 string json = await reader.ReadToEndAsync();

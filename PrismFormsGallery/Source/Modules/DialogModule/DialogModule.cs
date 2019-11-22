@@ -1,4 +1,5 @@
 ﻿using System;
+using DialogModule.ViewModels;
 using DialogModule.Views;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -15,7 +16,7 @@ namespace DialogModule
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<RegistrationView>();
-            containerRegistry.RegisterDialog<TermsDialogView>();
+            containerRegistry.RegisterDialog<TermsDialogView, TermsDialogViewModel>();
         }
     }
 }

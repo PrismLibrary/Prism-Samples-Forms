@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:ioc="clr-namespace:Prism.Ioc;assembly=Prism.Forms"
+             xmlns:prism="http://prismlibrary.com"
              xmlns:converters="clr-namespace:ContosoCookbook.Converters;assembly=ContosoCookbook"
              x:Class="ContosoCookbook.Views.RecipePage"
              Title="{Binding Recipe.Title}">
@@ -9,7 +9,7 @@
   <ContentPage.Resources>
     <ResourceDictionary>
       <converters:ListConverter x:Key="ListConverter" />
-      <ioc:ContainerProvider x:TypeArguments="converters:LocalImagePathConverter" x:Key="LocalImagePathConverter" />
+      <prism:ContainerProvider x:TypeArguments="converters:LocalImagePathConverter" x:Key="LocalImagePathConverter" />
       <Color x:Key="CaptionColor">#FFFF8300</Color>
     </ResourceDictionary>
   </ContentPage.Resources>
@@ -20,15 +20,10 @@
       <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
 
-    <Label Text="{Binding Recipe.Title}" FontSize="Large" LineBreakMode="WordWrap">
-      <Label.IsVisible>
-        <OnPlatform x:TypeArguments="x:Boolean">
-          <On Platform="iOS" Value="False"/>
-          <On Platform="Android" Value="False"/>
-          <On Platform="UWP" Value="True"/>
-        </OnPlatform>
-      </Label.IsVisible>
-    </Label>
+    <Label Text="{Binding Recipe.Title}"
+           FontSize="Large"
+           LineBreakMode="WordWrap"
+           IsVisible="{OnPlatform Default=False, UWP=True}" />
 
     <ScrollView Grid.Row="1">
       <StackLayout>

@@ -3,9 +3,9 @@ using Prism.DryIoc;
 using Prism.Ioc;
 using Xamarin.Forms;
 using Prism.Modularity;
-using XDSPrismForms.Views;
+using PrismFormsGallery.Views;
 
-namespace XDSPrismForms
+namespace PrismFormsGallery
 {
     public partial class App : PrismApplication
     {

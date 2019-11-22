@@ -2,7 +2,7 @@
 using Prism.Navigation;
 using MvvmHelpers;
 
-namespace XDSPrismForms.ViewModels
+namespace PrismFormsGallery.ViewModels
 {
     public class MainPageViewModel : BaseViewModel
     {

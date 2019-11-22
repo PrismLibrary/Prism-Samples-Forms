@@ -11,7 +11,8 @@ namespace DialogModule.ViewModels
         public TermsDialogViewModel()
         {
             Title = "Terms and Conditions";
-            SubmitCommand = new DelegateCommand(OnSubmitTapped, () => CanSubmit).ObservesProperty(() => CanSubmit);
+            SubmitCommand = new DelegateCommand(OnSubmitTapped, () => CanSubmit)
+                .ObservesProperty(() => CanSubmit);
             CancelCommand = new DelegateCommand(OnCancelTapped);
         }
 
@@ -20,12 +21,14 @@ namespace DialogModule.ViewModels
 
         void OnSubmitTapped()
         {
-            RequestClose?.Invoke(new DialogParameters { { "accepted", true } });
+            RequestClose(new DialogParameters { { "accepted", true } });
         }
 
+        bool _cancelled;
         void OnCancelTapped()
         {
-            RequestClose?.Invoke(new DialogParameters());
+            _cancelled = true;
+            RequestClose(new DialogParameters());
         }
 
         private string _name;
@@ -38,20 +41,20 @@ namespace DialogModule.ViewModels
         private string _email;
         public string Email
         {
-            get { return _email; }
-            set { SetProperty(ref _email, value); }
+            get => _email;
+            set => SetProperty(ref _email, value);
         }
 
         private bool _canSubmit;
         public bool CanSubmit
         {
             get => _canSubmit;
-            set { SetProperty(ref _canSubmit, value); }
+            set => SetProperty(ref _canSubmit, value);
         }
 
         public event Action<IDialogParameters> RequestClose;
 
-        public bool CanCloseDialog() => CanSubmit;
+        public bool CanCloseDialog() => _cancelled || CanSubmit;
 
         public void OnDialogClosed() { }
 

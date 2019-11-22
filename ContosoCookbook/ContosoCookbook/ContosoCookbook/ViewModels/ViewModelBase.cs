@@ -3,7 +3,7 @@ using Prism.Navigation;
 
 namespace ContosoCookbook.ViewModels
 {
-    public class ViewModelBase : BindableBase, INavigationAware
+    public class ViewModelBase : BindableBase, INavigationAware, IInitialize
     {
         public ViewModelBase()
         {
@@ -20,7 +20,7 @@ namespace ContosoCookbook.ViewModels
 
         }
 
-        public virtual void OnNavigatingTo(INavigationParameters parameters)
+        public virtual void Initialize(INavigationParameters parameters)
         {
 
         }

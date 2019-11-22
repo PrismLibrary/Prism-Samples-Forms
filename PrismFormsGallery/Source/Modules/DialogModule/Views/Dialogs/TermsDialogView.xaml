@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fft="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
-             xmlns:dialog="clr-namespace:Prism.Services.Dialogs.Xaml;assembly=Prism.Forms"
-             dialog:DialogLayout.RelativeWidthRequest="0.75"
+             xmlns:prism="http://prismlibrary.com"
+             prism:DialogLayout.RelativeWidthRequest="0.75"
              x:Class="DialogModule.Views.TermsDialogView">
     <Frame CornerRadius="20">
         <Grid RowSpacing="20">
@@ -16,7 +16,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <StackLayout Orientation="Horizontal" Spacing="12">
-                <Image 
+                <Image
                        Source="https://www.gravatar.com/avatar/e009b4ca9e976a04fb7b05264f1a21fc?s=60"
                        HeightRequest="60"
                        WidthRequest="60"
@@ -26,12 +26,12 @@
                     </ff:CachedImage.Transformations>-->
                 </Image>
                 <StackLayout HorizontalOptions="FillAndExpand">
-                    <Label Text="{Binding Name}" 
-                           FontSize="Large" 
+                    <Label Text="{Binding Name}"
+                           FontSize="Large"
                            VerticalTextAlignment="End"
                            VerticalOptions="FillAndExpand"/>
-                    <Label Text="{Binding Email}" 
-                           FontSize="Small" 
+                    <Label Text="{Binding Email}"
+                           FontSize="Small"
                            VerticalTextAlignment="Start"
                            VerticalOptions="FillAndExpand"/>
                 </StackLayout>

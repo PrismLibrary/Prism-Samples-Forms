@@ -5,7 +5,7 @@ using Prism.Mvvm;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace XDSPrismForms.ViewModels
+namespace PrismFormsGallery.ViewModels
 {
     public class ModulesPageViewModel : BaseViewModel
     {

@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Text;
 using Xamarin.Forms;
 
-namespace XDSPrismForms
+namespace PrismFormsGallery
 {
     public class CaseConverter : IValueConverter
     {
