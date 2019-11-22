@@ -11,8 +11,8 @@ Learn feature by feature how to use Prism in your apps!
 | 1 | [Prism Navigation][1] | How to use Prism's Uri based navigation to reset the navigation stack, or add pages Modally or Non-Modally |
 | 2 | [Registering Services][2] | coming soon |
 | 3 | [Platform Specific Services][3] | How to use Prism to auto inject platform specific dependencies that are registered with the IPlatformInitializer. |
-| 4 | [Delegate Commands][commands] | How to use DelegateCommands and ObservesCanExecute |
-| 4.1 | [Composite Commands][composite] | How to use CompositeCommands to invoke commands in multiple unrelated ViewModels from a single interaction. |
+| 4 | [Delegate Commands][4] | How to use DelegateCommands and ObservesCanExecute |
+| 4.1 | [Composite Commands][4_1] | How to use CompositeCommands to invoke commands in multiple unrelated ViewModels from a single interaction. |
 | 5 | [Event Aggregator][5] | How to use the IEventAggregator to raise and listen to events. This shows how to use a simple event with a primitive type payload, generic event with payload &lt;T&gt;, and event with custom EventArgs. It also demonstrated how to subscribe to events published in Xamarin.Forms inside native code. |
 | 6 | [Page Dialog Service][6] | How to use the IPageDialogService to display alerts and action sheets from within your ViewModels. |
 | 7 | [Dialog Service][7] | coming soon |
@@ -40,8 +40,8 @@ Learn feature by feature how to use Prism in your apps!
 [1]: 01-Navigation/
 [2]: 02-ServiceRegistration/
 [3]: 03-PlatformSpecificServices/
-[commands]: 04:Commands/
-[composite]: 04-CompositeCommands/
+[4]: 04-Commands/
+[4_1]: 04-CompositeCommands/
 [5]: 05-EventAggregator/
 [6]: 06-PageDialogService/
 [7]: 07-DialogService/
