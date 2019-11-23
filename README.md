@@ -48,6 +48,15 @@ Learn feature by feature how to use Prism in your apps!
 | [Prism Forms Gallery][98] | Prism.Forms Gallery demonstrates a number of Prism and Prism.Forms features all in a single app. The goal of this gallery is to make it easy to learn, share, teach, test, and use the material in your presentations and talks. |
 | [Contoso Cookbook][99] | Contoso Cookbook is a classic Microsoft sample recipe app; first adapted for Xamarin.Forms by Jeff Prosise in 2015 and now updated to use Prism for Xamarin.Forms. Demonstrates how to use a TabbedPage with a DataTemplate for the tabs, and a ListView with DataTemplate for the recipe list on each tab; for a clean professional-looking UI. |
 
+## Adding or Updating a Sample
+
+A number of topics have been stubbed out. For any existing topic you can simply update the project with the relavent content. Be sure the Project heads are each updated as follows:
+
+- The Display Name on iOS, Android and UWP should be updated from `Prism Sample` to be relevent to what your sample is on. It should also be short! (i.e. ViewModelInitialization -&gt; Prism Init, EventToCommandBehavior -&gt; Event 2 Cmd)
+- The Sample's all use `com.prismlibrary.prismsample` as the Bundle/Package Id. If every sample kept this you would not be able to have samples side by side. Be sure that the final segment `prismsample` is updated to the lowercase name of the sample (i.e. `com.prismlibrary.eventtocommand`)
+
+If you're adding a brand new sample be sure to start with a copy of the resources in the [Sample Template](sample-template/) directory.
+
 [1]: 01-Navigation/
 [2]: 02-ServiceRegistration/
 [3]: 03-PlatformSpecificServices/
@@ -79,4 +88,3 @@ Learn feature by feature how to use Prism in your apps!
 
 [98]: 98-PrismFormsGallery
 [99]: 99-ContosoCookbook
-
