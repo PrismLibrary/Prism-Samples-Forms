@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:views="clr-namespace:PrismSample.Views;assembly=PrismSample"
+                       xmlns:viewModels="clr-namespace:PrismSample.ViewModels;assembly=PrismSample"
+                       x:TypeArguments="viewModels:NugetPackageListViewModel"
+                       x:Class="PrismSample.Views.NugetPackageListPage"
+                       NavigationPage.HasBackButton="True">
+  <ContentPage.Content>
+    <StackLayout>
+      <SearchBar x:Name="SearchBar" />
+      <ListView x:Name="NugetPackageListView"
+                HasUnevenRows="True"
+                RowHeight="80"
+                IsPullToRefreshEnabled="True">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <views:NugetViewCell />
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <Label x:Name="Instructions" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+  </ContentPage.Content>
+</views:ContentPageBase>

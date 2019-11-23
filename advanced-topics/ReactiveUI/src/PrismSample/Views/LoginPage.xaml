@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:PrismSample.Views;assembly=PrismSample"
+             xmlns:viewModels="clr-namespace:PrismSample.ViewModels;assembly=PrismSample"
+             x:TypeArguments="viewModels:LoginViewModel"
+             x:Class="PrismSample.Views.LoginPage">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <On Platform="Android">0,0,0,0</On>
+      <On Platform="iOS">0,20,0,0</On>
+    </OnPlatform>
+  </ContentPage.Padding>
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Entry">
+        <Setter Property="PlaceholderColor" Value="#bababa" />
+        <Setter Property="FontSize" Value="16" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <ContentPage.Content>
+    <Grid BackgroundColor="White">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="80" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="50" />
+      </Grid.RowDefinitions>
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+        <Label Text="English (United States)" />
+        <Image Source="down_arrow.png" Opacity="0.6" VerticalOptions="Start" Margin="0,3,0,0" />
+      </StackLayout>
+
+      <Grid Grid.Row="1" Margin="20,0,20,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+          <RowDefinition Height="50" />
+          <RowDefinition Height="50" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="40" />
+          <RowDefinition Height="40" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Source="InstagramLogo.png" HeightRequest="70" VerticalOptions="End" />
+        <Entry AutomationId="UsernameEntry" x:Name="Username" Grid.Row="1" Placeholder="Phone number, email or username" />
+        <Entry AutomationId="PasswordEntry" x:Name="Password" Grid.Row="2" Placeholder="Password" IsPassword="True" />
+        <Button AutomationId="LoginButton" x:Name="LoginButton" Text="Log In" HeightRequest="50" VerticalOptions="Start" Grid.Row="3" />
+        <Label Text="Forgot your login details? Get help signing in." HorizontalOptions="Center" Grid.Row="4" Margin="0,10,0,0" FontSize="12" />
+        <Grid Grid.Row="5">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+          <Label BackgroundColor="#bababa" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+          <Label Text="OR" Grid.Column="1" VerticalOptions="Center" Margin="10,0,10,0" />
+          <Label BackgroundColor="#bababa" Grid.Column="2" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+        </Grid>
+        <StackLayout Orientation="Horizontal" Grid.Row="6" HorizontalOptions="Center">
+          <Image Source="facebook.png" />
+          <Label Text="Log in with Facebook" TextColor="#485992" />
+        </StackLayout>
+      </Grid>
+      <StackLayout Grid.Row="2" BackgroundColor="#FFFFFF">
+        <Label HeightRequest="1" BackgroundColor="#E3E3E3" />
+        <Label Text="Don't have an account? Sign up." VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+      </StackLayout>
+      <ActivityIndicator x:Name="Loading" Grid.Row="1" />
+    </Grid>
+  </ContentPage.Content>
+</views:ContentPageBase>

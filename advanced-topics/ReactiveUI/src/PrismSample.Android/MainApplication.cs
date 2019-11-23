@@ -5,7 +5,7 @@ using Android.Runtime;
 namespace PrismSample.Droid
 {
     [Application(
-        Label = "Prism Sample",
+        Label = "Prism + ReactiveUI",
         Icon = "@mipmap/icon"
         )]
     public class MainApplication : Application

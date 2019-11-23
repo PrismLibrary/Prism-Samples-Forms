@@ -85,7 +85,7 @@ If you're adding a brand new sample be sure to start with a copy of the resource
 [SyslogLoggingSample]: advanced-topics/Logging-Syslog/
 [LogglyLoggingSample]: advanced-topics/Logging-Loggly/
 [ShinyPrismSample]: advanced-topics/ShinyLib/
-[ReactiveUISample]: 61-ReactiveUI/
+[ReactiveUISample]: advanced-topics/ReactiveUI/
 
 [PrismFormsGallery]: sample-apps/PrismFormsGallery
 [ContosoCookbook]: sample-apps/ContosoCookbook

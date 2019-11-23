@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views:ContentViewBase xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:views="clr-namespace:PrismSample.Views;assembly=PrismSample"
+                       xmlns:viewModels="clr-namespace:PrismSample.ViewModels;assembly=PrismSample"
+                       x:Class="PrismSample.Views.NugetVersionViewCell"
+                       x:TypeArguments="viewModels:NugetVersionViewModel">
+  <ContentView.Content>
+    <StackLayout Orientation="Horizontal" HeightRequest="24" Padding="16" >
+      <Label x:Name="PackageVersion" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+      <Label x:Name="DownloadCount" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+  </ContentView.Content>
+</views:ContentViewBase>

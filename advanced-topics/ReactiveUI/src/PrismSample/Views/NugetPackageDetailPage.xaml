@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       xmlns:views="clr-namespace:PrismSample.Views;assembly=PrismSample"
+                       xmlns:viewModels="clr-namespace:PrismSample.ViewModels;assembly=PrismSample"
+                       x:Class="PrismSample.Views.NugetPackageDetailPage"
+                       x:TypeArguments="viewModels:NugetPackageDetailViewModel">
+  <ContentPage.Content>
+    <StackLayout>
+      <ListView x:Name="NugetVersions" SelectionMode="None" Margin="16" ItemsSource="{Binding Versions}">
+        <ListView.Header>
+          <StackLayout Margin="12">
+            <Image VerticalOptions="Center" HeightRequest="36" WidthRequest="36" Source="{Binding PackageSearchMetadata.IconUrl}" />
+            <Label Text="{Binding PackageSearchMetadata.Identity.Id}" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" Padding="0, 16" />
+            <Label Text="{Binding PackageSearchMetadata.Description}" HorizontalOptions="CenterAndExpand" FontSize="Medium" Padding="16" />
+            <Label Text="{Binding PackageSearchMetadata.Authors}" HorizontalOptions="Center" FontSize="Medium" />
+            <Label Text="{Binding PackageSearchMetadata.DownloadCount, StringFormat='{0:N0} downloads'}" HorizontalOptions="Center" />
+            <Label Text="{Binding PackageSearchMetadata.LicenseUrl, StringFormat='License: {0}'}" FontSize="Small" FontAttributes="Bold" />
+            <Label Text="{Binding PackageSearchMetadata.ProjectUrl, StringFormat='Project: {0}'}" FontSize="Small" FontAttributes="Bold" />
+          </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <views:NugetVersionViewCell />
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+</views:ContentPageBase>
