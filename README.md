@@ -30,6 +30,17 @@ Learn feature by feature how to use Prism in your apps!
 | 19 | [NavigationMode][19] | coming soon |
 | 20 | [Confirm Navigation][20] | coming soon |
 
+## Advanced Concepts
+
+| Sample | Description |
+|:------:|-------------|
+| [Popups Plugin][50] | coming soon |
+| [Logging with App Center][51] | coming soon |
+| [Logging with Syslog][52] | coming soon |
+| [Logging with Loggly][53] | coming soon |
+| [Using Shiny Lib + Prism][60] | coming soon |
+| [Using ReactiveUI + Prism][61] | coming soon |
+
 ## Sample Apps
 
 | Sample | Description |
@@ -59,6 +70,12 @@ Learn feature by feature how to use Prism in your apps!
 [19]: 19-NavigationMode/
 [20]: 20-ConfirmNavigation/
 
+[50]: 50-PopupsPlugin/
+[51]: 51-Logging-AppCenter/
+[52]: 52-Logging-Syslog/
+[53]: 53-Logging-Loggly/
+[60]: 60-ShinyLib/
+[61]: 61-ReactiveUI/
 
 [98]: 98-PrismFormsGallery
 [99]: 99-ContosoCookbook
