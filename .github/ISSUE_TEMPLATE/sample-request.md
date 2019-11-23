@@ -1,17 +1,10 @@
 ---
-name: Sample Request
-about: Let us know if we're missing a sample of a critical feature
-title: "[Request] Name of the feature we're missing a sample for"
-labels: 'sample', 'update'
+name: Custom issue template
+about: Describe this issue template's purpose here.
+title: ''
+labels: ''
 assignees: ''
 
 ---
 
-### Sample
-
-<!-- Add the name of the sample here -->
-
-#### Reason for Update
-
-<!-- Why does this need an update? -->
 
