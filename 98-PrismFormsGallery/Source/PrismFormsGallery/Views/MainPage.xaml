@@ -4,26 +4,24 @@
              xmlns:prism="http://prismlibrary.com"
              x:Class="PrismFormsGallery.Views.MainPage"
              Title="{Binding Title}">
-    <ContentPage.Content>
-        <TableView Intent="Settings">
-            <TableSection Title="Features">
-                <TextCell Text="Commanding"
-                          Command="{Binding AreaSelected}"
-                          CommandParameter="Commanding"/>
-                <TextCell Text="Navigation"
-                          Command="{Binding AreaSelected}"
-                          CommandParameter="Navigation"/>
-                <TextCell Text="Event Aggregator"
-                          Command="{Binding AreaSelected}"
-                          CommandParameter="EventAggregator"/>
-                <TextCell Text="Dialog Service"
-                          Command="{Binding AreaSelected}"
-                          CommandParameter="DialogService"/>
-            </TableSection>
-            <TableSection Title=" ">
-                <TextCell Text="Modules"
-                          Command="{prism:NavigateTo ModulesPage}"/>
-            </TableSection>
-        </TableView>
-    </ContentPage.Content>
+  <TableView Intent="Settings">
+    <TableSection Title="Features">
+      <TextCell Text="Commanding"
+                Command="{Binding AreaSelected}"
+                CommandParameter="Commanding"/>
+      <TextCell Text="Navigation"
+                Command="{Binding AreaSelected}"
+                CommandParameter="Navigation"/>
+      <TextCell Text="Event Aggregator"
+                Command="{Binding AreaSelected}"
+                CommandParameter="Events"/>
+      <TextCell Text="Dialog Service"
+                Command="{Binding AreaSelected}"
+                CommandParameter="Dialog"/>
+    </TableSection>
+    <TableSection Title=" ">
+      <TextCell Text="Modules"
+                Command="{prism:NavigateTo ModulesPage}"/>
+    </TableSection>
+  </TableView>
 </ContentPage>
