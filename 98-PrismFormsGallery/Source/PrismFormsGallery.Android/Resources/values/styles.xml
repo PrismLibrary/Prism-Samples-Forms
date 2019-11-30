@@ -24,12 +24,14 @@
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">@color/colorAccent</item>
   </style>
-  <style name="Theme.Splash"
+  <style name="SplashScreen"
      parent="Theme.AppCompat.NoActionBar">
-    <item name="colorPrimary">#2196F3</item>
-    <item name="colorPrimaryDark">#1976D2</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="android:windowBackground">@drawable/splash_screen</item>
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowFullscreen">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowActionBar">true</item>
   </style>
 </resources>
