@@ -7,10 +7,14 @@
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout HorizontalOptions="Center"
+                 VerticalOptions="Center">
+        <Entry Text="{Binding Message}" />
+        <Button Text="Show Popup"
+                Command="{Binding ShowPopupCommand}"/>
+        <Button Text="Show Dialog"
+                Command="{Binding ShowDialogCommand}"
+                Style="{StaticResource DarkButton}" />
     </StackLayout>
 
 </ContentPage>

@@ -14,7 +14,7 @@
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>PrismSample.UWP</DisplayName>
+    <DisplayName>Prism Popups</DisplayName>
     <PublisherDisplayName>bd7518f2-03fc-45a4-b350-42248a9373f1</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>

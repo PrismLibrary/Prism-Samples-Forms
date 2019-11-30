@@ -33,8 +33,8 @@ Learn feature by feature how to use Prism in your apps!
 ## Advanced Concepts
 
 | Sample | Description |
-|:------:|-------------|
-| [Popups Plugin][50] | coming soon |
+| ------ |-------------|
+| [Popups Plugin][50] | Quite often you may find that a Modal page just doesn't cut it. A very popular option is to use Rg.Plugins.Popup. Because this is a 3rd party plugin it requires the use of [Prism.Plugins.Popup](https://popups.prismplugins.com). This sample shows how to use both Popup Pages for the Dialog Service and with Prism's Navigation Service. |
 | [Logging with App Center][51] | coming soon |
 | [Logging with Syslog][52] | coming soon |
 | [Logging with Loggly][53] | coming soon |
@@ -44,7 +44,7 @@ Learn feature by feature how to use Prism in your apps!
 ## Sample Apps
 
 | Sample | Description |
-|:----------:|-------------|
+| ---------- |-------------|
 | [Prism Forms Gallery][98] | Prism.Forms Gallery demonstrates a number of Prism and Prism.Forms features all in a single app. The goal of this gallery is to make it easy to learn, share, teach, test, and use the material in your presentations and talks. |
 | [Contoso Cookbook][99] | Contoso Cookbook is a classic Microsoft sample recipe app; first adapted for Xamarin.Forms by Jeff Prosise in 2015 and now updated to use Prism for Xamarin.Forms. Demonstrates how to use a TabbedPage with a DataTemplate for the tabs, and a ListView with DataTemplate for the recipe list on each tab; for a clean professional-looking UI. |
 
