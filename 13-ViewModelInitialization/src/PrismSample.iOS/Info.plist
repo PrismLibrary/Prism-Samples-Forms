@@ -23,15 +23,15 @@
 	<key>MinimumOSVersion</key>
 	<string>10.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>Prism Sample</string>
+	<string>ViewModel Initialization</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.prismlibrary.PrismSample</string>
+	<string>com.prismlibrary.viewmodelinitialization</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
-	<string>PrismSample</string>
+	<string>ViewModelInitialization</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>CFBundleShortVersionString</key>
