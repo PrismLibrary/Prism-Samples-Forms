@@ -16,6 +16,7 @@ namespace PrismSample.Droid
             base.OnCreate(savedInstanceState);
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            global::Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
     }

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popups:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  xmlns:prism="http://prismlibrary.com"
+                  mc:Ignorable="d"
+                  x:Class="PrismSample.Views.SamplePopup">
+  <StackLayout BackgroundColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Padding="20">
+    <Label Text="{Binding Message}" />
+    <Button Text="Close"
+            Command="{prism:GoBack}" />
+  </StackLayout>
+</popups:PopupPage>
