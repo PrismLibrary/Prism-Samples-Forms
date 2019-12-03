@@ -1,19 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="PrismSample.Views.MainPage"
+    x:Class="PrismSample.Views.ViewA"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com"
-    Title="Main Page"
-    mc:Ignorable="d">
+    Title="ViewA"
+    prism:ViewModelLocator.AutowireViewModel="True">
 
     <StackLayout>
         <Button
-            Command="{prism:NavigateTo 'NavigationPage/ViewA'}"
+            Command="{prism:GoBack}"
             HorizontalOptions="Center"
-            Text="Go to ViewA"
+            Style="{StaticResource DarkButton}"
+            Text="Main Page"
             VerticalOptions="CenterAndExpand" />
     </StackLayout>
 

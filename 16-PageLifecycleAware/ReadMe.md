@@ -1,5 +1,3 @@
 # PageLifecycleAware
 
-TODO
-
-- Should show doing something on OnAppearing / OnDisappearing
+This sample shows how to use the IPageLifecycleAware interface.
