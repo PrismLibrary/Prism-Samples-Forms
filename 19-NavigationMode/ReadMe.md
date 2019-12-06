@@ -1,5 +1,6 @@
 # Navigation Mode
 
-TODO
+This example shows
 
-- Show how to check the NavigationMode to do something only when you navigate back to a page
+- How to check the NavigationMode
+- How to only show something if we navigating back to a page
