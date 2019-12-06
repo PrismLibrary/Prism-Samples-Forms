@@ -16,9 +16,9 @@ namespace PrismSample
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync("MainPage");
+            var result = await NavigationService.NavigateAsync(nameof(HomePage) + "/" + nameof(NavigationPage) + "/" + nameof(MainPage));
 
-            if(!result.Success)
+            if (!result.Success)
             {
                 System.Diagnostics.Debugger.Break();
             }
@@ -28,6 +28,10 @@ namespace PrismSample
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>();
+            containerRegistry.RegisterForNavigation<TabsPage, TabsPageViewModel>();
+            containerRegistry.RegisterForNavigation<TabAPage, TabAPageViewModel>();
+            containerRegistry.RegisterForNavigation<TabBPage, TabBPageViewModel>();
         }
     }
 }

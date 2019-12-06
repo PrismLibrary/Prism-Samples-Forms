@@ -1,9 +1,10 @@
 # Master Detail
 
-TODO
+[Master Detail Docs](https://prismlibrary.github.io/docs/xamarin-forms/navigation/working-with-masterdetailpages.html)
 
-- Show How to use the Master Detail Page
-- Should have the following Menu Options
-  - Conventional use with a NavigationPage / Content Page
-  - Less common use with a Tabbed Page as the Child
-  - Should show the Hamburger icon on all platforms
+This example shows
+
+- How to use the Master Detail Page
+- Conventional use with a NavigationPage / Content Page
+- Less common use with a Tabbed Page as the Child
+- Hamburger icon on all platforms
