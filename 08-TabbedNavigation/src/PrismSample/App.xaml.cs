@@ -28,6 +28,14 @@ namespace PrismSample
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            
+            containerRegistry.RegisterForNavigation<TabsPage, TabsPageViewModel>();
+
+            containerRegistry.RegisterForNavigation<TabAPage, TabAPageViewModel>();
+            containerRegistry.RegisterForNavigation<TabBPage, TabBPageViewModel>();
+            containerRegistry.RegisterForNavigation<TabCPage, TabCPageViewModel>();
+
+            containerRegistry.RegisterForNavigation<DynamicTabsPage, DynamicTabsPageViewModel>();
         }
     }
 }

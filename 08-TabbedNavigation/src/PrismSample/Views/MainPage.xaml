@@ -7,10 +7,12 @@
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <StackLayout VerticalOptions="CenterAndExpand">
+
+    <Button Text="Create Tabs At Runtime" Command="{Binding DynamicTabsCommand}"></Button>
+    <Button Text="Go To Tab B" Command="{Binding TabBCommand}"></Button>
+    <Button Text="Go To Tab C" Command="{Binding TabCCommand}"></Button>
+
+  </StackLayout>
 
 </ContentPage>
