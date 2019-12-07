@@ -16,7 +16,7 @@ namespace PrismSample
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync(nameof(HomePage) + "/" + nameof(NavigationPage) + "/" + nameof(MainPage));
+            var result = await NavigationService.NavigateAsync("HomePage/NavigationPage/MainPage");
 
             if (!result.Success)
             {

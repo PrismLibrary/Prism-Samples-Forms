@@ -12,8 +12,8 @@ namespace PrismSample.ViewModels
     public class HomePageViewModel : BindableBase
     {
         private readonly INavigationService _navigationService;
-        public DelegateCommand TabbedPageCommand { get; set; }
-        public DelegateCommand MainPageCommand { get; set; }
+        public DelegateCommand TabbedPageCommand { get; }
+        public DelegateCommand MainPageCommand { get; }
 
         public HomePageViewModel(INavigationService navigationService)
         {
@@ -24,12 +24,12 @@ namespace PrismSample.ViewModels
 
         private async void TabbedPageAction()
         {
-            await _navigationService.NavigateAsync("/" + nameof(HomePage) + "/" + nameof(NavigationPage) + "/" + nameof(TabsPage));
+            await _navigationService.NavigateAsync("/HomePage/NavigationPage/TabsPage");
         }
 
         private async void MainPageAction()
         {
-            await _navigationService.NavigateAsync("/" + nameof(HomePage) + "/" + nameof(NavigationPage) + "/" + nameof(MainPage));
+            await _navigationService.NavigateAsync("/HomePage/NavigationPage/MainPage");
         }
 
     }

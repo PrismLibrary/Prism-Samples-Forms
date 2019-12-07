@@ -17,7 +17,7 @@ Learn feature by feature how to use Prism in your apps!
 | 6 | [Page Dialog Service][6] | How to use the IPageDialogService to display alerts and action sheets from within your ViewModels. |
 | 7 | [Dialog Service][7] | coming soon |
 | 8 | [Tabbed Navigation][8] | coming soon |
-| 9 | [Master Detail][9] | coming soon |
+| 9 | [Master Detail][9] | How to use a master detail page with a content page and a tabbed page as children |
 | 10 | [Modules][10] | How to use Prism modularization to separate the application logic using IModule, IModuleManager, ModuleCatalog. |
 | 11 | [Module Dependency][11] | coming soon |
 | 12 | [ViewModelLocator][12] | coming soon |
