@@ -22,7 +22,7 @@ namespace PrismSample.ViewModels
 
         private async void SecondPageAction()
         {
-            await _navigationService.NavigateAsync(nameof(SecondPage));
+            await _navigationService.NavigateAsync("SecondPage");
         }
 
     }

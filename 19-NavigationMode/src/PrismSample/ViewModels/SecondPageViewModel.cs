@@ -11,10 +11,10 @@ namespace PrismSample.ViewModels
     public class SecondPageViewModel : BindableBase, INavigatedAware
     {
         private readonly INavigationService _navigationService;
-        public DelegateCommand ThirdPageCommand { get; set; }
+        public DelegateCommand ThirdPageCommand { get; }
 
-        private string _navigationMode;
-        public string NavigationMode
+        private NavigationMode _navigationMode;
+        public NavigationMode NavigationMode
         {
             get { return _navigationMode; }
             set { SetProperty(ref _navigationMode, value); }
@@ -37,7 +37,7 @@ namespace PrismSample.ViewModels
 
         private async void ThirdPageAction()
         {
-            await _navigationService.NavigateAsync(nameof(ThirdPage));
+            await _navigationService.NavigateAsync("ThirdPage");
         }
 
         public void OnNavigatedFrom(INavigationParameters parameters)
@@ -47,11 +47,9 @@ namespace PrismSample.ViewModels
 
         public void OnNavigatedTo(INavigationParameters parameters)
         {
-            NavigationMode navigationMode = parameters.GetNavigationMode();
+            NavigationMode = parameters.GetNavigationMode();
 
-            NavigationMode = navigationMode.ToString();
-
-            IsVisible = navigationMode == Prism.Navigation.NavigationMode.Back;
+            IsVisible = NavigationMode == NavigationMode.Back;
         }
     }
 }
