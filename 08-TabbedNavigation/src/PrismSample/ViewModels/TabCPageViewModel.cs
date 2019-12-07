@@ -19,7 +19,7 @@ namespace PrismSample.ViewModels
 
         private void TabAAction()
         {
-            _navigationService.SelectTabAsync(nameof(TabAPage));
+            _navigationService.SelectTabAsync("TabAPage");
         }
     }
 }

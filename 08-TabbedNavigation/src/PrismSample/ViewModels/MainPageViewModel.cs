@@ -2,43 +2,36 @@
 using Prism.Mvvm;
 using Prism.Navigation;
 using PrismSample.Views;
+using Xamarin.Forms;
 
 namespace PrismSample.ViewModels
 {
     public class MainPageViewModel : BindableBase
     {
         private readonly INavigationService _navigationService;
-        public DelegateCommand DynamicTabsCommand { get; set; }
-        public DelegateCommand TabBCommand { get; set; }
-        public DelegateCommand TabCCommand { get; set; }
+        public DelegateCommand RuntimeTabsCommand { get; }
+        public DelegateCommand TabBCommand { get; }
 
         public MainPageViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
+
             TabBCommand = new DelegateCommand(TabBAction);
-            TabCCommand = new DelegateCommand(TabCAction);
-            DynamicTabsCommand = new DelegateCommand(DynamicTabsAction);
+            RuntimeTabsCommand = new DelegateCommand(RuntimeTabsAction);
         }
 
-        private async void DynamicTabsAction()
+        private async void RuntimeTabsAction()
         {
-            // Notice that with the DynamicTabsPage.xaml page we haven't specified any tabs.
-            // They are created on the fly when we navigate there
-            await _navigationService.NavigateAsync(nameof(DynamicTabsPage) +
-                                             $"?{KnownNavigationParameters.CreateTab}=" + nameof(TabCPage) +
-                                             $"&{KnownNavigationParameters.CreateTab}=" + nameof(TabBPage) +
-                                             $"&{KnownNavigationParameters.CreateTab}=" + nameof(TabAPage));
+            await _navigationService.NavigateAsync("TabbedPage" +
+                                             $"?{KnownNavigationParameters.CreateTab}=TabCPage" +
+                                             $"&{KnownNavigationParameters.CreateTab}=TabBPage" +
+                                             $"&{KnownNavigationParameters.CreateTab}=TabAPage");
         }
 
         private async void TabBAction()
         {
-            await _navigationService.NavigateAsync(nameof(TabsPage) + $"?{KnownNavigationParameters.SelectedTab}=" + nameof(TabBPage));
-        }
+            await _navigationService.NavigateAsync("TabsPage?selectedTab=TabBPage");
 
-        private async void TabCAction()
-        {
-            await _navigationService.NavigateAsync(nameof(TabsPage) + "?selectedTab=" + nameof(TabCPage));
         }
-
     }
 }

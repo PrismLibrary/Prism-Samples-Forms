@@ -16,7 +16,7 @@ Learn feature by feature how to use Prism in your apps!
 | 5 | [Event Aggregator][5] | How to use the IEventAggregator to raise and listen to events. This shows how to use a simple event with a primitive type payload, generic event with payload &lt;T&gt;, and event with custom EventArgs. It also demonstrated how to subscribe to events published in Xamarin.Forms inside native code. |
 | 6 | [Page Dialog Service][6] | How to use the IPageDialogService to display alerts and action sheets from within your ViewModels. |
 | 7 | [Dialog Service][7] | coming soon |
-| 8 | [Tabbed Navigation][8] | coming soon |
+| 8 | [Tabbed Navigation][8] | How to do navigation with tabbed pages in Prism |
 | 9 | [Master Detail][9] | coming soon |
 | 10 | [Modules][10] | How to use Prism modularization to separate the application logic using IModule, IModuleManager, ModuleCatalog. |
 | 11 | [Module Dependency][11] | coming soon |
