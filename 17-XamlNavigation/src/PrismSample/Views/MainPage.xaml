@@ -3,31 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:xaml="http://prismlibrary.com"
+             xmlns:prism="http://prismlibrary.com"
              mc:Ignorable="d"
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
   <StackLayout>
 
-    <Button Text="Info Page Without Parameters"  Command="{xaml:NavigateTo 'InformationPage'}" />
+    <Button Text="Info Page Without Parameters"  Command="{prism:NavigateTo 'InformationPage'}" />
 
-    <Button Text="Info Page With Implicit Message"  Command="{xaml:NavigateTo 'InformationPage?Message=Hello%20from%20XAML!'}" />
+    <Button Text="Info Page with QueryString parameters"  Command="{prism:NavigateTo 'InformationPage?Message=Hello%20from%20XAML!'}" />
 
-    <Button Text="Info Page With Parameters" Command="{xaml:NavigateTo 'InformationPage'}">
+    <Button Text="Info Page With Parameters" Command="{prism:NavigateTo 'InformationPage'}">
       <Button.CommandParameter>
-        <xaml:Parameter Key="Message" Value="A message from the past." />
+        <prism:Parameter Key="Message" Value="A message from the past." />
       </Button.CommandParameter>
     </Button>
 
-    <Button Text="Info Page With Multiple Parameters"  Command="{xaml:NavigateTo 'InformationPage'}">
+    <Button Text="Info Page With Multiple Parameters"  Command="{prism:NavigateTo 'InformationPage'}">
       <Button.CommandParameter>
-        <xaml:Parameters>
-          <xaml:Parameter Key="Message" Value="A message from the past." />
-          <xaml:Parameter Key="MoreMessages" Value="Extra messages from the past." />
-        </xaml:Parameters>
+        <prism:Parameters>
+          <prism:Parameter Key="Message" Value="A message from the past." />
+          <prism:Parameter Key="MoreMessages" Value="Extra messages from the past." />
+        </prism:Parameters>
       </Button.CommandParameter>
     </Button>
+
+    <Button Text="Info Page With Inline Command Parameters"  Command="{prism:NavigateTo InformationPage}"
+            CommandParameter="{prism:Parameter Key='Message', Value='Hello from XamlExtension'}" />
 
   </StackLayout>
 
