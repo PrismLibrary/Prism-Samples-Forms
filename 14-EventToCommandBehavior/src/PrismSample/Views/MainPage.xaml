@@ -5,12 +5,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="Main Page"
-             x:Class="PrismSample.Views.MainPage">
+             x:Class="PrismSample.Views.MainPage"
+  
+             xmlns:prism="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <StackLayout Margin="16" VerticalOptions="Center">
+
+    <Button Text="Simple Example" 
+            Command="{prism:NavigateTo 'NavigationPage/SimpleExamplePage'}"/>
+
+    <Button Text="IValueConverter Example" 
+            Command="{prism:NavigateTo 'NavigationPage/EventArgsConverterExamplePage'}"/>
+
+    <Button Text="Event Args Parameter Path Example" 
+            Command="{prism:NavigateTo 'NavigationPage/EventArgsParameterExamplePage'}"/>
+
+  </StackLayout>
 
 </ContentPage>
