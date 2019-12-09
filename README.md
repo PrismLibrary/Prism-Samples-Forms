@@ -27,7 +27,7 @@ Learn feature by feature how to use Prism in your apps!
 | 16 | [PageLifecycleAware][16] | coming soon |
 | 17 | [XamlNavigation][17] | How to do Prism navigation from within Xaml |
 | 18 | [DeviceService][18] | How to use Prism's IDeviceService to get the device's runtime and idiom. |
-| 19 | [NavigationMode][19] | coming soon |
+| 19 | [NavigationMode][19] | How to use the NavigationMode enum to only act on something when navigating back to a view |
 | 20 | [Confirm Navigation][20] | coming soon |
 
 ## Advanced Concepts
