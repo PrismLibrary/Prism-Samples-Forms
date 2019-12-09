@@ -1,9 +1,11 @@
 # Xaml Navigation
 
-TODO
+[XAML Navigation Docs](https://prismlibrary.github.io/docs/xamarin-forms/navigation/xaml-navigation.html)
 
-- Show the use of the NavigateTo Extension
-- Show the use of the GoBack Extension
-- Show the use of an implicit XAML Parameter
-- Show using the XAML Parameter Extension for the Command Parameter
-- Show passing multiple NavigationParameters in the Command Parameter
+This example shows
+
+- The use of the NavigateTo Extension
+- The use of the GoBack Extension
+- The use of an implicit XAML Parameter
+- Using the XAML Parameter Extension for the Command Parameter
+- Passing multiple Parameters in the Command Parameter

@@ -25,7 +25,7 @@ Learn feature by feature how to use Prism in your apps!
 | 14 | [EventToCommandBehavior][14] | coming soon |
 | 15 | [PageBehaviorFactory][15] | coming soon |
 | 16 | [PageLifecycleAware][16] | coming soon |
-| 17 | [XamlNavigation][17] | coming soon |
+| 17 | [XamlNavigation][17] | How to do Prism navigation from within Xaml |
 | 18 | [DeviceService][18] | How to use Prism's IDeviceService to get the device's runtime and idiom. |
 | 19 | [NavigationMode][19] | coming soon |
 | 20 | [Confirm Navigation][20] | coming soon |
