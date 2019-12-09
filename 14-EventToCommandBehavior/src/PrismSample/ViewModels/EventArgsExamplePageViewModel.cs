@@ -30,7 +30,7 @@ namespace PrismSample.ViewModels
             }
         }
 
-        async Task SelectedDeveloper(Developer developer)
+        private async Task SelectedDeveloper(Developer developer)
         {
             await _pageDialogService.DisplayAlertAsync("Info", $"{developer.FullName} from {developer.Country} is selected.", "Ok");
         }

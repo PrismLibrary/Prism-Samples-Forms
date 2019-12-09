@@ -5,20 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="Main Page"
-             x:Class="PrismSample.Views.MainPage"
-  
-             xmlns:prism="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms">
+             x:Class="PrismSample.Views.MainPage">
 
   <StackLayout Margin="16" VerticalOptions="Center">
 
     <Button Text="Simple Example" 
-            Command="{prism:NavigateTo 'NavigationPage/SimpleExamplePage'}"/>
+            Command="{Binding GoToSimpleExamplePageCommand}"/>
 
     <Button Text="IValueConverter Example" 
-            Command="{prism:NavigateTo 'NavigationPage/EventArgsConverterExamplePage'}"/>
+            Command="{Binding GoToEventArgsConverterExamplePageCommand}"/>
 
     <Button Text="Event Args Parameter Path Example" 
-            Command="{prism:NavigateTo 'NavigationPage/EventArgsParameterExamplePage'}"/>
+            Command="{Binding GoToEventArgsParameterExamplePageCommand}"/>
 
   </StackLayout>
 

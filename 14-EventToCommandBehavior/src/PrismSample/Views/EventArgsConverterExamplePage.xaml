@@ -5,33 +5,30 @@
              Title="Event Args Converter Example"
              
              xmlns:c="clr-namespace:PrismSample.Converters"
-             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms">
+             xmlns:b="http://prismlibrary.com">
 
   <ContentPage.Resources>
     <ResourceDictionary>
       <c:ItemTappedEventArgsConverter x:Key="itemTappedEventArgsConverter" />
     </ResourceDictionary>
   </ContentPage.Resources>
-  
-  <ContentPage.Content>
 
-    <ListView ItemsSource="{Binding Developers}">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          
-          <TextCell Text="{Binding FullName}"
-                    Detail="{Binding Country}" />
-        
-        </DataTemplate>
-      </ListView.ItemTemplate>
+  <ListView ItemsSource="{Binding Developers}">
+    <ListView.ItemTemplate>
+      <DataTemplate>
 
-      <ListView.Behaviors>
-        <b:EventToCommandBehavior EventName="ItemTapped" 
-                                  Command="{Binding SelectedDeveloperCommand}"
-                                  EventArgsConverter="{StaticResource itemTappedEventArgsConverter}" />
-      </ListView.Behaviors>
+        <TextCell Text="{Binding FullName}"
+                  Detail="{Binding Country}" />
 
-    </ListView>
+      </DataTemplate>
+    </ListView.ItemTemplate>
 
-  </ContentPage.Content>
+    <ListView.Behaviors>
+      <b:EventToCommandBehavior EventName="ItemTapped" 
+                                Command="{Binding SelectedDeveloperCommand}"
+                                EventArgsConverter="{StaticResource itemTappedEventArgsConverter}" />
+    </ListView.Behaviors>
+
+  </ListView>
+
 </ContentPage>

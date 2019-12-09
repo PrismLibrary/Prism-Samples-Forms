@@ -4,26 +4,23 @@
              x:Class="PrismSample.Views.SimpleExamplePage"
              Title="Simple usage"
              
-             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms">
+             xmlns:b="http://prismlibrary.com">
 
-  <ContentPage.Content>
+  <ListView ItemsSource="{Binding Developers}">
+    <ListView.ItemTemplate>
+      <DataTemplate>
 
-    <ListView ItemsSource="{Binding Developers}">
-      <ListView.ItemTemplate>
-        <DataTemplate>
+        <TextCell Text="{Binding FullName}"
+                  Detail="{Binding Country}" />
 
-          <TextCell Text="{Binding FullName}"
-                    Detail="{Binding Country}" />
+      </DataTemplate>
+    </ListView.ItemTemplate>
 
-        </DataTemplate>
-      </ListView.ItemTemplate>
+    <ListView.Behaviors>
+      <b:EventToCommandBehavior EventName="ItemTapped" 
+                                Command="{Binding SelectedDeveloperCommand}" />
+    </ListView.Behaviors>
 
-      <ListView.Behaviors>
-        <b:EventToCommandBehavior EventName="ItemTapped" 
-                                  Command="{Binding SelectedDeveloperCommand}" />
-      </ListView.Behaviors>
+  </ListView>
 
-    </ListView>
-
-  </ContentPage.Content>
 </ContentPage>
