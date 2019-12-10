@@ -37,7 +37,7 @@ Learn feature by feature how to use Prism in your apps!
 | [Popups Plugin][50] | Quite often you may find that a Modal page just doesn't cut it. A very popular option is to use Rg.Plugins.Popup. Because this is a 3rd party plugin it requires the use of [Prism.Plugins.Popup](https://popups.prismplugins.com). This sample shows how to use both Popup Pages for the Dialog Service and with Prism's Navigation Service. |
 | [Logging with App Center][51] | coming soon |
 | [Logging with Syslog][52] | coming soon |
-| [Logging with Loggly][53] | coming soon |
+| [Logging with Loggly][53] | Walks you through using the Logging Plugin with Loggly for Syslog or Http |
 | [Using Shiny Lib + Prism][60] | coming soon |
 | [Using ReactiveUI + Prism][61] | coming soon |
 
