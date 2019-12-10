@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Generate Logs"
+             x:Class="PrismSample.Views.GenerateLogsPage">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="20" />
+    </Grid.RowDefinitions>
+    <Label Text="{Binding LoggerType}"
+           HorizontalTextAlignment="Center"
+           FontSize="Title"/>
+    <ScrollView Grid.Row="1">
+      <StackLayout BindableLayout.ItemsSource="{Binding Logs}">
+        <BindableLayout.ItemTemplate>
+          <DataTemplate>
+            <Label Text="{Binding .}" />
+          </DataTemplate>
+        </BindableLayout.ItemTemplate>
+      </StackLayout>
+    </ScrollView>
+    
+    <Button Text="Generate Logs"
+            Command="{Binding GenerateLogs}"
+            Grid.Row="2" />
+  </Grid>
+</ContentPage>
