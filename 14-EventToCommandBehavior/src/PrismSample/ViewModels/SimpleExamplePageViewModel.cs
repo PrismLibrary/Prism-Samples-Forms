@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 using PrismSample.Services;
 using PrismSample.Models;
 using Prism.Commands;
@@ -21,7 +20,7 @@ namespace PrismSample.ViewModels
         {
             _pageDialogService = pageDialogService;
 
-            SelectedDeveloperCommand = new DelegateCommand(async () => await SelectedDeveloper());
+            SelectedDeveloperCommand = new DelegateCommand(SelectedDeveloper);
 
             // Insert test data into collection of Developers
             Developers = new ObservableCollection<Developer>();
@@ -31,7 +30,7 @@ namespace PrismSample.ViewModels
             }
         }
 
-        private async Task SelectedDeveloper()
+        private async void SelectedDeveloper()
         {
             await _pageDialogService.DisplayAlertAsync("Info.", "Some developer is selected.", "Ok");
         }

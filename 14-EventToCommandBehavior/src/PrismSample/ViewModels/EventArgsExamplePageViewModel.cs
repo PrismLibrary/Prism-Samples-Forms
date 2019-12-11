@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using System.Threading.Tasks;
 using PrismSample.Services;
 using PrismSample.Models;
 using Prism.Services;
@@ -15,7 +14,7 @@ namespace PrismSample.ViewModels
         public ObservableCollection<Developer> Developers { get; set; }
 
         private DelegateCommand<Developer> _selectedDeveloperCommand;
-        public DelegateCommand<Developer> SelectedDeveloperCommand => _selectedDeveloperCommand ?? (_selectedDeveloperCommand = new DelegateCommand<Developer>(async (developer) => await SelectedDeveloper(developer)));
+        public DelegateCommand<Developer> SelectedDeveloperCommand => _selectedDeveloperCommand ?? (_selectedDeveloperCommand = new DelegateCommand<Developer>((developer) => SelectedDeveloper(developer)));
 
         public EventArgsExamplePageViewModel(IPageDialogService pageDialogService,
             IDataProvider dataProvider)
@@ -30,7 +29,7 @@ namespace PrismSample.ViewModels
             }
         }
 
-        private async Task SelectedDeveloper(Developer developer)
+        private async void SelectedDeveloper(Developer developer)
         {
             await _pageDialogService.DisplayAlertAsync("Info", $"{developer.FullName} from {developer.Country} is selected.", "Ok");
         }

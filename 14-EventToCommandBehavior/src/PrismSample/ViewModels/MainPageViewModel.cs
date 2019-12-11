@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using PrismSample.Views;
+﻿using PrismSample.Views;
 using Prism.Navigation;
 using Prism.Commands;
 using Xamarin.Forms;
@@ -19,22 +18,22 @@ namespace PrismSample.ViewModels
         {
             _navigationService = navigationService;
 
-            GoToEventArgsConverterExamplePageCommand = new DelegateCommand(async () => await GoToEventArgsConverterExamplePage());
-            GoToEventArgsParameterExamplePageCommand = new DelegateCommand(async () => await GoToEventArgsParameterExamplePage());
-            GoToSimpleExamplePageCommand = new DelegateCommand(async () => await GoToSimpleExamplePage());
+            GoToEventArgsConverterExamplePageCommand = new DelegateCommand(GoToEventArgsConverterExamplePage);
+            GoToEventArgsParameterExamplePageCommand = new DelegateCommand( GoToEventArgsParameterExamplePage);
+            GoToSimpleExamplePageCommand = new DelegateCommand(GoToSimpleExamplePage);
         }
 
-        private async Task GoToEventArgsConverterExamplePage()
+        private async void GoToEventArgsConverterExamplePage()
         {
             await _navigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(EventArgsConverterExamplePage));
         }
 
-        private async Task GoToEventArgsParameterExamplePage()
+        private async void GoToEventArgsParameterExamplePage()
         {
             await _navigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(EventArgsParameterExamplePage));
         }
 
-        private async Task GoToSimpleExamplePage()
+        private async void GoToSimpleExamplePage()
         {
             await _navigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(SimpleExamplePage));
         }
