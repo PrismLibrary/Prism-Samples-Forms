@@ -5,12 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="Main Page"
-             x:Class="PrismSample.Views.MainPage">
+             x:Class="PrismSample.Views.MainPage"
+             Padding="16,0">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout VerticalOptions="Center">
+        <Entry Placeholder="Enter name"
+               Text="{Binding Name}"/>
+        <Button Text="Accept Terms"
+                Command="{Binding TermsCommand}"/>
+        <Label Text="{Binding Status}"
+               FontSize="Title"
+               Margin="20"
+               HorizontalTextAlignment="Center"/>
     </StackLayout>
 
 </ContentPage>

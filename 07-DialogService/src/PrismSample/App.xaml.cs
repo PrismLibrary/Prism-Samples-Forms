@@ -6,12 +6,9 @@ using Xamarin.Forms;
 
 namespace PrismSample
 {
+    [AutoRegisterForNavigation]
     public partial class App
     {
-        public App()
-        {
-        }
-
         protected override async void OnInitialized()
         {
             InitializeComponent();
@@ -27,7 +24,7 @@ namespace PrismSample
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterDialog<TermsDialog>();
         }
     }
 }
