@@ -27,10 +27,20 @@ namespace PrismSample.ViewModels
 
         async void OnGetNameTapped()
         {
+            // Option A - Use generic extension
+            Name = await GetNameExtAsync();
+
+            // Option B - Use type extension
             Name = await GetNameAsync();
         }
 
-        public Task<string> GetNameAsync()
+        async Task<string> GetNameExtAsync()
+        {
+            var r = await _dialogService.ShowDialogAsync("NameDialog");
+            return r.Parameters.GetValue<string>("Name");
+        }
+
+        async Task<string> GetNameAsync()
         {
             var tcs = new TaskCompletionSource<string>();
             try
@@ -45,7 +55,7 @@ namespace PrismSample.ViewModels
                 tcs.TrySetException(ex);
             }
 
-            return tcs.Task;
+            return tcs.Task.Result;
         }
     }
 }

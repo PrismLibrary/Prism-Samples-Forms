@@ -5,7 +5,7 @@
              Padding="16">
     <ContentPage.Content>
       <StackLayout VerticalOptions="Center">
-        <Label Text="{Binding Name}" FontSize="Title"/>
+        <Label Text="{Binding Name}" FontSize="Title" HorizontalTextAlignment="Center" />
         <Button Text="Get Name" Command="{Binding GetNameCommand}"/>
       </StackLayout>
     </ContentPage.Content>

@@ -11,5 +11,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dialogs\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>
