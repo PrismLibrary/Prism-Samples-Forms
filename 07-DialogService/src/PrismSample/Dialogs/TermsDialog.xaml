@@ -43,7 +43,7 @@
           <Button Text="Decline"
                   HorizontalOptions="FillAndExpand"
                   Command="{Binding CancelCommand}"
-                  BackgroundColor="#e57373"/>
+                  BackgroundColor="{StaticResource DestructiveButton}"/>
           <Button Text="Accept"
                   HorizontalOptions="FillAndExpand"
                   Command="{Binding SubmitCommand}"/>

@@ -3,20 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:prism="http://prismlibrary.com"
              mc:Ignorable="d"
-             Title="Main Page"
+             Title="{Binding Title}"
              x:Class="PrismSample.Views.MainPage"
              Padding="16,0">
-
-    <StackLayout VerticalOptions="Center">
-        <Entry Placeholder="Enter name"
-               Text="{Binding Name}"/>
-        <Button Text="Accept Terms"
-                Command="{Binding TermsCommand}"/>
-        <Label Text="{Binding Status}"
-               FontSize="Title"
-               Margin="20"
-               HorizontalTextAlignment="Center"/>
-    </StackLayout>
-
+    <TableView Intent="Settings">
+    <TableSection Title="Samples">
+      <TextCell Text="1. Passing Parameters"
+                Command="{prism:NavigateTo PassingParametersPage}"/>
+      <TextCell Text="2. Controlling Can Navigate"
+                Command="{prism:ShowDialog LockingDialog}"/>
+      <TextCell Text="3. Tap Outside To Close"
+                Command="{prism:ShowDialog LockingDialog}">
+        <TextCell.CommandParameter> 
+          <prism:Parameter Key="CloseOnTap" Value="true"/>
+        </TextCell.CommandParameter>
+      </TextCell>
+      <TextCell Text="4. Dialog Service Extensions"
+                Command="{prism:NavigateTo DialogExtensionPage}"/>
+    </TableSection>
+  </TableView>
 </ContentPage>

@@ -13,7 +13,7 @@ namespace PrismSample
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync("MainPage");
+            var result = await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(MainPage)}");
 
             if(!result.Success)
             {
@@ -25,6 +25,8 @@ namespace PrismSample
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterDialog<TermsDialog>();
+            containerRegistry.RegisterDialog<LockingDialog>();
+            containerRegistry.RegisterDialog<NameDialog>();
         }
     }
 }

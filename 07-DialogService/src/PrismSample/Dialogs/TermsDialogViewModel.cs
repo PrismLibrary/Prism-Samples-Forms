@@ -31,7 +31,7 @@ namespace PrismSample.ViewModels
             RequestClose(new DialogParameters { { "accepted", false } });
         }
 
-        private string _name = "User Name";
+        private string _name;
         public string Name
         {
             get => _name;
@@ -45,7 +45,7 @@ namespace PrismSample.ViewModels
             set { SetProperty(ref _canContinue, value); }
         }
 
-        private string _emailAddress = "Email Address";
+        private string _emailAddress;
         public string EmailAddress
         {
             get { return _emailAddress; }
