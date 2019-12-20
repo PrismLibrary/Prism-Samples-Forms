@@ -31,7 +31,7 @@ namespace PrismSample.ViewModels
             Name = await GetNameExtAsync();
 
             // Option B - Use type extension
-            Name = await GetNameAsync();
+            //Name = await GetNameAsync();
         }
 
         async Task<string> GetNameExtAsync()

@@ -12,6 +12,14 @@ namespace PrismSample.ViewModels
             CloseCommand = new DelegateCommand(OnCloseTapped);
         }
 
+        private string _question;
+
+        public string Question
+        {
+            get { return _question; }
+            set { SetProperty(ref _question, value); }
+        }
+
         private bool _canClose;
         public bool CanClose
         {
@@ -28,10 +36,10 @@ namespace PrismSample.ViewModels
 
         private void OnCloseTapped()
         {
-            RequestClose.Invoke(new DialogParameters());
+            RequestClose?.Invoke(new DialogParameters());
         }
 
-        public DelegateCommand CloseCommand { get; set; }
+        public DelegateCommand CloseCommand { get; }
 
         public event Action<IDialogParameters> RequestClose;
 
@@ -41,7 +49,13 @@ namespace PrismSample.ViewModels
 
         public void OnDialogOpened(IDialogParameters parameters)
         {
-            // For CloseOnTap sample #3.
+            // When not using IAutoInitialize, get values from parameters
+            
+            // For sample 2 & 3
+            if (parameters.ContainsKey("Question"))
+                Question = parameters.GetValue<string>("Question");
+            
+            // For sample 3
             if (parameters.ContainsKey("CloseOnTap"))
                 CloseOnTap = CanClose = parameters.GetValue<bool>("CloseOnTap");
         }

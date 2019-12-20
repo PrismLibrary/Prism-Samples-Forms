@@ -6,9 +6,11 @@
              prism:DialogLayout.CloseOnBackgroundTapped="{Binding CloseOnTap}" >
     <ContentView.Content>
       <Frame CornerRadius="20">
-        <StackLayout Spacing="12">
+        <StackLayout Spacing="16">
           <StackLayout Orientation="Horizontal">
-            <Label Text="Can navigate away?" HorizontalOptions="FillAndExpand"/>
+            <Label Text="{Binding Question}" 
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center"/>
             <Switch IsToggled="{Binding CanClose}"/>
           </StackLayout>
           <Button Text="Close" Command="{Binding CloseCommand}"/>
