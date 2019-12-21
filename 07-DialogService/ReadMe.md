@@ -114,7 +114,7 @@ var r = await _dialogService.ShowDialogAsync("NameDialog");
 return r.Parameters.GetValue<string>("Name");
 ```
 
-### ShowDialogAsync`<`T`>`
+### ShowDialogAsync`<T>`
 This extension shows the dialog and expects a parameter with the name matching the `Type` name.
 ```csharp
 public static Task<T> ShowDialogAsync<T>(this IDialogService dialogService,
