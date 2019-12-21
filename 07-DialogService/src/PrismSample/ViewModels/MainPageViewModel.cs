@@ -20,10 +20,7 @@ namespace PrismSample.ViewModels
         
         private void OnLockingDialogTapped()
         {
-            _dialogService.ShowDialog("LockingDialog", new DialogParameters
-            {
-                { "Question", "Can navigate away?" }
-            });
+            _dialogService.ShowDialog("LockingDialog?Question=Can navigate away?");
         }
         
         private void OnTapToCloseDialogTapped()

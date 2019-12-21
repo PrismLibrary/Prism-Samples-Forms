@@ -66,6 +66,10 @@ _dialogService.ShowDialog("LockingDialog");
 ```
 Show the dialog and pass in `DialogParameters`,
 ```csharp
+// using Query string
+_dialogService.ShowDialog("LockingDialog?Question=Can navigate away?");
+
+// using DialogParameters
 _dialogService.ShowDialog("LockingDialog", new DialogParameters
 {
     { "Question", "Can navigate away?" }
