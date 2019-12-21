@@ -14,6 +14,8 @@
                 Command="{Binding TapToCloseDialogCommand}"/>
       <TextCell Text="4. Dialog Service Extensions"
                 Command="{prism:NavigateTo DialogExtensionPage}"/>
+      <TextCell Text="5. Selector Dialog"
+                Command="{prism:NavigateTo SelectorPage}"/>
     </TableSection>
   </TableView>
 </ContentPage>

@@ -18,11 +18,11 @@ namespace PrismSample.ViewModels
             set { SetProperty(ref _name, value); }
         }
 
-        public DelegateCommand SubmitCommand { get; set; }
+        public DelegateCommand SubmitCommand { get; }
 
         private void OnSubmitTapped()
         {
-            RequestClose.Invoke(new DialogParameters { { "Name", Name } });
+            RequestClose(new DialogParameters { { "Name", Name } });
         }
 
         public event Action<IDialogParameters> RequestClose;

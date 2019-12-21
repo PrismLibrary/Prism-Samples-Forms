@@ -1,5 +1,6 @@
 ﻿using System;
 using Prism.Ioc;
+using PrismSample.Services;
 using PrismSample.ViewModels;
 using PrismSample.Views;
 using Xamarin.Forms;
@@ -27,6 +28,9 @@ namespace PrismSample
             containerRegistry.RegisterDialog<TermsDialog>();
             containerRegistry.RegisterDialog<LockingDialog>();
             containerRegistry.RegisterDialog<NameDialog>();
+            containerRegistry.RegisterDialog<ContactSelectorDialog>();
+
+            containerRegistry.Register<IContactsService, ContactsService>();
         }
     }
 }

@@ -36,7 +36,7 @@ namespace PrismSample.ViewModels
 
         private void OnCloseTapped()
         {
-            RequestClose?.Invoke(new DialogParameters());
+            RequestClose(new DialogParameters());
         }
 
         public DelegateCommand CloseCommand { get; }

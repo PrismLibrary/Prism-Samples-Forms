@@ -42,5 +42,24 @@ namespace PrismSample
             }
             return tcs.Task;
         }
+        
+        public static Task<T> ShowDialogAsync<T>(this IDialogService dialogService,
+            string name)
+        {
+            var tcs = new TaskCompletionSource<T>();
+
+            try
+            {
+                dialogService.ShowDialog(name, (result) =>
+                {
+                    tcs.SetResult(result.Parameters.GetValue<T>(typeof(T).Name));
+                });
+            }
+            catch (Exception ex)
+            {
+                tcs.SetException(ex);
+            }
+            return tcs.Task;
+        }
     }
 }
