@@ -33,6 +33,11 @@ namespace PrismSample
             try
             {
                 dialogService.ShowDialog(name, parameters, (result) => {
+                    if (result.Exception != null)
+                    {
+                        tcs.SetException(result.Exception);
+                        return;
+                    }
                     tcs.SetResult(result);
                 });
             }
@@ -52,6 +57,11 @@ namespace PrismSample
             {
                 dialogService.ShowDialog(name, (result) =>
                 {
+                    if (result.Exception != null)
+                    {
+                        tcs.SetException(result.Exception);
+                        return;
+                    }
                     tcs.SetResult(result.Parameters.GetValue<T>(typeof(T).Name));
                 });
             }
