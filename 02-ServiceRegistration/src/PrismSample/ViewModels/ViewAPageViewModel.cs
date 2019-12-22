@@ -9,11 +9,11 @@ namespace PrismSample.ViewModels
     {
         private readonly INavigationService _navigationService;
 
-        private int numberValue;
+        private int _numberValue;
         public int NumberValue
         {
-            get { return numberValue; }
-            set { SetProperty(ref numberValue, value); }
+            get => _numberValue;
+            set => SetProperty(ref _numberValue, value);
         }
 
         public DelegateCommand GoBackCommand { get; private set; }

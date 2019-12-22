@@ -1,5 +1,4 @@
-﻿using PrismSample.Views;
-using Prism.Navigation;
+﻿using Prism.Navigation;
 using Prism.Commands;
 using Prism.Mvvm;
 
@@ -22,12 +21,12 @@ namespace PrismSample.ViewModels
 
         private async void GoToViewA()
         {
-            await _navigationService.NavigateAsync(nameof(ViewAPage));
+            await _navigationService.NavigateAsync("ViewAPage");
         }
 
         private async void GoToViewB()
         {
-            await _navigationService.NavigateAsync(nameof(ViewBPage));
+            await _navigationService.NavigateAsync("ViewBPage");
         }
     }
 }
