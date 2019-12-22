@@ -13,13 +13,14 @@ namespace PrismSample.ViewModels
 
         public ObservableCollection<Developer> Developers { get; set; }
 
-        private DelegateCommand<Developer> _selectedDeveloperCommand;
-        public DelegateCommand<Developer> SelectedDeveloperCommand => _selectedDeveloperCommand ?? (_selectedDeveloperCommand = new DelegateCommand<Developer>((developer) => SelectedDeveloper(developer)));
+        public DelegateCommand<Developer> SelectedDeveloperCommand { get; private set; }
 
         public EventArgsExamplePageViewModel(IPageDialogService pageDialogService,
             IDataProvider dataProvider)
         {
             _pageDialogService = pageDialogService;
+
+            SelectedDeveloperCommand = new DelegateCommand<Developer>(SelectedDeveloper);
 
             // Insert test data into collection of Developers
             Developers = new ObservableCollection<Developer>();

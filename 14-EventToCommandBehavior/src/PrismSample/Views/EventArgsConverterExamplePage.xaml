@@ -3,9 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrismSample.Views.EventArgsConverterExamplePage"
              Title="Event Args Converter Example"
-             
              xmlns:c="clr-namespace:PrismSample.Converters"
-             xmlns:b="http://prismlibrary.com">
+             xmlns:prism="http://prismlibrary.com">
 
   <ContentPage.Resources>
     <ResourceDictionary>
@@ -24,11 +23,10 @@
     </ListView.ItemTemplate>
 
     <ListView.Behaviors>
-      <b:EventToCommandBehavior EventName="ItemTapped" 
-                                Command="{Binding SelectedDeveloperCommand}"
-                                EventArgsConverter="{StaticResource itemTappedEventArgsConverter}" />
+      <prism:EventToCommandBehavior EventName="ItemTapped" 
+                                    Command="{Binding SelectedDeveloperCommand}"
+                                    EventArgsConverter="{StaticResource itemTappedEventArgsConverter}" />
     </ListView.Behaviors>
-
   </ListView>
 
 </ContentPage>

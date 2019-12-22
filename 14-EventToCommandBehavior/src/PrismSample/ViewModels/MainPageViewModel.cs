@@ -1,7 +1,5 @@
-﻿using PrismSample.Views;
-using Prism.Navigation;
+﻿using Prism.Navigation;
 using Prism.Commands;
-using Xamarin.Forms;
 using Prism.Mvvm;
 
 namespace PrismSample.ViewModels
@@ -25,17 +23,17 @@ namespace PrismSample.ViewModels
 
         private async void GoToEventArgsConverterExamplePage()
         {
-            await _navigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(EventArgsConverterExamplePage));
+            await _navigationService.NavigateAsync("EventArgsConverterExamplePage");
         }
 
         private async void GoToEventArgsParameterExamplePage()
         {
-            await _navigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(EventArgsParameterExamplePage));
+            await _navigationService.NavigateAsync("EventArgsParameterExamplePage");
         }
 
         private async void GoToSimpleExamplePage()
         {
-            await _navigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(SimpleExamplePage));
+            await _navigationService.NavigateAsync("SimpleExamplePage");
         }
     }
 }

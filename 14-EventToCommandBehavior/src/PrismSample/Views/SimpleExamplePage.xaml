@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrismSample.Views.SimpleExamplePage"
              Title="Simple usage"
-             
-             xmlns:b="http://prismlibrary.com">
+             xmlns:prism="http://prismlibrary.com">
 
   <ListView ItemsSource="{Binding Developers}">
     <ListView.ItemTemplate>
@@ -17,10 +16,9 @@
     </ListView.ItemTemplate>
 
     <ListView.Behaviors>
-      <b:EventToCommandBehavior EventName="ItemTapped" 
-                                Command="{Binding SelectedDeveloperCommand}" />
+      <prism:EventToCommandBehavior EventName="ItemTapped" 
+                                    Command="{Binding SelectedDeveloperCommand}" />
     </ListView.Behaviors>
-
   </ListView>
 
 </ContentPage>
