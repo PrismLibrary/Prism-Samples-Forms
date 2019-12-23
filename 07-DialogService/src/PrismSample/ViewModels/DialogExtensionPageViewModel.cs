@@ -19,13 +19,13 @@ namespace PrismSample.ViewModels
         private string _name;
         public string Name
         {
-            get { return _name; }
-            set { SetProperty(ref _name, value); }
+            get => _name;
+            set => SetProperty(ref _name, value);
         }
 
         public DelegateCommand GetNameCommand { get; }
 
-        async void OnGetNameTapped()
+        private async void OnGetNameTapped()
         {
             // Option A - Use generic extension
             //Name = await GetNameExtAsync();
@@ -34,13 +34,13 @@ namespace PrismSample.ViewModels
             Name = await GetNameAsync();
         }
 
-        async Task<string> GetNameExtAsync()
+        private async Task<string> GetNameExtAsync()
         {
             var r = await _dialogService.ShowDialogAsync("NameDialog");
             return r.Parameters.GetValue<string>("Name");
         }
 
-        Task<string> GetNameAsync()
+        private Task<string> GetNameAsync()
         {
             var tcs = new TaskCompletionSource<string>();
             try

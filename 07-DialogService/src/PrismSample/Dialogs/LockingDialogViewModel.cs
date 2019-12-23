@@ -1,5 +1,4 @@
 ﻿using System;
-using Prism.AppModel;
 using Prism.Commands;
 using Prism.Services.Dialogs;
 
@@ -13,25 +12,24 @@ namespace PrismSample.ViewModels
         }
 
         private string _question;
-
         public string Question
         {
-            get { return _question; }
-            set { SetProperty(ref _question, value); }
+            get => _question; 
+            set => SetProperty(ref _question, value);
         }
 
         private bool _canClose;
         public bool CanClose
         {
-            get { return _canClose; }
-            set { SetProperty(ref _canClose, value); }
+            get => _canClose;
+            set => SetProperty(ref _canClose, value);
         }
 
         private bool _closeOnTap;
         public bool CloseOnTap
         {
-            get { return _closeOnTap; }
-            set { SetProperty(ref _closeOnTap, value); }
+            get => _closeOnTap;
+            set => SetProperty(ref _closeOnTap, value);
         }
 
         private void OnCloseTapped()

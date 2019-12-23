@@ -1,8 +1,6 @@
-using System.Collections.Generic;
 using Prism.Commands;
 using Prism.Services.Dialogs;
 using PrismSample.Models;
-using PrismSample.Services;
 
 namespace PrismSample.ViewModels
 {
@@ -19,13 +17,13 @@ namespace PrismSample.ViewModels
         private Contact _contact;
         public Contact Contact
         {
-            get { return _contact; }
-            set { SetProperty(ref _contact, value); }
+            get => _contact;
+            set => SetProperty(ref _contact, value);
         }
 
         public DelegateCommand GetContactCommand { get; }
         
-        async void OnGetContactTapped()
+        private async void OnGetContactTapped()
         {
             Contact = await _dialogService.ShowDialogAsync<Contact>("ContactSelectorDialog");
         }

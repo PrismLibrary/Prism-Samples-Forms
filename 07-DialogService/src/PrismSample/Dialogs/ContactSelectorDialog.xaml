@@ -1,46 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com"
-             prism:DialogLayout.RelativeWidthRequest="0.75"
-             prism:DialogLayout.RelativeHeightRequest="0.75"
-             prism:DialogLayout.CloseOnBackgroundTapped="True"
-             x:Class="PrismSample.Views.ContactSelectorDialog">
-  <ContentView.Content>
-    <Frame CornerRadius="20" HasShadow="False">
-      <StackLayout Spacing="20">
-        <Label Text="Contacts" 
-               FontSize="Title"/>
-        <SearchBar Placeholder="Name or email" 
-                   Text="{Binding Query}"/>
-        <ListView ItemsSource="{Binding Contacts}" 
-                  HasUnevenRows="True"
-                  SelectedItem="{Binding SelectedContact}"
-                  SelectionMode="Single"
-                  SeparatorColor="Gray">
-          <ListView.ItemTemplate>
-            <DataTemplate>
-              <ViewCell>
-                <Grid ColumnSpacing="10" Margin="8">
-                  <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                  </Grid.ColumnDefinitions>
-                  <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                  </Grid.RowDefinitions>
-                  
-                  <Image Grid.RowSpan="2" VerticalOptions="Center" Aspect="AspectFit" Source="{Binding Avatar}"/>
-                  <Label Grid.Column="1" Text="{Binding Name}" FontSize="Header" VerticalOptions="End"/>
-                  <Label Grid.Column="1" Grid.Row="1" Text="{Binding Email}" FontSize="Small" VerticalOptions="Start"
-                         TextColor="Gray"/>
-                </Grid>
-              </ViewCell>
-            </DataTemplate>
-          </ListView.ItemTemplate>
-        </ListView>
-      </StackLayout>
-    </Frame>
-  </ContentView.Content>
-</ContentView>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:prism="http://prismlibrary.com"
+       prism:DialogLayout.RelativeWidthRequest="0.75"
+       prism:DialogLayout.RelativeHeightRequest="0.75"
+       prism:DialogLayout.CloseOnBackgroundTapped="True"
+       x:Class="PrismSample.Views.ContactSelectorDialog"
+       CornerRadius="20" HasShadow="False">
+  <StackLayout Spacing="20">
+    <Label Text="Contacts" 
+           FontSize="Title"/>
+    <SearchBar Placeholder="Name or email" 
+               Text="{Binding Query}"/>
+    <ListView ItemsSource="{Binding Contacts}" 
+              HasUnevenRows="True"
+              SelectedItem="{Binding SelectedContact}"
+              SelectionMode="Single"
+              SeparatorColor="Gray">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid ColumnSpacing="10" Margin="8">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+              </Grid.RowDefinitions>
+              
+              <Image Grid.RowSpan="2" VerticalOptions="Center" Aspect="AspectFit" Source="{Binding Avatar}"/>
+              <Label Grid.Column="1" Text="{Binding Name}" FontSize="Header" VerticalOptions="End"/>
+              <Label Grid.Column="1" Grid.Row="1" Text="{Binding Email}" FontSize="Small" VerticalOptions="Start"
+                     TextColor="Gray"/>
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</Frame>

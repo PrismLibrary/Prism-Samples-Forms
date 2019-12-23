@@ -4,7 +4,7 @@
              xmlns:prism="http://prismlibrary.com"
              Title="{Binding Title}"
              x:Class="PrismSample.Views.MainPage">
-    <TableView Intent="Settings">
+  <TableView Intent="Settings">
     <TableSection Title="Samples">
       <TextCell Text="1. Passing Parameters"
                 Command="{prism:NavigateTo PassingParametersPage}"/>

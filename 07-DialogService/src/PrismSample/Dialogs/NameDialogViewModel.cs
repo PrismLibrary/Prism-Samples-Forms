@@ -14,8 +14,8 @@ namespace PrismSample.ViewModels
         private string _name;
         public string Name
         {
-            get { return _name; }
-            set { SetProperty(ref _name, value); }
+            get => _name;
+            set => SetProperty(ref _name, value);
         }
 
         public DelegateCommand SubmitCommand { get; }

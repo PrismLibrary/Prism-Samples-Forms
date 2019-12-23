@@ -7,16 +7,14 @@
              Title="{Binding Title}"
              x:Class="PrismSample.Views.PassingParametersPage"
              Padding="16,0">
-
-    <StackLayout VerticalOptions="Center">
-        <Entry Placeholder="Enter name"
-               Text="{Binding Name}"/>
-        <Button Text="Accept Terms"
-                Command="{Binding TermsCommand}"/>
-        <Label Text="{Binding Status}"
-               FontSize="Title"
-               Margin="20"
-               HorizontalTextAlignment="Center"/>
-    </StackLayout>
-
+  <StackLayout VerticalOptions="Center">
+    <Entry Placeholder="Enter name"
+           Text="{Binding Name}"/>
+    <Button Text="Accept Terms"
+            Command="{Binding TermsCommand}"/>
+    <Label Text="{Binding Status}"
+           FontSize="Title"
+           Margin="20"
+           HorizontalTextAlignment="Center"/>
+  </StackLayout>
 </ContentPage>

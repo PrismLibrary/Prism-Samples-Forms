@@ -1,7 +1,6 @@
 ﻿using System;
 using Prism.AppModel;
 using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Services.Dialogs;
 
 namespace PrismSample.ViewModels
@@ -19,13 +18,13 @@ namespace PrismSample.ViewModels
         public DelegateCommand SubmitCommand { get; }
         public DelegateCommand CancelCommand { get; }
 
-        void OnSubmitTapped()
+        private void OnSubmitTapped()
         {
             RequestClose(new DialogParameters { { "accepted", true } });
         }
 
-        bool _cancelled;
-        void OnCancelTapped()
+        private bool _cancelled;
+        private void OnCancelTapped()
         {
             _cancelled = true;
             RequestClose(new DialogParameters { { "accepted", false } });

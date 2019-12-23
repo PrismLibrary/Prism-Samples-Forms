@@ -18,22 +18,23 @@ namespace PrismSample.ViewModels
         private List<Contact> _contacts;
         public List<Contact> Contacts
         {
-            get { return _contacts; }
-            set { SetProperty(ref _contacts, value); }
+            get => _contacts;
+            set => SetProperty(ref _contacts, value);
         }
         
         private Contact _selectedContact;
         public Contact SelectedContact
         {
-            get { return _selectedContact; }
-            set
-            {
-                SetProperty(ref _selectedContact, value);
-                if(value != null)
-                    RequestClose(new DialogParameters {{"Contact", value}});
-            }
+            get => _selectedContact; 
+            set => SetProperty(ref _selectedContact, value, onChanged:OnContactSelected);
         }
-        
+
+        private void OnContactSelected()
+        {
+            if(SelectedContact != null)
+                RequestClose(new DialogParameters {{"Contact", SelectedContact}});
+        }
+
         public async void OnDialogOpened(IDialogParameters parameters)
         {
             Contacts = await _contactsService.GetContacts();

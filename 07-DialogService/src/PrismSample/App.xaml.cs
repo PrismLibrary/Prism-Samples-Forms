@@ -1,7 +1,5 @@
-﻿using System;
-using Prism.Ioc;
+﻿using Prism.Ioc;
 using PrismSample.Services;
-using PrismSample.ViewModels;
 using PrismSample.Views;
 using Xamarin.Forms;
 
@@ -14,7 +12,7 @@ namespace PrismSample
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(MainPage)}");
+            var result = await NavigationService.NavigateAsync($"NavigationPage/MainPage");
 
             if(!result.Success)
             {

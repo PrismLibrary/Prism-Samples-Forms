@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
-
-namespace PrismSample.Views
+﻿namespace PrismSample.Views
 {
-    public partial class TermsDialog : ContentView
+    public partial class TermsDialog
     {
         public TermsDialog()
         {
