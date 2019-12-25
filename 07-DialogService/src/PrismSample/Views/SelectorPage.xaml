@@ -15,7 +15,7 @@
       </Grid.RowDefinitions>
                 
       <Image Grid.RowSpan="2" VerticalOptions="Center" Aspect="AspectFit" Source="{Binding Contact.Avatar}"/>
-      <Label Grid.Column="1" Text="{Binding Contact.Name}" FontSize="Header" VerticalOptions="End"/>
+      <Label Grid.Column="1" Text="{Binding Contact.Name}" FontSize="Title" VerticalOptions="End"/>
       <Label Grid.Column="1" Grid.Row="1" Text="{Binding Contact.Email}" FontSize="Small" VerticalOptions="Start"
              TextColor="Gray"/>
     </Grid>
