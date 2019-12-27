@@ -21,7 +21,7 @@ Learn feature by feature how to use Prism in your apps!
 | 10 | [Modules][10] | How to use Prism modularization to separate the application logic using IModule, IModuleManager, ModuleCatalog. |
 | 11 | [Module Dependency][11] | coming soon |
 | 12 | [ViewModelLocator][12] | coming soon |
-| 13 | [ViewModel Initialization][13] | coming soon |
+| 13 | [ViewModel Initialization][13] | How to properly use `IAutoInitialize`, `IInitialize`, or `IInitializeAsync` to do a one time initialization of your ViewModel with the context you need based on the Navigation Parameters, or any other initialization you may need to do. |
 | 14 | [EventToCommandBehavior][14] | coming soon |
 | 15 | [PageBehaviorFactory][15] | coming soon |
 | 16 | [PageLifecycleAware][16] | coming soon |
