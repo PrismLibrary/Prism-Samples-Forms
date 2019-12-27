@@ -3,14 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:prism="http://prismlibrary.com"
              mc:Ignorable="d"
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+  <Grid>
+    <StackLayout VerticalOptions="Center"
+                 Padding="20">
+      <Label Text="{Binding Message}"
+             HorizontalTextAlignment="Center" />
+      <Button Text="AutoInitialize ViewA without Required Parameter"
+              Command="{Binding NavigateCommand}"
+              CommandParameter="ViewA" />
+      <Button Text="AutoInitialize ViewA with Required Parameter"
+              Command="{Binding NavigateCommand}"
+              CommandParameter="ViewA?message=Hello%20from%20the%20MainPage" />
+      <Button Text="Initialize ViewB"
+              Command="{Binding NavigateCommand}"
+              CommandParameter="ViewB?message=Hello%20from%20the%20MainPage" />
+      <Button Text="InitializeAsync ViewC"
+              Command="{Binding NavigateCommand}"
+              CommandParameter="ViewC?message=Hello%20from%20the%20MainPage" />
+      <Button Text="InitializeAsync ViewD"
+              Command="{Binding NavigateCommand}"
+              CommandParameter="ViewD?message=Hello%20from%20the%20MainPage" />
     </StackLayout>
+    <BoxView BackgroundColor="Black"
+             Opacity="0.7"
+             IsVisible="{Binding IsNavigating}"/>
+    <ActivityIndicator IsRunning="{Binding IsNavigating}"
+                       Scale="{OnPlatform Default=1, iOS=2}"
+                       Color="White"
+                       IsVisible="{Binding IsNavigating}" />
+  </Grid>
 
 </ContentPage>
