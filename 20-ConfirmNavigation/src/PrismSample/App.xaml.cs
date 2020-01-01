@@ -17,7 +17,7 @@ namespace PrismSample
 
             var result = await NavigationService.NavigateAsync("MainPage?createTab=ViewAPage&createTab=ViewBPage");
 
-            if (!result.Success)
+            if(!result.Success)
             {
                 System.Diagnostics.Debugger.Break();
             }
