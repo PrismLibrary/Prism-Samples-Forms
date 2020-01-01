@@ -1,5 +1,4 @@
-﻿using System;
-using Prism.Ioc;
+﻿using Prism.Ioc;
 using PrismSample.ViewModels;
 using PrismSample.Views;
 using Xamarin.Forms;
@@ -16,9 +15,9 @@ namespace PrismSample
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync("MainPage");
+            var result = await NavigationService.NavigateAsync("MainPage?createTab=ViewAPage&createTab=ViewBPage");
 
-            if(!result.Success)
+            if (!result.Success)
             {
                 System.Diagnostics.Debugger.Break();
             }
@@ -28,6 +27,9 @@ namespace PrismSample
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<ViewAPage, ViewAPageViewModel>();
+            containerRegistry.RegisterForNavigation<ViewBPage, ViewBPageViewModel>();
+            containerRegistry.RegisterForNavigation<ViewCPage, ViewCPageViewModel>();
         }
     }
 }
