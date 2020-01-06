@@ -5,14 +5,14 @@ using Prism.Services;
 
 namespace PrismSample.ViewModels
 {
-    public class ViewBPageViewModel : IConfirmNavigationAsync
+    public class AsyncExamplePageViewModel : IConfirmNavigationAsync
     {
         private readonly INavigationService _navigationService;
         private readonly IPageDialogService _pageDialogService;
 
         public DelegateCommand NavigateAwayCommand { get; private set; }
 
-        public ViewBPageViewModel(INavigationService navigationService, 
+        public AsyncExamplePageViewModel(INavigationService navigationService, 
             IPageDialogService pageDialogService)
         {
             _navigationService = navigationService;
@@ -23,7 +23,7 @@ namespace PrismSample.ViewModels
 
         private async void NavigateAway()
         {
-            await _navigationService.NavigateAsync("ViewCPage");
+            await _navigationService.NavigateAsync("ResultPage");
         }
 
         public Task<bool> CanNavigateAsync(INavigationParameters parameters)

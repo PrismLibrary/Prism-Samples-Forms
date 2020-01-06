@@ -3,13 +3,13 @@ using Prism.Commands;
 
 namespace PrismSample.ViewModels
 {
-    public class ViewCPageViewModel
+    public class ResultPageViewModel
     {
         private readonly INavigationService _navigationService;
 
         public DelegateCommand GoBackCommand { get; private set; }
 
-        public ViewCPageViewModel(INavigationService navigationService) 
+        public ResultPageViewModel(INavigationService navigationService) 
         {
             _navigationService = navigationService;
 

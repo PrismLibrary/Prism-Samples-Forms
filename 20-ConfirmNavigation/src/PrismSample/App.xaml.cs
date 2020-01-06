@@ -15,7 +15,7 @@ namespace PrismSample
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync("MainPage?createTab=ViewAPage&createTab=ViewBPage");
+            var result = await NavigationService.NavigateAsync("TabbedPage?createTab=NonAsyncExamplePage&createTab=AsyncExamplePage");
 
             if(!result.Success)
             {
@@ -26,10 +26,10 @@ namespace PrismSample
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
-            containerRegistry.RegisterForNavigation<ViewAPage, ViewAPageViewModel>();
-            containerRegistry.RegisterForNavigation<ViewBPage, ViewBPageViewModel>();
-            containerRegistry.RegisterForNavigation<ViewCPage, ViewCPageViewModel>();
+            containerRegistry.RegisterForNavigation<TabbedPage>();
+            containerRegistry.RegisterForNavigation<NonAsyncExamplePage, NonAsyncExamplePageViewModel>();
+            containerRegistry.RegisterForNavigation<AsyncExamplePage, AsyncExamplePageViewModel>();
+            containerRegistry.RegisterForNavigation<ResultPage, ResultPageViewModel>();
         }
     }
 }

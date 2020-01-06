@@ -2,9 +2,9 @@
 
 namespace PrismSample.Views
 {
-    public partial class ViewBPage : ContentPage
+    public partial class AsyncExamplePage : ContentPage
     {
-        public ViewBPage()
+        public AsyncExamplePage()
         {
             InitializeComponent();
         }

@@ -2,9 +2,9 @@
 
 namespace PrismSample.Views
 {
-    public partial class ViewCPage : ContentPage
+    public partial class NonAsyncExamplePage : ContentPage
     {
-        public ViewCPage()
+        public NonAsyncExamplePage()
         {
             InitializeComponent();
         }

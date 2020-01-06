@@ -4,7 +4,7 @@ using Prism.Mvvm;
 
 namespace PrismSample.ViewModels
 {
-    public class ViewAPageViewModel : BindableBase, IConfirmNavigation
+    public class NonAsyncExamplePageViewModel : BindableBase, IConfirmNavigation
     {
         private readonly INavigationService _navigationService;
 
@@ -17,7 +17,7 @@ namespace PrismSample.ViewModels
 
         public DelegateCommand NavigateAwayCommand { get; private set; }
 
-        public ViewAPageViewModel(INavigationService navigationService)
+        public NonAsyncExamplePageViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
 
@@ -26,7 +26,7 @@ namespace PrismSample.ViewModels
 
         private async void NavigateAway()
         {
-            await _navigationService.NavigateAsync("ViewCPage");
+            await _navigationService.NavigateAsync("ResultPage");
         }
 
         public bool CanNavigate(INavigationParameters parameters)
