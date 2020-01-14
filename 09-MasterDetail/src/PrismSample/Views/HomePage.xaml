@@ -2,19 +2,19 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   xmlns:prism="http://prismlibrary.com"
-                  prism:ViewModelLocator.AutowireViewModel="True"
                   x:Class="PrismSample.Views.HomePage" 
-                  MasterBehavior="Popover">
+                  MasterBehavior="Popover"
+                  IconImageSource="hamburger.png">
 
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
             <StackLayout Padding="20">
-                
+
                 <Button Text="Main Page" Command="{Binding MainPageCommand}" />
                 <Button Text="Tabbed Page" Command="{Binding TabbedPageCommand}" />
 
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
-    
+
 </MasterDetailPage>

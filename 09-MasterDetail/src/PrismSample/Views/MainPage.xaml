@@ -8,9 +8,7 @@
              x:Class="PrismSample.Views.MainPage">
 
   <StackLayout>
-    <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
   </StackLayout>
 
 </ContentPage>

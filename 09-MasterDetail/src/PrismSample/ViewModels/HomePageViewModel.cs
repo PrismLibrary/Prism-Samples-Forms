@@ -1,17 +1,12 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Prism.Navigation;
-using PrismSample.Views;
-using Xamarin.Forms;
 
 namespace PrismSample.ViewModels
 {
     public class HomePageViewModel : BindableBase
     {
-        private readonly INavigationService _navigationService;
+        private INavigationService _navigationService { get; }
         public DelegateCommand TabbedPageCommand { get; }
         public DelegateCommand MainPageCommand { get; }
 
@@ -24,7 +19,9 @@ namespace PrismSample.ViewModels
 
         private async void TabbedPageAction()
         {
-            await _navigationService.NavigateAsync("/HomePage/NavigationPage/TabsPage");
+            await _navigationService.NavigateAsync("/HomePage/NavigationPage/TabbedPage" +
+                                                   $"?{KnownNavigationParameters.CreateTab}=TabAPage" +
+                                                   $"&{KnownNavigationParameters.CreateTab}=TabBPage");
         }
 
         private async void MainPageAction()
