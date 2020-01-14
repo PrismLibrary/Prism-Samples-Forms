@@ -1,22 +1,18 @@
-﻿using System;
-using Prism.Ioc;
-using PrismSample.ViewModels;
+﻿using Prism.Ioc;
+using PrismSample.Services;
 using PrismSample.Views;
 using Xamarin.Forms;
 
 namespace PrismSample
 {
+    [AutoRegisterForNavigation]
     public partial class App
     {
-        public App()
-        {
-        }
-
         protected override async void OnInitialized()
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync("MainPage");
+            var result = await NavigationService.NavigateAsync($"NavigationPage/MainPage");
 
             if(!result.Success)
             {
@@ -27,7 +23,12 @@ namespace PrismSample
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterDialog<TermsDialog>();
+            containerRegistry.RegisterDialog<LockingDialog>();
+            containerRegistry.RegisterDialog<NameDialog>();
+            containerRegistry.RegisterDialog<ContactSelectorDialog>();
+
+            containerRegistry.Register<IContactsService, ContactsService>();
         }
     }
 }

@@ -7,10 +7,21 @@
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
+  <StackLayout>
+    <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+
+    <Label Text="{Binding RuntimePlatform, StringFormat='Runtime Platform: {0}'}"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand">
+    </Label>
+
+    <Label Text="{Binding Idiom, StringFormat='Idiom: {0}'}"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand">
+    </Label>
+
+  </StackLayout>
 
 </ContentPage>

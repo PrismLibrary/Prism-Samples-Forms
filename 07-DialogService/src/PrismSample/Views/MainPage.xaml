@@ -1,16 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             Title="Main Page"
+             xmlns:prism="http://prismlibrary.com"
+             Title="{Binding Title}"
              x:Class="PrismSample.Views.MainPage">
-
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+  <TableView Intent="Settings">
+    <TableSection Title="Samples">
+      <TextCell Text="1. Passing Parameters"
+                Command="{prism:NavigateTo PassingParametersPage}"/>
+      <TextCell Text="2. Controlling Can Navigate"
+                Command="{Binding LockingDialogCommand}"/>
+      <TextCell Text="3. Tap Outside To Close"
+                Command="{Binding TapToCloseDialogCommand}"/>
+      <TextCell Text="4. Dialog Service Extensions"
+                Command="{prism:NavigateTo DialogExtensionPage}"/>
+      <TextCell Text="5. Selector Dialog"
+                Command="{prism:NavigateTo SelectorPage}"/>
+    </TableSection>
+  </TableView>
 </ContentPage>

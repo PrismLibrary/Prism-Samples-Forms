@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="PrismSample.Views.LockingDialog"
+       xmlns:prism="http://prismlibrary.com"
+       prism:DialogLayout.CloseOnBackgroundTapped="{Binding CloseOnTap}"
+       CornerRadius="20" HasShadow="false">
+  <StackLayout Spacing="16">
+    <StackLayout Orientation="Horizontal">
+      <Label Text="{Binding Question}" 
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"/>
+      <Switch IsToggled="{Binding CanClose}"/>
+    </StackLayout>
+    <Button Text="Close" Command="{Binding CloseCommand}"/>
+  </StackLayout>
+</Frame>

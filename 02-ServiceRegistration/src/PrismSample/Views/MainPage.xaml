@@ -7,10 +7,14 @@
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <StackLayout VerticalOptions="Center" Margin="12">
+    
+    <Button Text="Singleton Service Example"
+            Command="{Binding GoToViewACommand}"/>
+    
+    <Button Text="Transient Service Example"
+            Command="{Binding GoToViewBCommand}"/>
+  
+  </StackLayout>
 
 </ContentPage>

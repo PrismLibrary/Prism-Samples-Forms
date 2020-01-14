@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismSample.Views.ViewAPage"
+             Title="Page with Singleton Service">
+  
+  <StackLayout VerticalOptions="Center" Margin="12">
+
+    <Label Text="This page is using Singleton Service, returned number value from service is: "
+           VerticalOptions="CenterAndExpand" 
+           HorizontalTextAlignment="Center"
+           HorizontalOptions="CenterAndExpand" />
+
+    <Label Text="{Binding NumberValue}" 
+           FontSize="Large" 
+           HorizontalOptions="Center" 
+           HorizontalTextAlignment="Center" />
+
+    <Button Text="Go back" Command="{Binding GoBackCommand}"/>
+
+  </StackLayout>
+</ContentPage>

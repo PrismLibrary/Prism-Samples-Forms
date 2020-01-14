@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="{Binding Title}"
+             x:Class="PrismSample.Views.PassingParametersPage"
+             Padding="16,0">
+  <StackLayout VerticalOptions="Center">
+    <Entry Placeholder="Enter name"
+           Text="{Binding Name}"/>
+    <Button Text="Accept Terms"
+            Command="{Binding TermsCommand}"/>
+    <Label Text="{Binding Status}"
+           FontSize="Title"
+           Margin="20"
+           HorizontalTextAlignment="Center"/>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:prism="http://prismlibrary.com"
+       prism:DialogLayout.RelativeWidthRequest="0.75"
+       x:Class="PrismSample.Views.TermsDialog"
+       CornerRadius="20" HasShadow="False">
+  <Grid RowSpacing="20">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 Spacing="-5">
+          <Label Text="{Binding Name}"
+                  FontSize="Large"
+                  VerticalTextAlignment="End"
+                  VerticalOptions="FillAndExpand"/>
+          <Label Text="{Binding EmailAddress}"
+                  FontSize="Small"
+                  VerticalTextAlignment="Start"
+                  VerticalOptions="FillAndExpand"/>
+      </StackLayout>
+    <Label Text="{Binding Title}"
+           Grid.Row="1"
+           FontAttributes="Bold"/>
+    <Label Text="By using this DialogService, you agree that Prism.Forms is awesome!"
+           Grid.Row="2"
+           FontSize="Small"
+           HeightRequest="80"/>
+    <StackLayout Orientation="Horizontal" Grid.Row="3">
+      <CheckBox IsChecked="{Binding CanContinue}"/>
+      <Label Text="I have read terms and conditions"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal"
+                 Grid.Row="4">
+        <Button Text="Decline"
+                HorizontalOptions="FillAndExpand"
+                Command="{Binding CancelCommand}"
+                BackgroundColor="{StaticResource DestructiveButton}"/>
+        <Button Text="Accept"
+                HorizontalOptions="FillAndExpand"
+                Command="{Binding SubmitCommand}"/>
+    </StackLayout>
+  </Grid>
+</Frame>
