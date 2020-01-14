@@ -2,13 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
-             prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="PrismSample.Views.TabCPage"
              Title="Tab C">
 
-  <StackLayout>
-    <Label Text="Tab C" HorizontalOptions="CenterAndExpand"></Label>
-    <Button Text="Go To Tab A" HorizontalOptions="CenterAndExpand" Command="{Binding TabACommand}"></Button>
+  <StackLayout VerticalOptions="CenterAndExpand">
+    <Label Text="Tab C" HorizontalTextAlignment="Center" />
+    <Button Text="Go To Tab A" HorizontalOptions="CenterAndExpand" Command="{Binding TabACommand}" />
   </StackLayout>
 
 </ContentPage>

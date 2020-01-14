@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using System;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 using PrismSample.Views;
@@ -8,7 +9,7 @@ namespace PrismSample.ViewModels
 {
     public class MainPageViewModel : BindableBase
     {
-        private readonly INavigationService _navigationService;
+        private INavigationService _navigationService { get; }
         public DelegateCommand RuntimeTabsCommand { get; }
         public DelegateCommand TabBCommand { get; }
 
@@ -30,7 +31,10 @@ namespace PrismSample.ViewModels
 
         private async void TabBAction()
         {
-            await _navigationService.NavigateAsync("TabsPage?selectedTab=TabBPage");
+            var p = new NavigationParameters();
+            p.Add("ActiveCount", 0);
+
+            await _navigationService.NavigateAsync("TabsPage?selectedTab=TabBPage", p);
 
         }
     }

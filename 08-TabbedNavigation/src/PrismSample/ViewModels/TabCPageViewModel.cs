@@ -8,8 +8,8 @@ namespace PrismSample.ViewModels
 {
     public class TabCPageViewModel : BindableBase
     {
-        private readonly INavigationService _navigationService;
-        public DelegateCommand TabACommand { get; set; }
+        private INavigationService _navigationService { get; }
+        public DelegateCommand TabACommand { get; }
 
         public TabCPageViewModel(INavigationService navigationService)
         {
@@ -17,9 +17,9 @@ namespace PrismSample.ViewModels
             TabACommand = new DelegateCommand(TabAAction);
         }
 
-        private void TabAAction()
+        private async void TabAAction()
         {
-            _navigationService.SelectTabAsync("TabAPage");
+            await _navigationService.SelectTabAsync("TabAPage");
         }
     }
 }

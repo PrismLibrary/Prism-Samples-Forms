@@ -9,8 +9,8 @@
 
   <StackLayout VerticalOptions="CenterAndExpand">
 
-    <Button Text="Create Tabs At Runtime" Command="{Binding RuntimeTabsAction}"></Button>
-    <Button Text="Go To Tab B" Command="{Binding TabBCommand}"></Button>
+    <Button Text="Create Tabs At Runtime" Command="{Binding RuntimeTabsCommand}" />
+    <Button Text="Go To Tab B" Command="{Binding TabBCommand}" />
 
   </StackLayout>
 
