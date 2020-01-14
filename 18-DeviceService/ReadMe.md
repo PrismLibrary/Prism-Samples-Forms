@@ -1,5 +1,5 @@
 # Device Service
 
-TODO
+This example shows
 
-- Show using the IDeviceService instead of the Xamarin.Forms Device class
+- How to use the IDeviceService instead of the Xamarin.Forms Device class

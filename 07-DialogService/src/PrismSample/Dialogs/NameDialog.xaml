@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:prism="http://prismlibrary.com"
+       prism:DialogLayout.RelativeWidthRequest="0.75"
+       x:Class="PrismSample.Views.NameDialog"
+       CornerRadius="20" HasShadow="false">
+  <StackLayout>
+    <Entry Placeholder="Enter name" Text="{Binding Name}"/>
+    <Button Text="Submit" Command="{Binding SubmitCommand}"/>
+  </StackLayout>
+</Frame>

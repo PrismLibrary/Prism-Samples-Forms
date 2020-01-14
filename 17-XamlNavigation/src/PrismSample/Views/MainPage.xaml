@@ -3,14 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:prism="http://prismlibrary.com"
              mc:Ignorable="d"
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <StackLayout>
+
+    <Button Text="Info Page Without Parameters"  Command="{prism:NavigateTo 'InformationPage'}" />
+
+    <Button Text="Info Page with QueryString parameters"  Command="{prism:NavigateTo 'InformationPage?Message=Hello%20from%20XAML!'}" />
+
+    <Button Text="Info Page With Parameters" Command="{prism:NavigateTo 'InformationPage'}">
+      <Button.CommandParameter>
+        <prism:Parameter Key="Message" Value="A message from the past." />
+      </Button.CommandParameter>
+    </Button>
+
+    <Button Text="Info Page With Multiple Parameters"  Command="{prism:NavigateTo 'InformationPage'}">
+      <Button.CommandParameter>
+        <prism:Parameters>
+          <prism:Parameter Key="Message" Value="A message from the past." />
+          <prism:Parameter Key="MoreMessages" Value="Extra messages from the past." />
+        </prism:Parameters>
+      </Button.CommandParameter>
+    </Button>
+
+    <Button Text="Info Page With Inline Command Parameters"  Command="{prism:NavigateTo InformationPage}"
+            CommandParameter="{prism:Parameter Key='Message', Value='Hello from XamlExtension'}" />
+
+  </StackLayout>
 
 </ContentPage>

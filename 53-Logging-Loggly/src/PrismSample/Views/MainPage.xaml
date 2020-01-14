@@ -3,14 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:xaml="clr-namespace:PrismSample.Xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
              mc:Ignorable="d"
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="300" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <CarouselView ItemsSource="{Binding InfoItems}"
+                  Grid.Row="0"
+                  PeekAreaInsets="15">
+      <CarouselView.ItemTemplate>
+        <DataTemplate>
+          <StackLayout VerticalOptions="End">
+            <Image Aspect="AspectFit"
+                   Source="{xaml:EmbeddedImage Name={Binding ImageName}}"
+                   Margin="10"/>
+            <Label Text="{Binding Text}"
+                   Padding="20,10"/>
+          </StackLayout>
+        </DataTemplate>
+      </CarouselView.ItemTemplate>
+    </CarouselView>
+
+    <Frame HasShadow="{Binding RequiresLogglyToken}"
+           IsVisible="{Binding RequiresLogglyToken}"
+           Grid.Row="1">
+      <StackLayout>
+        <Label Text="Loggly Token" />
+        <Entry Text="{Binding Token}"
+           IsPassword="True" />
+        <Button Text="Save"
+            Command="{Binding SaveTokenCommand}" />
+      </StackLayout>
+    </Frame>
+
+    <Picker SelectedItem="{Binding SelectedLoggerType}"
+            Grid.Row="2"
+            Margin="10,40,10,0">
+      <Picker.Items>
+        <x:String>Please Select</x:String>
+        <x:String>Syslog</x:String>
+        <x:String>Http</x:String>
+      </Picker.Items>
+    </Picker>
+    <Button Text="Generate Logs"
+            Command="{Binding NavigateCommand}"
+            Grid.Row="4"/>
+  </Grid>
 
 </ContentPage>

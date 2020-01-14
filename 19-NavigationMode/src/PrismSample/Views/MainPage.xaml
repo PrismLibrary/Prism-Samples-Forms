@@ -7,10 +7,11 @@
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
+  <StackLayout>
+    <Button Text="Go To Second Page"
+            Command="{Binding SecondPageCommand}"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  </StackLayout>
 
 </ContentPage>

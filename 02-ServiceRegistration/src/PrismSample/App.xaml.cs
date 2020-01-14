@@ -1,5 +1,6 @@
 ﻿using System;
 using Prism.Ioc;
+using PrismSample.Services;
 using PrismSample.ViewModels;
 using PrismSample.Views;
 using Xamarin.Forms;
@@ -28,6 +29,11 @@ namespace PrismSample
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<ViewAPage, ViewAPageViewModel>();
+            containerRegistry.RegisterForNavigation<ViewBPage, ViewBPageViewModel>();
+
+            containerRegistry.RegisterSingleton<IExampleAlphaService, ExampleAlphaService>();
+            containerRegistry.Register<IExampleBetaService, ExampleBetaService>();
         }
     }
 }

@@ -28,6 +28,8 @@ namespace PrismSample
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<SecondPage, SecondPageViewModel>();
+            containerRegistry.RegisterForNavigation<ThirdPage, ThirdPageViewModel>();
         }
     }
 }

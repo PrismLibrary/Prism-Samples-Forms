@@ -7,10 +7,17 @@
              Title="Main Page"
              x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <StackLayout Margin="16" VerticalOptions="Center">
+
+    <Button Text="Simple Example" 
+            Command="{Binding GoToSimpleExamplePageCommand}"/>
+
+    <Button Text="IValueConverter Example" 
+            Command="{Binding GoToEventArgsConverterExamplePageCommand}"/>
+
+    <Button Text="Event Args Parameter Path Example" 
+            Command="{Binding GoToEventArgsParameterExamplePageCommand}"/>
+
+  </StackLayout>
 
 </ContentPage>

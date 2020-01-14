@@ -1,5 +1,4 @@
 # Prism.Plugin.Logging - Loggly
 
-TODO
-
-- Show logging with the Loggly implementation of the Prism Logging Plugin
+- See how to configure the Prism Logging Plugin for Loggly
+- Use Syslog or the Http Provider
