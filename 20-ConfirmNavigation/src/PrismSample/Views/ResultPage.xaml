@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismSample.Views.ResultPage">
+  
+  <StackLayout VerticalOptions="Center" Margin="16">
+    
+    <Label Text="Congratulations! You did it!"
+           FontAttributes="Bold" 
+           HorizontalOptions="Center"/>
+    
+    <Button Text="Go back" 
+            HorizontalOptions="Center"
+            Command="{Binding GoBackCommand}" />
+  
+  </StackLayout>
+  
+</ContentPage>
