@@ -127,12 +127,12 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.815419" />
+    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
-      <Version>2.4.11.982</Version>
+      <Version>$(FFImageLoadingVersion)</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Transformations">
-      <Version>2.4.11.982</Version>
+      <Version>$(FFImageLoadingVersion)</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

@@ -143,11 +143,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Prism.DryIoc.Forms">
-      <Version>7.2.0.1422</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.9" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="$(PrismVersion)" />
+    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="$(UwpNuGetVersion)" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PrismSample\PrismSample.csproj">

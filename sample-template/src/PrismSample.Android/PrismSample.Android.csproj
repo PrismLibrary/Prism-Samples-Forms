@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,11 +53,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Prism.DryIoc.Forms">
-      <Version>7.2.0.1422</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.3" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="$(PrismVersion)" />
+    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="$(AndroidSupportVersion)" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

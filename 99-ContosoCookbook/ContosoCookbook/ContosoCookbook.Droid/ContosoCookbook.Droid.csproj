@@ -61,13 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.3" />
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
-    <PackageReference Include="Prism.Unity.Forms" Version="7.2.0.1367" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
+    <PackageReference Include="Prism.Unity.Forms" Version="$(PrismVersion)" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

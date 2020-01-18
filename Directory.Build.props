@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <PrismVersion>7.2.0.1422</PrismVersion>
+    <XamarinFormsVersion>4.4.0.991477</XamarinFormsVersion>
+    <AndroidSupportVersion>28.0.0.3</AndroidSupportVersion>
+    <UwpNuGetVersion>6.2.9</UwpNuGetVersion>
+    <PopupPluginVersion>7.2.0.759</PopupPluginVersion>
+    <LoggingPluginVersion>7.2.0.700</LoggingPluginVersion>
+    <FFImageLoadingVersion>2.4.11.982</FFImageLoadingVersion>
+    <MvvmHelpersVersion>1.4.1-beta</MvvmHelpersVersion>
+    <NewtonsoftJsonVersion>12.0.3</NewtonsoftJsonVersion>
+  </PropertyGroup>
+</Project>

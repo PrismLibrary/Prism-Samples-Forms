@@ -127,8 +127,8 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
-    <PackageReference Include="Prism.Unity.Forms" Version="7.2.0.1367" />
+    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
+    <PackageReference Include="Prism.Unity.Forms" Version="$(PrismVersion)" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

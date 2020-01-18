@@ -3,17 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
- <ItemGroup>
-    <PackageReference Include="Prism.Forms" Version="7.2.0.1367" />
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.815419" />
-    <PackageReference Include="Refractored.MvvmHelpers" Version="1.4.1-beta" />
-    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Forms" Version="$(PrismVersion)" />
+    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="$(MvvmHelpersVersion)" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="$(FFImageLoadingVersion)" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="$(FFImageLoadingVersion)" />
   </ItemGroup>
- <ItemGroup>
-   <Folder Include="ViewModels\" />
-   <Folder Include="Views\" />
-   <Folder Include="Views\Dialogs\" />
-   <Folder Include="ViewModels\Dialogs\" />
- </ItemGroup>
+
 </Project>

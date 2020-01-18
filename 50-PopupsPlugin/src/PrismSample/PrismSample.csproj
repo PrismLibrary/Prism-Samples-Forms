@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
-    <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.759" />
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="$(PrismVersion)" />
+    <PackageReference Include="Prism.Plugin.Popups" Version="$(PopupPluginVersion)" />
+    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
   </ItemGroup>
 
   <ItemGroup>

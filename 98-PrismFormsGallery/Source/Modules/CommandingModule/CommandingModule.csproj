@@ -3,13 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
- <ItemGroup>
-    <PackageReference Include="Prism.Forms" Version="7.2.0.1367" />
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.815419" />
-    <PackageReference Include="Refractored.MvvmHelpers" Version="1.4.1-beta" />
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Forms" Version="$(PrismVersion)" />
+    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="$(MvvmHelpersVersion)" />
   </ItemGroup>
- <ItemGroup>
-   <Folder Include="Views\" />
-   <Folder Include="ViewModels\" />
- </ItemGroup>
+
 </Project>

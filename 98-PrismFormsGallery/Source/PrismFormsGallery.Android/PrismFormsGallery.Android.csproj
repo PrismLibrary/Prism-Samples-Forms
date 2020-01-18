@@ -51,14 +51,14 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.815419" />
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="$(AndroidSupportVersion)" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
