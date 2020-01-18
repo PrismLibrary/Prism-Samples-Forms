@@ -80,12 +80,12 @@ If you're adding a brand new sample be sure to start with a copy of the resource
 [NavigationModeSample]: 19-NavigationMode/
 [ConfirmNavigationSample]: 20-ConfirmNavigation/
 
-[PopupsPluginSample]: 50-PopupsPlugin/
-[AppCenterLoggingSample]: 51-Logging-AppCenter/
-[SyslogLoggingSample]: 52-Logging-Syslog/
-[LogglyLoggingSample]: 53-Logging-Loggly/
-[ShinyPrismSample]: 60-ShinyLib/
+[PopupsPluginSample]: advanced-topics/PopupsPlugin/
+[AppCenterLoggingSample]: advanced-topics/Logging-AppCenter/
+[SyslogLoggingSample]: advanced-topics/Logging-Syslog/
+[LogglyLoggingSample]: advanced-topics/Logging-Loggly/
+[ShinyPrismSample]: advanced-topics/ShinyLib/
 [ReactiveUISample]: 61-ReactiveUI/
 
-[PrismFormsGallery]: 98-PrismFormsGallery
-[ContosoCookbook]: 99-ContosoCookbook
+[PrismFormsGallery]: sample-apps/PrismFormsGallery
+[ContosoCookbook]: sample-apps/ContosoCookbook
