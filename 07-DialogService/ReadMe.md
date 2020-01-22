@@ -6,6 +6,10 @@ The new Prism Dialog Service is designed to provide you a minimalistic framework
 --|--|--
 ![](media/main.png) | ![](media/selector.png) | ![](media/tap.png)
 
+## YouTube Tutorials
+
+Getting Started:
+[![Prism.Forms IDialogService](http://img.youtube.com/vi/swe4XTksiLI/0.jpg)](http://www.youtube.com/watch?v=swe4XTksiLI "Getting Started with IDialogService")
 
 ## Dialog View
 Let's start with the view for our dialog.
@@ -14,9 +18,9 @@ Let's start with the view for our dialog.
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:prism="http://prismlibrary.com"
-    prism:DialogLayout.RelativeWidthRequest="0.75" 
+    prism:DialogLayout.RelativeWidthRequest="0.75"
     ...>
-    
+
     <!-- The View -->
 
 </ContentView>
@@ -24,8 +28,8 @@ Let's start with the view for our dialog.
 ## Dialog ViewModel
 Dialog view's ViewModel implements `IDialogAware`
 ```csharp
-public class TermsDialogViewModel : BindableBase, IDialogAware 
-{ 
+public class TermsDialogViewModel : BindableBase, IDialogAware
+{
     public TermsDialogViewModel()
     {
         Title = "Terms and Conditions";

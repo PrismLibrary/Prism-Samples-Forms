@@ -4,6 +4,11 @@ ViewModel initialization occurs only Once during the lifecycle of the ViewModel.
 
 Where many developers get more confused is with the second way we need to initialize our ViewModel in which the ViewModel needs the proper context of how we will be using the ViewModel. Most commonly we may get much of this context via the Navigation Parameters. Prism provides us a few ways to handle this second variation.
 
+## YouTube Tutorials
+
+Using IInitialize:
+[![Using IInitialize](http://img.youtube.com/vi/uGDflfthMeA/0.jpg)](http://www.youtube.com/watch?v=uGDflfthMeA "Initializing your ViewModels with IInitialize")
+
 ## IAutoInitialization
 
 When running the sample you'll see that we can keep our ViewModel very lightweight and simply add the marker interface `IAutoInitialize`. The NavigationService will do the rest and automatically use the NavigationParameters to set properties within the ViewModel for us. We can optionally add the `AutoInitialize` attribute to our properties if we need to mark a property as being required or having a completely different name than the property name.

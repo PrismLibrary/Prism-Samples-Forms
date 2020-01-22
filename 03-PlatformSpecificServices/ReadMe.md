@@ -2,4 +2,4 @@
 
 See how to use Platform Specific Services with Prism.Forms.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qMzTAOOgY8c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Platform Specifics](http://img.youtube.com/vi/qMzTAOOgY8c/0.jpg)](http://www.youtube.com/watch?v=qMzTAOOgY8c "Using Platform Specific Services")
