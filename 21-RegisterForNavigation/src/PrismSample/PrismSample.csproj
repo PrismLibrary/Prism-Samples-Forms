@@ -10,9 +10,4 @@
     <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
   </ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Update="Views\MainMenuPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
 </Project>

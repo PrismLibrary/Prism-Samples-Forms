@@ -3,5 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrismSample.Views.MainMenuPage"
              Title="Main menu">
+
+  <StackLayout VerticalOptions="Center" Margin="10">
+
+    <Button Text="Basic Registered View" 
+            Command="{Binding GoToBasicPageCommand}"/>
+
+    <Button Text="Registered View + ViewModel" 
+            Command="{Binding GoToFullRegistratedPageCommand}"/>
+
+    <Button Text="Custom name page registration" 
+            Command="{Binding GoToCustomNameRegisteredPageCommand}"/>
+
+    <Button Text="Platform specific page" 
+            Command="{Binding GoToPlatformSpecificPageCommand}"/>
+
+    <Button Text="Idiom specific page" 
+            Command="{Binding GoToIdiomSpecificPageCommand}"/>
+
+  </StackLayout>
   
 </ContentPage>
