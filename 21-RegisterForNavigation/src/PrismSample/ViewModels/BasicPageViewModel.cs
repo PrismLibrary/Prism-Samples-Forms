@@ -6,7 +6,7 @@ namespace PrismSample.ViewModels
     {
         public BasicPageViewModel()
         {
-            PageText = "MVVM and data binding is working with basic page registration!";
+            Text = "MVVM and data binding is working with basic page registration!";
         }
     }
 }

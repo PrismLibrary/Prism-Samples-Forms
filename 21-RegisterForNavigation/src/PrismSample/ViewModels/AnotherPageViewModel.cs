@@ -4,7 +4,7 @@
     {
         public AnotherPageViewModel()
         {
-            PageText = "MVVM and data binding is working with custom name page registration!";
+            Text = "MVVM and data binding is working with custom name page registration!";
         }
     }
 }

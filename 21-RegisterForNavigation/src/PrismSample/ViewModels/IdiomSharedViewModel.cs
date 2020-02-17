@@ -4,7 +4,7 @@
     {
         public IdiomSharedViewModel()
         {
-            PageText = "MVVM and data binding is working with IDIOM shared View-Model!";
+            Text = "MVVM and data binding is working with Idiom shared ViewModel!";
         }
     }
 }

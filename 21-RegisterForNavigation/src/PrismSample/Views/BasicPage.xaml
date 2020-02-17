@@ -6,7 +6,7 @@
 
   <StackLayout Margin="10" 
                VerticalOptions="Center">
-    <Label Text="{Binding PageText}"
+    <Label Text="{Binding Text}"
            VerticalOptions="CenterAndExpand" 
            HorizontalOptions="CenterAndExpand"
            HorizontalTextAlignment="Center"/>

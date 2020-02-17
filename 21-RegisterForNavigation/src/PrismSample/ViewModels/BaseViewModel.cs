@@ -4,11 +4,11 @@ namespace PrismSample.ViewModels
 {
     public class BaseViewModel : BindableBase
     {
-        private string pageText;
-        public string PageText
+        private string text;
+        public string Text
         {
-            get { return pageText; }
-            set { SetProperty(ref pageText, value); }
+            get { return text; }
+            set { SetProperty(ref text, value); }
         }
     }
 }

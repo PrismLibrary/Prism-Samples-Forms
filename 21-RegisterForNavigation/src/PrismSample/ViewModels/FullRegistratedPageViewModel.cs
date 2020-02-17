@@ -4,7 +4,7 @@
     {
         public FullRegistratedPageViewModel()
         {
-            PageText = "MVVM and data binding is working with full registered page and View-Model!";
+            Text = "MVVM and data binding is working with full registered page and ViewModel!";
         }
     }
 }

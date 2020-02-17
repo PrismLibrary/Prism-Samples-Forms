@@ -4,7 +4,7 @@
     {
         public PlatformSharedViewModel()
         {
-            PageText = "MVVM and data binding is working with platform shared View-Model!";
+            Text = "MVVM and data binding is working with platform shared ViewModel!";
         }
     }
 }

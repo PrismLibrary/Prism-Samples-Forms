@@ -7,19 +7,24 @@
   <StackLayout VerticalOptions="Center" Margin="10">
 
     <Button Text="Basic Registered View" 
-            Command="{Binding GoToBasicPageCommand}"/>
+            CommandParameter="BasicPage"
+            Command="{Binding NavigateCommand}"/>
 
-    <Button Text="Registered View + ViewModel" 
-            Command="{Binding GoToFullRegistratedPageCommand}"/>
+    <Button Text="Registered View + ViewModel"
+            CommandParameter="FullRegistratedPage"
+            Command="{Binding NavigateCommand}"/>
 
     <Button Text="Custom name page registration" 
-            Command="{Binding GoToCustomNameRegisteredPageCommand}"/>
+            CommandParameter="CustomNamePage"
+            Command="{Binding NavigateCommand}"/>
 
     <Button Text="Platform specific page" 
-            Command="{Binding GoToPlatformSpecificPageCommand}"/>
+            CommandParameter="PlatformSpecificPage"
+            Command="{Binding NavigateCommand}"/>
 
     <Button Text="Idiom specific page" 
-            Command="{Binding GoToIdiomSpecificPageCommand}"/>
+            CommandParameter="IdiomSpecificPage"
+            Command="{Binding NavigateCommand}"/>
 
   </StackLayout>
   
