@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismSample.Views.AnotherPage"
+             Title="Another page">
+  
+  <StackLayout Margin="10" 
+               VerticalOptions="Center">
+    <Label Text="{Binding Text}"
+           VerticalOptions="CenterAndExpand" 
+           HorizontalOptions="CenterAndExpand"
+           HorizontalTextAlignment="Center"/>
+  </StackLayout>
+</ContentPage>

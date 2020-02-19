@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismSample.Views.MainMenuPage"
+             Title="Main menu">
+
+  <StackLayout VerticalOptions="Center" Margin="10">
+
+    <Button Text="Basic Registered View" 
+            CommandParameter="BasicPage"
+            Command="{Binding NavigateCommand}"/>
+
+    <Button Text="Registered View + ViewModel"
+            CommandParameter="FullRegistratedPage"
+            Command="{Binding NavigateCommand}"/>
+
+    <Button Text="Custom name page registration" 
+            CommandParameter="CustomNamePage"
+            Command="{Binding NavigateCommand}"/>
+
+    <Button Text="Platform specific page" 
+            CommandParameter="PlatformSpecificPage"
+            Command="{Binding NavigateCommand}"/>
+
+    <Button Text="Idiom specific page" 
+            CommandParameter="IdiomSpecificPage"
+            Command="{Binding NavigateCommand}"/>
+
+  </StackLayout>
+  
+</ContentPage>
