@@ -55,7 +55,6 @@ namespace PrismSample.ViewModels
 
         public override void OnNavigatedFrom(INavigationParameters parameters)
         {
-            base.OnNavigatedFrom(parameters);
             Username = string.Empty;
             Password = string.Empty;
         }
@@ -63,7 +62,7 @@ namespace PrismSample.ViewModels
         private async Task ExecuteLogin()
         {
             await Observable.Return(Unit.Default).Delay(TimeSpan.FromSeconds(3));
-            await _navigationService.NavigateAsync($"NavigationPage/NugetPackageListPage");
+            await _navigationService.NavigateAsync($"NavigationPage/NuGetPackageListPage");
         }
 
         private static bool ValidateEmail(string email) => !string.IsNullOrEmpty(email) && email.Length > 2;

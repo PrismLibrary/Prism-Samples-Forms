@@ -13,9 +13,9 @@ using Xamarin.Forms.Xaml;
 namespace PrismSample.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NugetPackageDetailPage : ContentPageBase<NugetPackageDetailViewModel>
+    public partial class NuGetPackageDetailPage : ContentPageBase<NuGetPackageDetailViewModel>
     {
-        public NugetPackageDetailPage()
+        public NuGetPackageDetailPage()
         {
             InitializeComponent();
 
@@ -24,10 +24,10 @@ namespace PrismSample.Views
                 .InvokeCommand(this, x => x.ViewModel.GetVersions)
                 .DisposeWith(ViewBindings);
 
-            NugetVersions
+            NuGetVersions
                 .Events()
                 .ItemSelected
-                .Subscribe(_ => NugetVersions.SelectedItem = null)
+                .Subscribe(_ => NuGetVersions.SelectedItem = null)
                 .DisposeWith(ViewBindings);
         }
     }

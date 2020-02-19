@@ -8,19 +8,19 @@ using ReactiveUI;
 
 namespace PrismSample.ViewModels
 {
-    public class NugetPackageDetailViewModel : NavigationViewModelBase
+    public class NuGetPackageDetailViewModel : NavigationViewModelBase
     {
         private IPackageSearchMetadata _packageSearchMetadata;
-        private readonly ObservableAsPropertyHelper<IEnumerable<NugetVersionViewModel>> _versions;
+        private readonly ObservableAsPropertyHelper<IEnumerable<NuGetVersionViewModel>> _versions;
 
-        public NugetPackageDetailViewModel()
+        public NuGetPackageDetailViewModel()
         {
-            GetVersions = ReactiveCommand.CreateFromTask<IPackageSearchMetadata, IEnumerable<NugetVersionViewModel>>(ExecuteGetVersions);
+            GetVersions = ReactiveCommand.CreateFromTask<IPackageSearchMetadata, IEnumerable<NuGetVersionViewModel>>(ExecuteGetVersions);
 
             _versions = GetVersions.ToProperty(this, x => x.Versions, scheduler: RxApp.MainThreadScheduler);
         }
 
-        public ReactiveCommand<IPackageSearchMetadata, IEnumerable<NugetVersionViewModel>> GetVersions { get; set; }
+        public ReactiveCommand<IPackageSearchMetadata, IEnumerable<NuGetVersionViewModel>> GetVersions { get; set; }
 
         public IPackageSearchMetadata PackageSearchMetadata
         {
@@ -28,7 +28,7 @@ namespace PrismSample.ViewModels
             set => this.RaiseAndSetIfChanged(ref _packageSearchMetadata, value);
         }
 
-        public IEnumerable<NugetVersionViewModel> Versions => _versions.Value;
+        public IEnumerable<NuGetVersionViewModel> Versions => _versions.Value;
 
         public override void OnNavigatedTo(INavigationParameters parameters)
         {
@@ -40,10 +40,10 @@ namespace PrismSample.ViewModels
             }
         }
 
-        private async Task<IEnumerable<NugetVersionViewModel>> ExecuteGetVersions(IPackageSearchMetadata packageSearchMetadata)
+        private async Task<IEnumerable<NuGetVersionViewModel>> ExecuteGetVersions(IPackageSearchMetadata packageSearchMetadata)
         {
             var versions = await packageSearchMetadata.GetVersionsAsync();
-            return versions.Reverse().Take(30).Select(x => new NugetVersionViewModel(x));
+            return versions.Reverse().Take(30).Select(x => new NuGetVersionViewModel(x));
         }
     }
 }

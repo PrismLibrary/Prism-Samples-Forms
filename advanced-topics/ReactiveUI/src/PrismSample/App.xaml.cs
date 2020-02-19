@@ -32,11 +32,11 @@ namespace PrismSample
             // Register Navigation
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginViewModel>();
-            containerRegistry.RegisterForNavigation<NugetPackageListPage, NugetPackageListViewModel>();
-            containerRegistry.RegisterForNavigation<NugetPackageDetailPage, NugetPackageDetailViewModel>();
+            containerRegistry.RegisterForNavigation<NuGetPackageListPage, NuGetPackageListViewModel>();
+            containerRegistry.RegisterForNavigation<NuGetPackageDetailPage, NuGetPackageDetailViewModel>();
 
             // Register Services
-            containerRegistry.RegisterSingleton<INugetPackageService, NugetPackageService>();
+            containerRegistry.RegisterSingleton<INuGetPackageService, NuGetPackageService>();
         }
     }
 }

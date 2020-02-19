@@ -5,13 +5,8 @@
              xmlns:views="clr-namespace:PrismSample.Views;assembly=PrismSample"
              xmlns:viewModels="clr-namespace:PrismSample.ViewModels;assembly=PrismSample"
              x:TypeArguments="viewModels:LoginViewModel"
-             x:Class="PrismSample.Views.LoginPage">
-  <ContentPage.Padding>
-    <OnPlatform x:TypeArguments="Thickness">
-      <On Platform="Android">0,0,0,0</On>
-      <On Platform="iOS">0,20,0,0</On>
-    </OnPlatform>
-  </ContentPage.Padding>
+             x:Class="PrismSample.Views.LoginPage"
+             Padding="{OnPlatform '0,0,0,0', iOS='0,20,0,0'}">
   <ContentPage.Resources>
     <ResourceDictionary>
       <Style TargetType="Entry">

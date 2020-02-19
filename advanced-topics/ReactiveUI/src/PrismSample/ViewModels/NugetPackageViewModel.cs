@@ -7,11 +7,11 @@ using Xamarin.Forms;
 
 namespace PrismSample.ViewModels
 {
-    public class NugetPackageViewModel : ViewModelBase
+    public class NuGetPackageViewModel : ViewModelBase
     {
         private IPackageSearchMetadata _packageSearchMetadata;
 
-        public NugetPackageViewModel(IPackageSearchMetadata packageSearchMetadata)
+        public NuGetPackageViewModel(IPackageSearchMetadata packageSearchMetadata)
         {
             _packageSearchMetadata = packageSearchMetadata;
         }

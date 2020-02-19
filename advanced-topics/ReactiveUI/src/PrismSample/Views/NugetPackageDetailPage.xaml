@@ -4,11 +4,11 @@
                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                        xmlns:views="clr-namespace:PrismSample.Views;assembly=PrismSample"
                        xmlns:viewModels="clr-namespace:PrismSample.ViewModels;assembly=PrismSample"
-                       x:Class="PrismSample.Views.NugetPackageDetailPage"
-                       x:TypeArguments="viewModels:NugetPackageDetailViewModel">
+                       x:Class="PrismSample.Views.NuGetPackageDetailPage"
+                       x:TypeArguments="viewModels:NuGetPackageDetailViewModel">
   <ContentPage.Content>
     <StackLayout>
-      <ListView x:Name="NugetVersions" SelectionMode="None" Margin="16" ItemsSource="{Binding Versions}">
+      <ListView x:Name="NuGetVersions" SelectionMode="None" Margin="16" ItemsSource="{Binding Versions}">
         <ListView.Header>
           <StackLayout Margin="12">
             <Image VerticalOptions="Center" HeightRequest="36" WidthRequest="36" Source="{Binding PackageSearchMetadata.IconUrl}" />
@@ -23,7 +23,7 @@
         <ListView.ItemTemplate>
           <DataTemplate>
             <ViewCell>
-              <views:NugetVersionViewCell />
+              <views:NuGetVersionViewCell />
             </ViewCell>
           </DataTemplate>
         </ListView.ItemTemplate>
