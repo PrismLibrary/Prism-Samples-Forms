@@ -4,20 +4,20 @@
                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                        xmlns:views="clr-namespace:PrismSample.Views;assembly=PrismSample"
                        xmlns:viewModels="clr-namespace:PrismSample.ViewModels;assembly=PrismSample"
-                       x:TypeArguments="viewModels:NugetPackageListViewModel"
-                       x:Class="PrismSample.Views.NugetPackageListPage"
+                       x:TypeArguments="viewModels:NuGetPackageListViewModel"
+                       x:Class="PrismSample.Views.NuGetPackageListPage"
                        NavigationPage.HasBackButton="True">
   <ContentPage.Content>
     <StackLayout>
       <SearchBar x:Name="SearchBar" />
-      <ListView x:Name="NugetPackageListView"
+      <ListView x:Name="NuGetPackageListView"
                 HasUnevenRows="True"
                 RowHeight="80"
                 IsPullToRefreshEnabled="True">
         <ListView.ItemTemplate>
           <DataTemplate>
             <ViewCell>
-              <views:NugetViewCell />
+              <views:NuGetViewCell />
             </ViewCell>
           </DataTemplate>
         </ListView.ItemTemplate>

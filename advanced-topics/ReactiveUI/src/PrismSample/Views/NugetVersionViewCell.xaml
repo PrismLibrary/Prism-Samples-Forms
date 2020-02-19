@@ -4,8 +4,8 @@
                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                        xmlns:views="clr-namespace:PrismSample.Views;assembly=PrismSample"
                        xmlns:viewModels="clr-namespace:PrismSample.ViewModels;assembly=PrismSample"
-                       x:Class="PrismSample.Views.NugetVersionViewCell"
-                       x:TypeArguments="viewModels:NugetVersionViewModel">
+                       x:Class="PrismSample.Views.NuGetVersionViewCell"
+                       x:TypeArguments="viewModels:NuGetVersionViewModel">
   <ContentView.Content>
     <StackLayout Orientation="Horizontal" HeightRequest="24" Padding="16" >
       <Label x:Name="PackageVersion" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />

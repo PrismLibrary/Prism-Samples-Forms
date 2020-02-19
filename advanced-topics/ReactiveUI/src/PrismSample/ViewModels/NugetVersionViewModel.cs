@@ -3,11 +3,11 @@ using ReactiveUI;
 
 namespace PrismSample.ViewModels
 {
-    public class NugetVersionViewModel : ViewModelBase
+    public class NuGetVersionViewModel : ViewModelBase
     {
         private VersionInfo _versionInfo;
 
-        public NugetVersionViewModel(VersionInfo versionInfo)
+        public NuGetVersionViewModel(VersionInfo versionInfo)
         {
             _versionInfo = versionInfo;
         }

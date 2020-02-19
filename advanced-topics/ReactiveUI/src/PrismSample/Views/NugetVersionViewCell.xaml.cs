@@ -13,9 +13,9 @@ using Xamarin.Forms.Xaml;
 namespace PrismSample.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NugetVersionViewCell : ContentViewBase<NugetVersionViewModel>
+    public partial class NuGetVersionViewCell : ContentViewBase<NuGetVersionViewModel>
     {
-        public NugetVersionViewCell()
+        public NuGetVersionViewCell()
         {
             InitializeComponent();
 

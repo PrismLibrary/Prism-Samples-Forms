@@ -6,7 +6,7 @@ using PrismSample.ViewModels;
 
 namespace PrismSample.Services
 {
-    public interface INugetPackageService
+    public interface INuGetPackageService
     {
         Task<IEnumerable<IPackageSearchMetadata>> SearchNuGetPackages(string term, CancellationToken token);
     }

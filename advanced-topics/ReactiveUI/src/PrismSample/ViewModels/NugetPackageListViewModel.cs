@@ -15,21 +15,21 @@ using Xamarin.Forms;
 
 namespace PrismSample.ViewModels
 {
-    public class NugetPackageListViewModel : ViewModelBase
+    public class NuGetPackageListViewModel : ViewModelBase
     {
         private readonly INavigationService _navigationService;
-        private readonly INugetPackageService _nugetPackageService;
+        private readonly INuGetPackageService _nugetPackageService;
         private string _searchText;
-        private ObservableAsPropertyHelper<IEnumerable<NugetPackageViewModel>> _searchResults;
+        private ObservableAsPropertyHelper<IEnumerable<NuGetPackageViewModel>> _searchResults;
         private ObservableAsPropertyHelper<bool> _isRefreshing;
         private ObservableAsPropertyHelper<bool> _hasItems;
 
-        public NugetPackageListViewModel(INavigationService navigationService, INugetPackageService nugetPackageService)
+        public NuGetPackageListViewModel(INavigationService navigationService, INuGetPackageService nugetPackageService)
         {
             _navigationService = navigationService;
             _nugetPackageService = nugetPackageService;
 
-            PackageDetails = ReactiveCommand.CreateFromTask<NugetPackageViewModel>(ExecutePackageDetails);
+            PackageDetails = ReactiveCommand.CreateFromTask<NuGetPackageViewModel>(ExecutePackageDetails);
             Refresh = ReactiveCommand.CreateFromTask(ExecuteRefresh);
 
             Refresh.ThrownExceptions.Subscribe(exception => this.Log().Warn(exception));
@@ -66,31 +66,31 @@ namespace PrismSample.ViewModels
             set => this.RaiseAndSetIfChanged(ref _searchText, value);
         }
 
-        public string Instructions = "Search for a nuget package.";
+        public string Instructions = "Search for a NuGet package.";
 
-        public IEnumerable<NugetPackageViewModel> SearchResults => _searchResults.Value;
+        public IEnumerable<NuGetPackageViewModel> SearchResults => _searchResults.Value;
 
-        public ReactiveCommand<NugetPackageViewModel, Unit> PackageDetails { get; set; }
+        public ReactiveCommand<NuGetPackageViewModel, Unit> PackageDetails { get; set; }
 
         public ReactiveCommand<Unit, Unit> Refresh { get; set; }
 
-        private async Task ExecutePackageDetails(NugetPackageViewModel viewModel) =>
+        private async Task ExecutePackageDetails(NuGetPackageViewModel viewModel) =>
             await _navigationService.NavigateAsync(
-                "NugetPackageDetailPage",
+                "NuGetPackageDetailPage",
                 new NavigationParameters
                 {
                     { "PackageMetadata", viewModel.PackageMetadata }
                 });
 
-        private async Task<IEnumerable<NugetPackageViewModel>> SearchNuGetPackages(string term, CancellationToken token)
+        private async Task<IEnumerable<NuGetPackageViewModel>> SearchNuGetPackages(string term, CancellationToken token)
         {
             if (string.IsNullOrWhiteSpace(term))
             {
-                return Enumerable.Empty<NugetPackageViewModel>();
+                return Enumerable.Empty<NuGetPackageViewModel>();
             }
 
             var result = await _nugetPackageService.SearchNuGetPackages(term, token);
-            return result.Select(x => new NugetPackageViewModel(x));
+            return result.Select(x => new NuGetPackageViewModel(x));
         }
 
         private async Task ExecuteRefresh()
