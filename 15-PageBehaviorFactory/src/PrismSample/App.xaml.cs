@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Prism.Behaviors;
 using Prism.Ioc;
-using PrismSample.ViewModels;
+using PrismSample.Behaviours;
 using PrismSample.Views;
 using Xamarin.Forms;
 
@@ -16,7 +16,7 @@ namespace PrismSample
         {
             InitializeComponent();
 
-            var result = await NavigationService.NavigateAsync("MainPage");
+            var result = await NavigationService.NavigateAsync("TabbedPage?createTab=FirstTabPage&createTab=SecondTabPage");
 
             if(!result.Success)
             {
@@ -27,7 +27,10 @@ namespace PrismSample
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<TabbedPage>();
+            containerRegistry.RegisterSingleton<IPageBehaviorFactory, SampleBehaviourFactory>();
+            containerRegistry.RegisterForNavigation<FirstTabPage>();
+            containerRegistry.RegisterForNavigation<SecondTabPage>();
         }
     }
 }
