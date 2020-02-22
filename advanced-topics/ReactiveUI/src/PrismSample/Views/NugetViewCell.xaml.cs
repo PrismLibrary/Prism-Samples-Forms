@@ -30,6 +30,7 @@ namespace PrismSample.Views
             this.OneWayBind(ViewModel, x => x.PackageMetadata.IconUrl, x => x.IconUrl.Uri)
                 .DisposeWith(ViewCellBindings);
 
+            // Note: The VersionToStringConvterer could be done inline.  Check the ReadMe.md for a link to the documentation
             this.OneWayBind(ViewModel, x => x.PackageMetadata.Identity.Version, x => x.PackageVersion.Text, vmToViewConverterOverride: new VersionToStringConverter())
                 .DisposeWith(ViewCellBindings);
 
