@@ -12,7 +12,7 @@
       <Label.FormattedText>
         <FormattedString>
           <Span Text="This page's background and navigation bar color is set by "/>
-          <Span Text="SampleBehaviourFactory" 
+          <Span Text="SampleBehaviorFactory" 
                 FontAttributes="Bold"/>
         </FormattedString>
       </Label.FormattedText>

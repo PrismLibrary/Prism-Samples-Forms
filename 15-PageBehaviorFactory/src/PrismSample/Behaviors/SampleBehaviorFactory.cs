@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace PrismSample.Behaviors
 {
-    public class SampleBehaviourFactory : PageBehaviorFactory
+    public class SampleBehaviorFactory : PageBehaviorFactory
     {
         public override void ApplyContentPageBehaviors(ContentPage page)
         {

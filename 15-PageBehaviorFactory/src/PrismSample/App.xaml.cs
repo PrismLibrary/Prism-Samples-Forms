@@ -28,7 +28,7 @@ namespace PrismSample
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<TabbedPage>();
-            containerRegistry.RegisterSingleton<IPageBehaviorFactory, SampleBehaviourFactory>();
+            containerRegistry.RegisterSingleton<IPageBehaviorFactory, SampleBehaviorFactory>();
             containerRegistry.RegisterForNavigation<FirstTabPage>();
             containerRegistry.RegisterForNavigation<SecondTabPage>();
         }
