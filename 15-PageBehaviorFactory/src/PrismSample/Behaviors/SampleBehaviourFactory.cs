@@ -1,10 +1,10 @@
-﻿using Prism.Behaviors;
-using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+﻿using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+using Xamarin.Forms.PlatformConfiguration;
+using Prism.Behaviors;
+using Xamarin.Forms;
 
-namespace PrismSample.Behaviours
+namespace PrismSample.Behaviors
 {
     public class SampleBehaviourFactory : PageBehaviorFactory
     {

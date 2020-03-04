@@ -1,6 +1,6 @@
 ﻿using Prism.Behaviors;
 using Prism.Ioc;
-using PrismSample.Behaviours;
+using PrismSample.Behaviors;
 using PrismSample.Views;
 using Xamarin.Forms;
 
