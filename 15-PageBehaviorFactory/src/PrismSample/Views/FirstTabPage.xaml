@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismSample.Views.FirstTabPage"
+             Title="{Binding Title}">
+  <StackLayout>
+    <Label TextColor="White"
+           Margin="10"
+           HorizontalTextAlignment="Center"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" >
+      <Label.FormattedText>
+        <FormattedString>
+          <Span Text="This page's background and navigation bar color is set by "/>
+          <Span Text="SampleBehaviorFactory" 
+                FontAttributes="Bold"/>
+        </FormattedString>
+      </Label.FormattedText>
+    </Label>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismSample.Views.SecondTabPage"
+             Title="{Binding Title}">
+  <StackLayout>
+    <Label TextColor="White"
+           Margin="10"
+           Text="My purpose is to be with Tab 1, I don't want him to be alone :D"
+           HorizontalTextAlignment="Center"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+  </StackLayout>
+</ContentPage>
