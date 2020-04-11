@@ -81,7 +81,7 @@ _dialogService.ShowDialog("LockingDialog", new DialogParameters
 ```
 Show the dialog and handle callback,
 ```csharp
-_dialogService.ShowDialog("TermsDialog", new DialogParameters(), HandleCallback());
+_dialogService.ShowDialog("TermsDialog", new DialogParameters(), HandleCallback);
 
 private void HandleCallback(IDialogResult result)
 {...}
