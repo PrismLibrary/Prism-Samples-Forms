@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Prism;
+using Prism.Events;
+using Prism.Ioc;
+using PrismSample.Models;
 using UIKit;
 
 namespace PrismSample.iOS
@@ -23,9 +27,8 @@ namespace PrismSample.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            var application = new App();
+            var application = new App(new iOSInitializer());
             var ea = application.Container.Resolve<IEventAggregator>().GetEvent<NativeEvent>().Subscribe(OnNameChangedEvent);
-
             LoadApplication(application);
 
             return base.FinishedLaunching(app, options);
@@ -39,6 +42,14 @@ namespace PrismSample.iOS
             };
             alertView.AddButton ("OK");
             alertView.Show ();
+        }
+    }
+
+    public class iOSInitializer : IPlatformInitializer
+    {
+        public void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            // Register any platform specific implementations
         }
     }
 }
