@@ -14,7 +14,6 @@ namespace PrismSample.Droid
         public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
         {
             base.OnCreate(savedInstanceState, persistentState);
-            Log.Debug(TAG, "SplashActivity.OnCreate");
         }
 
         // Launches the startup task
