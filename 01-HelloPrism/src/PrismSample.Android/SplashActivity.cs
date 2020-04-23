@@ -11,11 +11,6 @@ namespace PrismSample.Droid
               NoHistory = true)]
     public class SplashActivity : AppCompatActivity
     {
-        public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
-        {
-            base.OnCreate(savedInstanceState, persistentState);
-        }
-
         // Launches the startup task
         protected override void OnResume()
         {
