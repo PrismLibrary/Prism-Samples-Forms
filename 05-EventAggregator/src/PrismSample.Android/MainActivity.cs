@@ -1,6 +1,10 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Prism.Ioc;
+using Prism.Events;
+using PrismSample.Models;
+using Android.Widget;
 
 namespace PrismSample.Droid
 {
