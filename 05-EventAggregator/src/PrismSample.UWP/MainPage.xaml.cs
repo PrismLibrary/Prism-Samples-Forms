@@ -12,6 +12,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Prism.Ioc;
+using Prism.Events;
+using PrismSample.Models;
+using Windows.UI.Popups;
 
 namespace PrismSample.UWP
 {
@@ -21,7 +25,7 @@ namespace PrismSample.UWP
         {
             this.InitializeComponent();
 
-            var application = new PrismSample.App(this);
+            var application = new PrismSample.App();
 
             var ea = application.Container.Resolve<IEventAggregator>().GetEvent<NativeEvent>().Subscribe(OnNativeEvent);
 
@@ -32,11 +36,6 @@ namespace PrismSample.UWP
         {
             var msg = new MessageDialog($"Hi {args.Message}, from Windows");
             await msg.ShowAsync();
-        }
-
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-
         }
     }
 }
