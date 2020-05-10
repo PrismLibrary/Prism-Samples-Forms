@@ -15,7 +15,7 @@ namespace ContosoCookbook.ViewModels
         {
             _navigationService = navigationService;
             _recipeService = recipeService;
-            RecipeSelectedCommand = new DelegateCommand<Recipe>(RecipeSelected);
+            RecipeSelectedCommand = new DelegateCommand<Recipe>(RecipeSelected, _ => !IsBusy).ObservesProperty(() => IsBusy);
         }
 
         public DelegateCommand<Recipe> RecipeSelectedCommand { get; }
@@ -27,14 +27,23 @@ namespace ContosoCookbook.ViewModels
             set => SetProperty(ref _recipeGroups, value);
         }
 
+        private bool _isBusy;
+        public bool IsBusy
+        {
+            get => _isBusy;
+            set => SetProperty(ref _isBusy, value);
+        }
+
         private async void RecipeSelected(Recipe recipe)
         {
+            IsBusy = true;
             var p = new NavigationParameters
             {
                 { "recipe", recipe }
             };
 
             await _navigationService.NavigateAsync("RecipePage", p);
+            IsBusy = false;
         }
 
         public override async void Initialize(INavigationParameters parameters)
