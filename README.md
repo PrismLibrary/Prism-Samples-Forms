@@ -39,7 +39,7 @@ Learn feature by feature how to use Prism in your apps!
 | [Logging with Syslog][SyslogLoggingSample] | coming soon |
 | [Logging with Loggly][LogglyLoggingSample] | Walks you through using the Logging Plugin with Loggly for Syslog or Http |
 | [Using Shiny Lib + Prism][ShinyPrismSample] | coming soon |
-| [Using ReactiveUI + Prism][ReactiveUISample] | coming soon |
+| [Using ReactiveUI + Prism][ReactiveUISample] | This sample shows you how to use Prism and [ReactiveUI](https://github.com/reactiveui/ReactiveUI) in the same project!  It displays a use of `ReactiveCommand`, `WhenAny` operators, ReactiveUI binding, [Pharmacist](https://github.com/reactiveui/Pharmacist) observable generation, Binding Type Converters and more.  The base of the application uses Prism, and adds Reactive paradigms into the Prism application architecture. |
 
 ## Sample Apps
 
