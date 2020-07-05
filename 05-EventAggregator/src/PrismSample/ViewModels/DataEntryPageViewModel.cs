@@ -4,6 +4,7 @@ using Prism.Commands;
 using Prism.Events;
 using Prism.Navigation;
 using PrismSample.Models;
+using PrismSample.Navigation;
 
 namespace PrismSample
 {
@@ -33,6 +34,15 @@ namespace PrismSample
         private void OnSubmitTapped()
         {
             _navigationService.GoBackAsync ();
+        }
+
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            base.OnNavigatedTo(parameters);
+            if (parameters.ContainsKey(NavigationParameterKeys.CurrentIsFunValue))
+            {
+                IsFun = (bool)parameters[NavigationParameterKeys.CurrentIsFunValue];
+            }
         }
     }
 }
