@@ -1,16 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             Title="Main Page"
-             x:Class="PrismSample.Views.MainPage">
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:viewModel="clr-namespace:PrismSample.ViewModels"
+                  x:Class="PrismSample.Views.MainPage"
+                  x:DataType="viewModel:MainPageViewModel"
+                  Title="{Binding Title}"
+                  IsPresented="{Binding IsPresented}">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <MasterDetailPage.Master>
+    <ContentPage Title="Menu">
+      <TableView Intent="Menu">
+        <TableRoot>
+          <TableSection>
+            <TextCell Text="Welcome"
+                      Command="{Binding Navigate}"
+                      CommandParameter="Nav/Welcome" />
+          </TableSection>
+          <TableSection Title="Sample Pages"
+                        TextColor="Black">
+            <TextCell Text="Sample Page 1"
+                      Command="{Binding Navigate}"
+                      CommandParameter="Nav/SampleOne" />
+            <TextCell Text="Sample Page 2"
+                      Command="{Binding Navigate}"
+                      CommandParameter="Nav/SampleTwo" />
+            <TextCell Text="Sample Page 3"
+                      Command="{Binding Navigate}"
+                      CommandParameter="Nav/SampleThree" />
+          </TableSection>
+        </TableRoot>
+      </TableView>
+    </ContentPage>
+  </MasterDetailPage.Master>
 
-</ContentPage>
+</MasterDetailPage>
