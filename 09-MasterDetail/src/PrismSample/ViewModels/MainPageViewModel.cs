@@ -14,20 +14,12 @@ namespace PrismSample.ViewModels
 
             this.Navigate = ReactiveCommand.CreateFromTask<string>(async arg =>
             {
-                this.IsPresented = false;
+                IsPresented = false;
                 await navigationService.NavigateAsync(arg);
             });
         }
 
         public ICommand Navigate { get; }
         [Reactive] public bool IsPresented { get; set; }
-
-
-        //public override void OnAppearing()
-        //{
-        //    base.OnAppearing();
-        //    var env = DependencyService.Get<IEnvironment>();
-        //    Console.WriteLine($"ENV: {env?.ToString() ?? "NO"}");
-        //}
     }
 }

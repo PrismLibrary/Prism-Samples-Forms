@@ -32,8 +32,8 @@ namespace PrismSample
 
             ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(viewType =>
             {
-                var viewModelTypeName = viewType.FullName.Replace("Page", "ViewModel");
-                var viewModelType = Type.GetType(viewModelTypeName);
+                string viewModelTypeName = viewType.FullName.Replace("Page", "ViewModel");
+                Type viewModelType = Type.GetType(viewModelTypeName);
                 return viewModelType;
             });
 
