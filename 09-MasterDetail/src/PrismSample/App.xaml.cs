@@ -8,7 +8,6 @@ using System;
 using Xamarin.Essentials.Implementation;
 using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace PrismSample
 {
@@ -24,7 +23,7 @@ namespace PrismSample
         {
         }
 
-        public App(IPlatformInitializer initializer) 
+        public App(IPlatformInitializer initializer)
             : base(initializer) { }
 
         protected override async void OnInitialized()
@@ -38,8 +37,7 @@ namespace PrismSample
                 return viewModelType;
             });
 
-            //await NavigationService.NavigateAsync("NavigationPage/MainPage");
-            await this.NavigationService.NavigateAsync("Main/Nav/Welcome");
+            await NavigationService.NavigateAsync("Main/Nav/Welcome");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -49,6 +47,10 @@ namespace PrismSample
             containerRegistry.RegisterForNavigation<NavigationPage>("Nav");
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>("Main");
             containerRegistry.RegisterForNavigation<WelcomePage>("Welcome");
+
+            containerRegistry.RegisterForNavigation<SampleOnePage>("SampleOne");
+            containerRegistry.RegisterForNavigation<SampleTwoPage>("SampleTwo");
+            containerRegistry.RegisterForNavigation<SampleThreePage>("SampleThree");
         }
     }
 }
