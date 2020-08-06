@@ -1,15 +1,22 @@
-﻿using System.ComponentModel;
+﻿using Prism.Navigation;
+using Xamarin.Forms;
 
 namespace PrismSample.Views
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
-    public partial class MainPage
+    public partial class MainPage : IMasterDetailPageOptions
     {
+        public static readonly BindableProperty IsPresentedAfterNavigationProperty =
+            BindableProperty.Create(nameof(IsPresentedAfterNavigation), typeof(bool), typeof(MainPage), false);
+
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        public bool IsPresentedAfterNavigation
+        {
+            get => (bool)GetValue(IsPresentedAfterNavigationProperty);
+            set => SetValue(IsPresentedAfterNavigationProperty, value);
         }
     }
 }

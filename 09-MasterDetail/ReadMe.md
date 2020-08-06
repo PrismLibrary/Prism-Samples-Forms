@@ -1,9 +1,8 @@
 # Master Detail
 
-TODO
+This example shows:
 
-- Show How to use the Master Detail Page
-- Should have the following Menu Options
-  - Conventional use with a NavigationPage / Content Page
-  - Less common use with a Tabbed Page as the Child
-  - Should show the Hamburger icon on all platforms
+- How to use the MasterDetailPage with Xamarin.Forms and Prism
+- Conventional Use with a NavigationPage / ContentPage
+- Less common use with a TabbedPage as the Child
+- Hamburger icon on all platforms

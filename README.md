@@ -17,7 +17,7 @@ Learn feature by feature how to use Prism in your apps!
 | 6 | [Page Dialog Service][PageDialogServiceSample] | How to use the IPageDialogService to display alerts and action sheets from within your ViewModels. |
 | 7 | [Dialog Service][DialogServiceSample] | How to use the DialogService to provide highly customizable experiences within your application. |
 | 8 | [Tabbed Navigation][8] | coming soon |
-| 9 | [Master Detail][9] | coming soon |
+| 9 | [Master Detail][MasterDetailSample] | How to use a master detail page with a content page and a tabbed page as children |
 | 10 | [Modules][ModulesSample] | How to use Prism modularization to separate the application logic using IModule, IModuleManager, ModuleCatalog. |
 | 11 | [Module Dependency][ModuleDependencySample] | coming soon |
 | 12 | [ViewModelLocator][ViewModelLocatorSample] | coming soon |
@@ -39,7 +39,7 @@ Learn feature by feature how to use Prism in your apps!
 | [Logging with Syslog][SyslogLoggingSample] | coming soon |
 | [Logging with Loggly][LogglyLoggingSample] | Walks you through using the Logging Plugin with Loggly for Syslog or Http |
 | [Using Shiny Lib + Prism][ShinyPrismSample] | coming soon |
-| [Using ReactiveUI + Prism][ReactiveUISample] | This sample shows you how to use Prism and [ReactiveUI](https://github.com/reactiveui/ReactiveUI) in the same project!  It displays a use of `ReactiveCommand`, `WhenAny` operators, ReactiveUI binding, [Pharmacist](https://github.com/reactiveui/Pharmacist) observable generation, Binding Type Converters and more.  The base of the application uses Prism, and adds Reactive paradigms into the Prism application architecture. |
+| [Using ReactiveUI + Prism][ReactiveUISample] | coming soon |
 
 ## Sample Apps
 
@@ -67,7 +67,7 @@ If you're adding a brand new sample be sure to start with a copy of the resource
 [PageDialogServiceSample]: 06-PageDialogService/
 [DialogServiceSample]: 07-DialogService/
 [8]: 08-TabbedNavigation/
-[9]: 09-MasterDetail/
+[MasterDetailSample]: 09-MasterDetail/
 [ModulesSample]: 10-Modules/
 [ModuleDependencySample]: 11-ModuleDependency/
 [ViewModelLocatorSample]: 12-ViewModelLocator/
