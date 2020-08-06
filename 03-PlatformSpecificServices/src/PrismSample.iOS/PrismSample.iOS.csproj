@@ -141,6 +141,7 @@
   <ItemGroup>
     <PackageReference Include="Prism.DryIoc.Forms" Version="$(PrismVersion)" />
     <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
+    <PackageReference Include="Xamarin.Essentials" Version="$(XamarinEssentialsVersion)" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
