@@ -1,16 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             Title="Main Page"
-             x:Class="PrismSample.Views.MainPage">
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  Title="Main Page"
+                  x:Name="page"
+                  x:Class="PrismSample.Views.MainPage">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <MasterDetailPage.Master>
+    <ContentPage Title="Menu"
+                 IconImageSource="{OnPlatform iOS='hamburger.png'}"
+                 Padding="{OnPlatform Default='20', iOS='20,40'}">
+      <StackLayout>
+        <Label Text="Master Detail Demo"
+               FontSize="Large"
+               FontAttributes="Bold"
+               Margin="0,20"/>
+        <Button Text="View A"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="ViewA" />
+        <Button Text="View B"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="ViewB" />
+        <Button Text="TabbedPage"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="TabbedPage?createTab=ViewA&amp;createTab=ViewB" />
+        <StackLayout Orientation="Horizontal">
+          <Switch IsToggled="{Binding IsPresentedAfterNavigation,Source={x:Reference page}}" />
+          <Label Text="Is Presented After Navigation" />
+        </StackLayout>
+      </StackLayout>
+    </ContentPage>
+  </MasterDetailPage.Master>
 
-</ContentPage>
+</MasterDetailPage>
