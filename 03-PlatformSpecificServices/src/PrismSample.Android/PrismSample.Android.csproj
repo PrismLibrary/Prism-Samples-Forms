@@ -54,9 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Prism.DryIoc.Forms" Version="$(PrismVersion)" />
-    <PackageReference Include="Xamarin.Essentials">
-      <Version>1.3.1</Version>
-    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials" Version="$(XamarinEssentialsVersion)" />
     <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="$(AndroidSupportVersion)" />
   </ItemGroup>
