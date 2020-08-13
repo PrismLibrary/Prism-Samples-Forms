@@ -48,11 +48,7 @@ namespace PrismSample
 
         private void OnEntryCommandTapped()
         {
-            INavigationParameters parameters = new NavigationParameters
-            {
-                {NavigationParameterKeys.CurrentIsFunValue, IsFun}
-            };
-            _navigationService.NavigateAsync(Navigate.DataEntry, parameters);
+            _navigationService.NavigateAsync(Navigate.DataEntry, (NavigationParameterKeys.CurrentIsFunValue, IsFun));
         }
 
         public ICommand GoBackCommand { get; }

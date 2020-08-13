@@ -38,10 +38,9 @@ namespace PrismSample
 
         public override void OnNavigatedTo(INavigationParameters parameters)
         {
-            base.OnNavigatedTo(parameters);
             if (parameters.ContainsKey(NavigationParameterKeys.CurrentIsFunValue))
             {
-                IsFun = (bool)parameters[NavigationParameterKeys.CurrentIsFunValue];
+                IsFun = parameters.GetValue<bool>(NavigationParameterKeys.CurrentIsFunValue);
             }
         }
     }
