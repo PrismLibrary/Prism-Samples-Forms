@@ -11,11 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
-    <PackageReference Include="Prism.DryIoc.Forms" Version="$(PrismVersion)" />
-    <PackageReference Include="Refractored.MvvmHelpers" Version="$(MvvmHelpersVersion)" />
-    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="$(FFImageLoadingVersion)" />
-    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="$(FFImageLoadingVersion)" />
+    <PackageReference Include="Xamarin.Forms" />
+    <PackageReference Include="Prism.DryIoc.Forms" />
+    <PackageReference Include="Refractored.MvvmHelpers" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" />
   </ItemGroup>
 
   <ItemGroup>

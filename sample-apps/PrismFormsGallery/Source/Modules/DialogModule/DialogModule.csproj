@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.Forms" Version="$(PrismVersion)" />
-    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
-    <PackageReference Include="Refractored.MvvmHelpers" Version="$(MvvmHelpersVersion)" />
-    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="$(FFImageLoadingVersion)" />
-    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="$(FFImageLoadingVersion)" />
+    <PackageReference Include="Prism.Forms" />
+    <PackageReference Include="Xamarin.Forms" />
+    <PackageReference Include="Refractored.MvvmHelpers" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" />
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations" />
   </ItemGroup>
 
 </Project>

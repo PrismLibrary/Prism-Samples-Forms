@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.DryIoc.Forms" Version="$(PrismVersion)" />
-    <PackageReference Include="Prism.Plugin.Logging.Loggly" Version="$(LoggingPluginVersion)" />
-    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
+    <PackageReference Include="Prism.DryIoc.Forms" />
+    <PackageReference Include="Prism.Plugin.Logging.Loggly" />
+    <PackageReference Include="Xamarin.Forms" />
   </ItemGroup>
 
 </Project>

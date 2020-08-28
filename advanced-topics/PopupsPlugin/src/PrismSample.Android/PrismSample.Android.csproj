@@ -53,9 +53,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Prism.DryIoc.Forms" Version="$(PrismVersion)" />
-    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="$(AndroidSupportVersion)" />
+    <PackageReference Include="Prism.DryIoc.Forms" />
+    <PackageReference Include="Xamarin.Forms" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

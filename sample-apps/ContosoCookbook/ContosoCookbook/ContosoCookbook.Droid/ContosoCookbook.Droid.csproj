@@ -61,13 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="$(AndroidSupportVersion)" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="$(AndroidSupportVersion)" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="$(AndroidSupportVersion)" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="$(AndroidSupportVersion)" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="$(AndroidSupportVersion)" />
-    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
-    <PackageReference Include="Prism.Unity.Forms" Version="$(PrismVersion)" />
+    <PackageReference Include="Xamarin.Android.Support.Design" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" />
+    <PackageReference Include="Xamarin.Android.Support.v4" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" />
+    <PackageReference Include="Xamarin.Forms" />
+    <PackageReference Include="Prism.Unity.Forms" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
