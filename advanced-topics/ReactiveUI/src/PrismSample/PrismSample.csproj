@@ -6,13 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NuGet.Client" Version="4.2.0" />
-    <PackageReference Include="NuGet.Protocol.Core.v3" Version="4.2.0" />
-    <PackageReference Include="Prism.DryIoc.Forms" Version="$(PrismVersion)" />
-    <PackageReference Include="Pharmacist.MsBuild" Version="$(PharmacistVersion)" PrivateAssets="all" />
-    <PackageReference Include="Pharmacist.Common" Version="$(PharmacistVersion)" />
-    <PackageReference Include="ReactiveUI.XamForms" Version="$(ReactiveUIVersion)" />
-    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
-    <PackageReference Include="Xamarin.Essentials" Version="$(XamarinEssentialsVersion)" />
+    <PackageReference Include="NuGet.Client" />
+    <PackageReference Include="NuGet.Protocol.Core.v3" />
+    <PackageReference Include="Prism.DryIoc.Forms" />
+    <PackageReference Include="Pharmacist.MsBuild" />
+    <PackageReference Include="Pharmacist.Common" />
+    <PackageReference Include="ReactiveUI.XamForms" />
+    <PackageReference Include="Xamarin.Forms" />
+    <PackageReference Include="Xamarin.Essentials" />
   </ItemGroup>
 </Project>

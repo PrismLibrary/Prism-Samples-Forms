@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonVersion)" />
-    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)" />
-    <PackageReference Include="Prism.Unity.Forms" Version="$(PrismVersion)" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="Xamarin.Forms" />
+    <PackageReference Include="Prism.Unity.Forms" />
   </ItemGroup>
 
   <ItemGroup>
