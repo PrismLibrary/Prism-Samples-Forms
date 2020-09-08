@@ -2,6 +2,7 @@
 <Frame xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:prism="http://prismlibrary.com"
+       xmlns:models="clr-namespace:PrismSample.Models"
        prism:DialogLayout.RelativeWidthRequest="0.75"
        prism:DialogLayout.RelativeHeightRequest="0.75"
        prism:DialogLayout.CloseOnBackgroundTapped="True"
@@ -18,7 +19,7 @@
               SelectionMode="Single"
               SeparatorColor="Gray">
       <ListView.ItemTemplate>
-        <DataTemplate>
+        <DataTemplate x:DataType="models:Contact">
           <ViewCell>
             <Grid ColumnSpacing="10" Margin="8">
               <Grid.ColumnDefinitions>
