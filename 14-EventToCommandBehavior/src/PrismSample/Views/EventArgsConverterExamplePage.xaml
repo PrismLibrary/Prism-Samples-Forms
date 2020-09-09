@@ -4,6 +4,7 @@
              x:Class="PrismSample.Views.EventArgsConverterExamplePage"
              Title="Event Args Converter Example"
              xmlns:c="clr-namespace:PrismSample.Converters"
+             xmlns:models="clr-namespace:PrismSample.Models"
              xmlns:prism="http://prismlibrary.com">
 
   <ContentPage.Resources>
@@ -14,7 +15,7 @@
 
   <ListView ItemsSource="{Binding Developers}">
     <ListView.ItemTemplate>
-      <DataTemplate>
+      <DataTemplate x:DataType="models:Developer">
 
         <TextCell Text="{Binding FullName}"
                   Detail="{Binding Country}" />

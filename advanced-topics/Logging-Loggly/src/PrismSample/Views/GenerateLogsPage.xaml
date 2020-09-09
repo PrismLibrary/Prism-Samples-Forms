@@ -19,8 +19,8 @@
     <ScrollView Grid.Row="1">
       <StackLayout BindableLayout.ItemsSource="{Binding Logs}">
         <BindableLayout.ItemTemplate>
-          <DataTemplate>
-            <Label Text="{Binding .}" />
+          <DataTemplate x:DataType="x:String">
+            <Label Text="{Binding}" />
           </DataTemplate>
         </BindableLayout.ItemTemplate>
       </StackLayout>

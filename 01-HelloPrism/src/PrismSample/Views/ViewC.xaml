@@ -17,8 +17,8 @@
     <StackLayout Padding="{OnPlatform Default='20', iOS='20,40,20,20'}"
                  BindableLayout.ItemsSource="{Binding Messages}">
       <BindableLayout.ItemTemplate>
-        <DataTemplate>
-          <Label Text="{Binding .}" />
+        <DataTemplate x:DataType="x:String">
+          <Label Text="{Binding}" />
         </DataTemplate>
       </BindableLayout.ItemTemplate>
     </StackLayout>
