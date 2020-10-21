@@ -1,0 +1,10 @@
+# Suppress: EC112
+# top-most EditorConfig file
+root = true
+
+# Don't use tabs for indentation.
+[*]
+indent_style = space
+
+[*.yml]
+indent_size = 2

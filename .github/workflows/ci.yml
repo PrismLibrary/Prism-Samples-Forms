@@ -1,0 +1,60 @@
+name: Sample CI
+
+on:
+  push:
+    branches:
+    - master
+    paths-ignore:
+      - '.github/**'
+      - '**/*.md'
+
+strategy:
+  matrix:
+    sampleApp: [
+      '01-HelloPrism', 02-ServiceRegistration', 03-PlatformSpecificServices', '04-Commands',
+      '04-CompositeCommands', '05-EventAggregator', '06-PageDialogService', '07-DialogService',
+      '08-TabbedNavigation', '09-MasterDetail', '10-Modules', '11-ModuleDependency', '12-ViewModelLocator',
+      '13-ViewModelInitialization', '14-EventToCommandBehavior', '15-PageBehaviorFactory', '16-PageLifecycleAware',
+      '17-XamlNavigation', '18-DeviceService', '19-NavigationMode', '20-ConfirmNavigation',
+      'advanced-topics/PopupsPlugin', 'advanced-topics/ReactiveUI', 'advanced-topics/ShinyLib'
+    ]
+
+jobs:
+
+  android-build:
+    runs-on: macos-latest
+    env:
+      Configuration: Debug
+      Platform: AnyCPU
+      ProjectPath: '${{ matrix.sampleApp }}/src/PrismSample.Android/PrismSample.Android.csproj'
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Restore NuGet packages
+      run: nuget restore ${{ env.ProjectPath }}
+
+    - name: Build ${{ matrix.sampleApp }} Android
+      run: msbuild ${{ env.ProjectPath }} /p:SolutionDir=${{ matrix.sampleApp }} /p:Configuration=${{ env.Configuration }} /p:Platform=${{ env.Platform }} /verbosity:normal /t:Rebuild
+
+  ios-build:
+    runs-on: macos-latest
+    env:
+      Configuration: Debug
+      Platform: iPhoneSimulator
+      ProjectPath: '${{ matrix.sampleApp }}/src/PrismSample.iOS/PrismSample.iOS.csproj'
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Restore NuGet packages
+      run: nuget restore ${{ env.ProjectPath }}
+
+    - name: Build ${{ matrix.sampleApp }} iOS
+      run: msbuild ${{ env.ProjectPath }} /p:SolutionDir=${{ matrix.sampleApp }} /p:Configuration=${{ env.Configuration }} /p:Platform=${{ env.Platform }} /verbosity:normal /t:Rebuild
