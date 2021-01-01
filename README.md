@@ -16,8 +16,8 @@ Learn feature by feature how to use Prism in your apps!
 | 5 | [Event Aggregator][EventAggregatorSample] | How to use the IEventAggregator to raise and listen to events. This shows how to use a simple event with a primitive type payload, generic event with payload &lt;T&gt;, and event with custom EventArgs. It also demonstrated how to subscribe to events published in Xamarin.Forms inside native code. |
 | 6 | [Page Dialog Service][PageDialogServiceSample] | How to use the IPageDialogService to display alerts and action sheets from within your ViewModels. |
 | 7 | [Dialog Service][DialogServiceSample] | How to use the DialogService to provide highly customizable experiences within your application. |
-| 8 | [Tabbed Navigation][TabbedNavigationSample] | How to do navigation with tabbed pages in Prism |
-| 9 | [Master Detail][9] | coming soon |
+| 8 | [Tabbed Navigation][8] | coming soon |
+| 9 | [Master Detail][MasterDetailSample] | How to use a master detail page with a content page and a tabbed page as children |
 | 10 | [Modules][ModulesSample] | How to use Prism modularization to separate the application logic using IModule, IModuleManager, ModuleCatalog. |
 | 11 | [Module Dependency][ModuleDependencySample] | coming soon |
 | 12 | [ViewModelLocator][ViewModelLocatorSample] | coming soon |
@@ -66,8 +66,8 @@ If you're adding a brand new sample be sure to start with a copy of the resource
 [EventAggregatorSample]: 05-EventAggregator/
 [PageDialogServiceSample]: 06-PageDialogService/
 [DialogServiceSample]: 07-DialogService/
-[TabbedNavigationSample]: 08-TabbedNavigation/
-[9]: 09-MasterDetail/
+[8]: 08-TabbedNavigation/
+[MasterDetailSample]: 09-MasterDetail/
 [ModulesSample]: 10-Modules/
 [ModuleDependencySample]: 11-ModuleDependency/
 [ViewModelLocatorSample]: 12-ViewModelLocator/
@@ -80,12 +80,12 @@ If you're adding a brand new sample be sure to start with a copy of the resource
 [NavigationModeSample]: 19-NavigationMode/
 [ConfirmNavigationSample]: 20-ConfirmNavigation/
 
-[PopupsPluginSample]: 50-PopupsPlugin/
-[AppCenterLoggingSample]: 51-Logging-AppCenter/
-[SyslogLoggingSample]: 52-Logging-Syslog/
-[LogglyLoggingSample]: 53-Logging-Loggly/
-[ShinyPrismSample]: 60-ShinyLib/
-[ReactiveUISample]: 61-ReactiveUI/
+[PopupsPluginSample]: advanced-topics/PopupsPlugin/
+[AppCenterLoggingSample]: advanced-topics/Logging-AppCenter/
+[SyslogLoggingSample]: advanced-topics/Logging-Syslog/
+[LogglyLoggingSample]: advanced-topics/Logging-Loggly/
+[ShinyPrismSample]: advanced-topics/ShinyLib/
+[ReactiveUISample]: advanced-topics/ReactiveUI/
 
-[PrismFormsGallery]: 98-PrismFormsGallery
-[ContosoCookbook]: 99-ContosoCookbook
+[PrismFormsGallery]: sample-apps/PrismFormsGallery
+[ContosoCookbook]: sample-apps/ContosoCookbook

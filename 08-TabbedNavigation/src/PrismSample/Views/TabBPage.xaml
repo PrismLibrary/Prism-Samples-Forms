@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              x:Class="PrismSample.Views.TabBPage"
+             prism:ViewModelLocator.AutowireViewModel="True"
              Title="Tab B">
 
   <StackLayout VerticalOptions="CenterAndExpand">
-    <Label Text="Tab B" HorizontalTextAlignment="Center" />
+    <Label Text="{Binding Title, StringFormat='Tab {0} Content'}" HorizontalTextAlignment="Center" />
   </StackLayout>
 
 </ContentPage>

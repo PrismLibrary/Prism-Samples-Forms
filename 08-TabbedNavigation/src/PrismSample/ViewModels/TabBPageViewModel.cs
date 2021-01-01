@@ -1,16 +1,12 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Prism.Navigation;
 
 namespace PrismSample.ViewModels
 {
-    public class TabBPageViewModel : BindableBase
+    public class TabBPageViewModel : TabPageViewModelBase
     {
-        public TabBPageViewModel()
+        public TabBPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-
+            Title = "B";
         }
     }
 }

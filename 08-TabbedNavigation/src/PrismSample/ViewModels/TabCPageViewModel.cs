@@ -1,23 +1,22 @@
 ﻿using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Navigation.TabbedPages;
-using PrismSample.Views;
 
 namespace PrismSample.ViewModels
 {
-    public class TabCPageViewModel : BindableBase
+    public class TabCPageViewModel : TabPageViewModelBase
     {
-        private INavigationService _navigationService { get; }
-        public DelegateCommand TabACommand { get; }
+        private INavigationService _navigationService;
+        public DelegateCommand NavigateTabACommand { get; set; }
 
-        public TabCPageViewModel(INavigationService navigationService)
+        public TabCPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             _navigationService = navigationService;
-            TabACommand = new DelegateCommand(TabAAction);
+            NavigateTabACommand = new DelegateCommand(NavigateTabA);
+            Title = "C";
         }
 
-        private async void TabAAction()
+        private async void NavigateTabA()
         {
             await _navigationService.SelectTabAsync("TabAPage");
         }

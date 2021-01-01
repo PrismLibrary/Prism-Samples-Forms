@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
              x:Class="PrismSample.Views.TabCPage"
+             prism:ViewModelLocator.AutowireViewModel="True"
              Title="Tab C">
 
   <StackLayout VerticalOptions="CenterAndExpand">
-    <Label Text="Tab C" HorizontalTextAlignment="Center" />
-    <Button Text="Go To Tab A" HorizontalOptions="CenterAndExpand" Command="{Binding TabACommand}" />
+    <Label Text="{Binding Title, StringFormat='Tab {0} Content'}" HorizontalTextAlignment="Center" />
+    <Button Text="Go To Tab A" HorizontalOptions="CenterAndExpand" Command="{Binding NavigateTabACommand}" />
   </StackLayout>
 
 </ContentPage>
