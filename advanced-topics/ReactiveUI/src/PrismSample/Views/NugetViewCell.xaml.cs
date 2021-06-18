@@ -1,15 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reactive.Disposables;
-using System.Reactive.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ImTools;
 using PrismSample.Converters;
 using PrismSample.ViewModels;
 using ReactiveUI;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace PrismSample.Views

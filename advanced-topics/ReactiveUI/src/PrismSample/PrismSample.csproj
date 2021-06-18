@@ -9,9 +9,8 @@
     <PackageReference Include="NuGet.Client" />
     <PackageReference Include="NuGet.Protocol.Core.v3" />
     <PackageReference Include="Prism.DryIoc.Forms" />
-    <PackageReference Include="Pharmacist.MsBuild" />
-    <PackageReference Include="Pharmacist.Common" />
     <PackageReference Include="ReactiveUI.XamForms" />
+    <PackageReference Include="ReactiveUI.Events.XamForms" />
     <PackageReference Include="Xamarin.Forms" />
     <PackageReference Include="Xamarin.Essentials" />
   </ItemGroup>

@@ -1,13 +1,9 @@
 using System;
 using System.Reactive;
 using System.Reactive.Linq;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows.Input;
 using Prism.Navigation;
-using PrismSample.Views;
 using ReactiveUI;
-using Xamarin.Forms;
 
 namespace PrismSample.ViewModels
 {

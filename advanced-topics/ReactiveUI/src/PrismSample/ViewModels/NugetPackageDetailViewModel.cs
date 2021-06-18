@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Reactive;
 using System.Threading.Tasks;
 using NuGet.Protocol.Core.Types;
 using Prism.Navigation;
@@ -40,7 +39,7 @@ namespace PrismSample.ViewModels
             }
         }
 
-        private async Task<IEnumerable<NuGetVersionViewModel>> ExecuteGetVersions(IPackageSearchMetadata packageSearchMetadata)
+        private static async Task<IEnumerable<NuGetVersionViewModel>> ExecuteGetVersions(IPackageSearchMetadata packageSearchMetadata)
         {
             var versions = await packageSearchMetadata.GetVersionsAsync();
             return versions.Reverse().Take(30).Select(x => new NuGetVersionViewModel(x));

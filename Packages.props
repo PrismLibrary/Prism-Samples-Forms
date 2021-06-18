@@ -3,7 +3,6 @@
     <PrismVersion>8.0.0.1909</PrismVersion>
     <AndroidSupportVersion>28.0.0.3</AndroidSupportVersion>
     <FFImageLoadingVersion>2.4.11.982</FFImageLoadingVersion>
-    <PharmacistVersion>1.6.4</PharmacistVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,9 +23,8 @@
     <!-- RxUI Sample -->
     <PackageReference Update="NuGet.Client" Version="4.2.0" />
     <PackageReference Update="NuGet.Protocol.Core.v3" Version="4.2.0" />
-    <PackageReference Update="Pharmacist.MsBuild" Version="$(PharmacistVersion)" PrivateAssets="all" />
-    <PackageReference Update="Pharmacist.Common" Version="$(PharmacistVersion)" />
     <PackageReference Update="ReactiveUI.XamForms" Version="11.5.17" />
+    <PackageReference Update="ReactiveUI.Events.XamForms" Version="11.5.17" />
 
     <PackageReference Update="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.10" />
 

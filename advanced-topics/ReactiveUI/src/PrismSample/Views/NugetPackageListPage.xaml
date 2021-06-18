@@ -9,6 +9,7 @@
   <ContentPage.Content>
     <StackLayout>
       <SearchBar x:Name="SearchBar" />
+      <Picker x:Name="Tags" />
       <ListView x:Name="NuGetPackageListView"
                 HasUnevenRows="True"
                 RowHeight="80"
