@@ -6,13 +6,10 @@ using PrismSample.Converters;
 using PrismSample.ViewModels;
 using ReactiveUI;
 using Xamarin.Forms;
-using Xamarin.Forms.Internals;
-using Xamarin.Forms.Xaml;
 
 namespace PrismSample.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NuGetPackageListPage : ContentPageBase<NuGetPackageListViewModel>
+    public partial class NuGetPackageListPage
     {
         public NuGetPackageListPage()
         {
@@ -35,6 +32,11 @@ namespace PrismSample.Views
 
             this.WhenAnyValue(x => x.ViewModel.SearchResults)
                 .BindTo(this, x => x.NuGetPackageListView.ItemsSource)
+                .DisposeWith(ViewBindings);
+
+            this.WhenAnyValue(x => x.ViewModel.Tags)
+                .Where(x => x != null)
+                .BindTo(this, x => x.Tags.ItemsSource)
                 .DisposeWith(ViewBindings);
 
             NuGetPackageListView

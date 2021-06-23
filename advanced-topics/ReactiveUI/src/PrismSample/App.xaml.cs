@@ -1,10 +1,7 @@
-﻿using System;
-using Prism.Ioc;
-using PrismSample.Converters;
+﻿using Prism.Ioc;
 using PrismSample.Services;
 using PrismSample.ViewModels;
 using PrismSample.Views;
-using ReactiveUI;
 using Xamarin.Forms;
 
 namespace PrismSample

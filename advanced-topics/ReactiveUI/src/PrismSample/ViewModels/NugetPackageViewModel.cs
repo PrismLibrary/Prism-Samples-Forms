@@ -1,9 +1,5 @@
-using System;
-using System.Reactive;
-using System.Threading.Tasks;
 using NuGet.Protocol.Core.Types;
 using ReactiveUI;
-using Xamarin.Forms;
 
 namespace PrismSample.ViewModels
 {
