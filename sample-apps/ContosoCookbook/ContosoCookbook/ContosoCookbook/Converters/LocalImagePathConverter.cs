@@ -15,9 +15,9 @@ namespace ContosoCookbook.Converters
             _assembly = typeof(LocalImagePathConverter).AssemblyQualifiedName.Split(',')[1].Trim() + '.';
         }
 
-        private ILoggerFacade _logger { get; }
+        private readonly ILogger _logger;
 
-        public LocalImagePathConverter(ILoggerFacade logger)
+        public LocalImagePathConverter(ILogger logger)
         {
             _logger = logger;
         }
@@ -28,7 +28,7 @@ namespace ContosoCookbook.Converters
             // (e.g. "ContosoCookbook.images.chinese.photo.jpg") and return an ImageSource
             // wrapping that resource
             string source = _assembly + ((string)value).Replace('/', '.');
-            _logger.Log($"Getting image '{source}'", Category.Debug, Priority.None);
+            _logger.Debug($"Getting image '{source}'");
             return ImageSource.FromResource(source);
         }
 
