@@ -42,6 +42,8 @@ namespace PrismSample
 
             containerRegistry.RegisterInstance<ILogglyOptions>(new LogglyOptions
             {
+                // TODO : Specify Loggly token here
+                // Token = "",
                 AppName = "Logging Demo",
                 Tags = new[] { "Prism", "Sample" },
             });
