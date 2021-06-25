@@ -2,7 +2,6 @@
 using Prism.Ioc;
 using Prism.Unity;
 using Xamarin.Forms;
-using Prism.Logging;
 using ContosoCookbook.Views;
 using ContosoCookbook.Services;
 using Xamarin.Forms.Xaml;
@@ -29,7 +28,6 @@ namespace ContosoCookbook
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<ILogger, DebugLoggingService>();
             containerRegistry.RegisterSingleton<IRecipeService, RecipeService>();
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
