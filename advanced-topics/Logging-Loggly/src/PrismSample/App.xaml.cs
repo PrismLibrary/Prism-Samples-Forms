@@ -7,6 +7,7 @@ using PrismSample.Logging;
 using PrismSample.ViewModels;
 using PrismSample.Views;
 using Xamarin.Forms;
+using LogglyOptions = PrismSample.Logging.LogglyOptions;
 
 namespace PrismSample
 {
@@ -43,7 +44,7 @@ namespace PrismSample
 
             // TODO: Be sure to get your Loggly Consumer Token. Paste it here to avoid typing it...
             //containerRegistry.RegisterInstance<ILogglyOptions>(new LogglyOptions
-            //{ 
+            //{
             //    Token = "{Enter your Loggly Consumer Token Here...}"
             //});
 
