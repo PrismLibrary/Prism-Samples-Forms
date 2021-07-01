@@ -11,7 +11,7 @@
         <Color x:Key="AccentColor">#00A5F2</Color>
         <Color x:Key="TextColor">White</Color>
 
-        <Style TargetType="TabbedPage">
+        <Style TargetType="TabbedPage"  ApplyToDerivedTypes="True">
             <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryColor}" />
             <Setter Property="BarTextColor" Value="{StaticResource TextColor}" />
             <Setter Property="SelectedTabColor" Value="{StaticResource AccentColor}" />
