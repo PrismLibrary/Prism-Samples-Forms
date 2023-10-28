@@ -2,7 +2,7 @@
 using System;
 using MvvmHelpers;
 using Prism.Commands;
-using Prism.Services.Dialogs;
+using Prism.Dialogs;
 
 namespace DialogModule.ViewModels
 {
