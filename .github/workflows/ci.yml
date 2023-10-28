@@ -18,6 +18,7 @@ jobs:
   android-build:
     runs-on: macos-latest
     strategy:
+      fail-fast: false
       matrix:
         sampleApp: [
           '01-HelloPrism', 02-ServiceRegistration', 03-PlatformSpecificServices', '04-Commands',
@@ -47,6 +48,7 @@ jobs:
   ios-build:
     runs-on: macos-latest
     strategy:
+      fail-fast: false
       matrix:
         sampleApp: [
           '01-HelloPrism', 02-ServiceRegistration', 03-PlatformSpecificServices', '04-Commands',
