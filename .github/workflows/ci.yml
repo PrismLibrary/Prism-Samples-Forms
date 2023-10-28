@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         sampleApp: [
-          '01-HelloPrism', 02-ServiceRegistration', 03-PlatformSpecificServices', '04-Commands',
+          '01-HelloPrism', '02-ServiceRegistration', '03-PlatformSpecificServices', '04-Commands',
           '04-CompositeCommands', '05-EventAggregator', '06-PageDialogService', '07-DialogService',
           '08-TabbedNavigation', '09-MasterDetail', '10-Modules', '11-ModuleDependency', '12-ViewModelLocator',
           '13-ViewModelInitialization', '14-EventToCommandBehavior', '15-PageBehaviorFactory', '16-PageLifecycleAware',
@@ -51,7 +51,7 @@ jobs:
       fail-fast: false
       matrix:
         sampleApp: [
-          '01-HelloPrism', 02-ServiceRegistration', 03-PlatformSpecificServices', '04-Commands',
+          '01-HelloPrism', '02-ServiceRegistration', '03-PlatformSpecificServices', '04-Commands',
           '04-CompositeCommands', '05-EventAggregator', '06-PageDialogService', '07-DialogService',
           '08-TabbedNavigation', '09-MasterDetail', '10-Modules', '11-ModuleDependency', '12-ViewModelLocator',
           '13-ViewModelInitialization', '14-EventToCommandBehavior', '15-PageBehaviorFactory', '16-PageLifecycleAware',
