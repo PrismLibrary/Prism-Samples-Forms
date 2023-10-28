@@ -12,21 +12,21 @@ on:
     paths-ignore:
       - '**/*.md'
 
-strategy:
-  matrix:
-    sampleApp: [
-      '01-HelloPrism', 02-ServiceRegistration', 03-PlatformSpecificServices', '04-Commands',
-      '04-CompositeCommands', '05-EventAggregator', '06-PageDialogService', '07-DialogService',
-      '08-TabbedNavigation', '09-MasterDetail', '10-Modules', '11-ModuleDependency', '12-ViewModelLocator',
-      '13-ViewModelInitialization', '14-EventToCommandBehavior', '15-PageBehaviorFactory', '16-PageLifecycleAware',
-      '17-XamlNavigation', '18-DeviceService', '19-NavigationMode', '20-ConfirmNavigation',
-      'advanced-topics/ReactiveUI'
-    ]
 
 jobs:
 
   android-build:
     runs-on: macos-latest
+    strategy:
+      matrix:
+        sampleApp: [
+          '01-HelloPrism', 02-ServiceRegistration', 03-PlatformSpecificServices', '04-Commands',
+          '04-CompositeCommands', '05-EventAggregator', '06-PageDialogService', '07-DialogService',
+          '08-TabbedNavigation', '09-MasterDetail', '10-Modules', '11-ModuleDependency', '12-ViewModelLocator',
+          '13-ViewModelInitialization', '14-EventToCommandBehavior', '15-PageBehaviorFactory', '16-PageLifecycleAware',
+          '17-XamlNavigation', '18-DeviceService', '19-NavigationMode', '20-ConfirmNavigation',
+          'advanced-topics/ReactiveUI'
+        ]
     env:
       Configuration: Debug
       Platform: AnyCPU
@@ -46,6 +46,16 @@ jobs:
 
   ios-build:
     runs-on: macos-latest
+    strategy:
+      matrix:
+        sampleApp: [
+          '01-HelloPrism', 02-ServiceRegistration', 03-PlatformSpecificServices', '04-Commands',
+          '04-CompositeCommands', '05-EventAggregator', '06-PageDialogService', '07-DialogService',
+          '08-TabbedNavigation', '09-MasterDetail', '10-Modules', '11-ModuleDependency', '12-ViewModelLocator',
+          '13-ViewModelInitialization', '14-EventToCommandBehavior', '15-PageBehaviorFactory', '16-PageLifecycleAware',
+          '17-XamlNavigation', '18-DeviceService', '19-NavigationMode', '20-ConfirmNavigation',
+          'advanced-topics/ReactiveUI'
+        ]
     env:
       Configuration: Debug
       Platform: iPhoneSimulator
