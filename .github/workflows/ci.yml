@@ -16,7 +16,7 @@ strategy:
       '08-TabbedNavigation', '09-MasterDetail', '10-Modules', '11-ModuleDependency', '12-ViewModelLocator',
       '13-ViewModelInitialization', '14-EventToCommandBehavior', '15-PageBehaviorFactory', '16-PageLifecycleAware',
       '17-XamlNavigation', '18-DeviceService', '19-NavigationMode', '20-ConfirmNavigation',
-      'advanced-topics/PopupsPlugin', 'advanced-topics/ReactiveUI', 'advanced-topics/ShinyLib'
+      'advanced-topics/ReactiveUI'
     ]
 
 jobs:
