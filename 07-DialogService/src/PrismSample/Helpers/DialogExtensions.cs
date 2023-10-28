@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Prism.Services.Dialogs;
+using Prism.Dialogs;
 
 namespace PrismSample
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 using Prism.Commands;
-using Prism.Services.Dialogs;
+using Prism.Dialogs;
 
 namespace PrismSample.ViewModels
 {
