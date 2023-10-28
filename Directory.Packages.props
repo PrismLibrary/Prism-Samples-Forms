@@ -1,0 +1,39 @@
+<Project>
+  <PropertyGroup>
+    <PrismVersion>9.0.271-pre</PrismVersion>
+    <AndroidSupportVersion>28.0.0.3</AndroidSupportVersion>
+    <FFImageLoadingVersion>2.4.11.982</FFImageLoadingVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageVersion Include="Prism.Forms" Version="$(PrismVersion)" />
+    <PackageVersion Include="Prism.Unity.Forms" Version="$(PrismVersion)" />
+    <PackageVersion Include="Prism.DryIoc.Forms" Version="$(PrismVersion)" />
+    <PackageVersion Include="Prism.Plugin.Logging.Loggly" Version="8.1.16" />
+    <PackageVersion Include="Xamarin.Forms" Version="5.0.0.2612" />
+    <PackageVersion Include="Xamarin.Essentials" Version="1.8.0" />
+
+    <!-- General Packages -->
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageVersion Include="Refractored.MvvmHelpers" Version="1.6.2" />
+    <PackageVersion Include="Xamarin.FFImageLoading.Forms" Version="$(FFImageLoadingVersion)" />
+    <PackageVersion Include="Xamarin.FFImageLoading.Transformations" Version="$(FFImageLoadingVersion)" />
+
+    <!-- RxUI Sample -->
+    <PackageVersion Include="NuGet.Client" Version="4.2.0" />
+    <PackageVersion Include="NuGet.Protocol.Core.v3" Version="4.2.0" />
+    <PackageVersion Include="ReactiveUI.XamForms" Version="19.5.1" />
+    <PackageVersion Include="ReactiveUI.Events.XamForms" Version="15.1.1" />
+
+    <PackageVersion Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.14" />
+
+    <!-- Android Support -->
+    <PackageVersion Include="Xamarin.Android.Support.Core.Utils" Version="$(AndroidSupportVersion)" />
+    <PackageVersion Include="Xamarin.Android.Support.Design" Version="$(AndroidSupportVersion)" />
+    <PackageVersion Include="Xamarin.Android.Support.v7.AppCompat" Version="$(AndroidSupportVersion)" />
+    <PackageVersion Include="Xamarin.Android.Support.v4" Version="$(AndroidSupportVersion)" />
+    <PackageVersion Include="Xamarin.Android.Support.v7.CardView" Version="$(AndroidSupportVersion)" />
+    <PackageVersion Include="Xamarin.Android.Support.v7.MediaRouter" Version="$(AndroidSupportVersion)" />
+    <PackageVersion Include="Xamarin.Android.Support.CustomTabs" Version="$(AndroidSupportVersion)" />
+  </ItemGroup>
+</Project>
