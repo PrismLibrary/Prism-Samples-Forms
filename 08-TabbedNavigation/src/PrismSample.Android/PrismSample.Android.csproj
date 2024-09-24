@@ -103,4 +103,9 @@
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties XamarinHotReloadXFormsNugetUpgradeInfoBarPrismSampleAndroidHideInfoBar="True" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
